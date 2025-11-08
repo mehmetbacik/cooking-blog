@@ -1,0 +1,33 @@
+// Responsive breakpoints
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  }
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+
+  @include breakpoint("sm") {
+    max-width: map-get($breakpoints, "sm");
+  }
+
+  @include breakpoint("md") {
+    max-width: map-get($breakpoints, "md");
+  }
+
+  @include breakpoint("lg") {
+    max-width: map-get($breakpoints, "lg");
+  }
+
+  @include breakpoint("xl") {
+    max-width: map-get($breakpoints, "xl");
+  }
+}
