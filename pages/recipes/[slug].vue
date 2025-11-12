@@ -1,12 +1,11 @@
 <template>
-  <div>
-    <h1>Recipe: {{ slug }}</h1>
+  <div class="recipe-details">
+    <ContentDoc path="/recipes" :slug="route.params.slug" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 
-const route = useRoute();
-const slug = route.params.slug;
+const route = useRoute()
 </script>
