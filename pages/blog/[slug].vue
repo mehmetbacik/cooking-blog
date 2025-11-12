@@ -1,12 +1,11 @@
 <template>
-  <div>
-    <h1>Blog Post: {{ slug }}</h1>
+  <div class="blog-post">
+    <ContentDoc path="/blog" :slug="route.params.slug" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 
-const route = useRoute();
-const slug = route.params.slug;
+const route = useRoute()
 </script>
