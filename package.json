@@ -18,7 +18,6 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "sass": "^1.93.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "sass": "^1.93.3"
   }
 }
