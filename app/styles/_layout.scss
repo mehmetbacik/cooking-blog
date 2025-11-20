@@ -1,0 +1,71 @@
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    @media (min-width: map-get($breakpoints, $point)) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+  @include breakpoint("sm") {
+    max-width: map-get($breakpoints, "sm");
+  }
+
+  @include breakpoint("md") {
+    max-width: map-get($breakpoints, "md");
+  }
+
+  @include breakpoint("lg") {
+    max-width: map-get($breakpoints, "lg");
+  }
+
+  @include breakpoint("xl") {
+    max-width: map-get($breakpoints, "xl");
+  }
+}
+
+$grid-columns: 12;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$spacing-md;
+  margin-right: -$spacing-md;
+
+  > * {
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+  }
+}
+
+.col {
+  flex: 1 0 0;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / $grid-columns);
+    max-width: percentage($i / $grid-columns);
+  }
+}
+
+@each $name, $size in $breakpoints {
+  @include breakpoint($name) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$name}-#{$i} {
+        flex: 0 0 percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+      }
+    }
+  }
+}

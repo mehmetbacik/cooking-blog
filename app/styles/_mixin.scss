@@ -1,0 +1,7 @@
+.container {
+  @include container;
+}
+
+.section {
+  padding: $spacing-unit * 16 0;
+}
