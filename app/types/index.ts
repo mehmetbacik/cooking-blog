@@ -22,4 +22,5 @@ export interface BlogPost {
   category: string;
   date: string;
   readTime: string;
+  author: string;
 }
