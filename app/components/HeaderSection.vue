@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { navItems } from "../data/navData";
+import { socialItems } from "../data/socialData";
 </script>
 
 <template>
@@ -16,6 +17,20 @@ import { navItems } from "../data/navData";
             </NuxtLink>
           </li>
         </ul>
+      </div>
+      <div class="navbar__socials">
+        <div class="social-links">
+          <a
+            v-for="social in socialItems"
+            :key="social.id"
+            :href="social.link"
+            target="_blank"
+            :aria-label="social.name"
+            class="social-item"
+          >
+            <img :src="social.iconUrl" :alt="social.name" />
+          </a>
+        </div>
       </div>
     </div>
   </nav>

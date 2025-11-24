@@ -30,3 +30,10 @@ export interface NavItem {
   label: string;
   link: string;
 }
+
+export interface SocialItem {
+  id: number;
+  name: string;
+  iconUrl: string;
+  link: string;
+}
