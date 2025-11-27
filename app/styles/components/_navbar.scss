@@ -1,0 +1,28 @@
+.header {
+    border-bottom: solid 1px $color-gray-light;
+    &__content {
+        padding-block: $spacing-unit * 10;
+        .header {
+            &__navbar-wrapper {
+                .navbar {
+                    &__links {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+                    }
+                }
+            }
+            &__social-wrapper {
+                .social {
+                    &__links {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
+}

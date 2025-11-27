@@ -5,16 +5,16 @@ const LogoPath = "/images/logo.svg";
 </script>
 
 <template>
-  <nav class="navbar">
-    <div class="container navbar__content">
+  <header class="header">
+    <div class="container header__content">
       <div class="row align-items-center">
-        <div class="col-12 col-lg-3 logo__wrapper">
-          <NuxtLink to="/" class="navbar__logo">
+        <div class="col-12 col-lg-3 header__logo-wrapper">
+          <NuxtLink to="/" class="header__logo">
             <img :src="LogoPath" alt="Logo" />
           </NuxtLink>
         </div>
-        <div class="col-12 col-lg-6 nav__wrapper">
-          <div class="navbar__links">
+        <div class="col-12 col-lg-6 header__navbar-wrapper">
+          <nav class="navbar__links">
             <ul>
               <li v-for="item in navItems" :key="item.id">
                 <NuxtLink
@@ -26,27 +26,25 @@ const LogoPath = "/images/logo.svg";
                 </NuxtLink>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
-        <div class="col-12 col-lg-3 social__wrapper">
-          <div class="navbar__socials">
-            <div class="social__links">
-              <a
-                v-for="social in socialItems"
-                :key="social.id"
-                :href="social.link"
-                target="_blank"
-                :aria-label="social.name"
-                class="social-item"
-              >
-                <img :src="social.iconUrl" :alt="social.name" />
-              </a>
-            </div>
+        <div class="col-12 col-lg-3 header__social-wrapper">
+          <div class="social__links">
+            <a
+              v-for="social in socialItems"
+              :key="social.id"
+              :href="social.link"
+              target="_blank"
+              :aria-label="social.name"
+              class="social-item"
+            >
+              <img :src="social.iconUrl" :alt="social.name" />
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </nav>
+  </header>
 </template>
 
 <style lang="scss" scoped></style>
