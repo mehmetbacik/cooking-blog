@@ -1,0 +1,50 @@
+.header {
+    border-bottom: solid 1px $color-gray-light;
+    &__content {
+        padding-block: $spacing-unit * 10;
+        .header {
+            &__logo-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                .header {
+                    &__logo {
+                        text-decoration: none;
+                    }
+                }
+            }
+            &__navbar-wrapper {
+                .navbar {
+                    &__links {
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            li {
+                                .nav-item {
+                                    font-size: $font-size-base;
+                                    font-weight: 500;
+                                    color: $color-black;
+                                    transition: $transition-base;
+                                    &:hover {
+                                        color: $color-blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__social-wrapper {
+                .social {
+                    &__links {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        gap: $spacing-unit * 10;
+                    }
+                }
+            }
+        }
+    }
+}
