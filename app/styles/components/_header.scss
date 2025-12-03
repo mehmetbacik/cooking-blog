@@ -1,5 +1,18 @@
 .header {
     border-bottom: solid 1px $color-gray-light;
+    position: relative;
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        backdrop-filter: blur(2px);
+        animation: fadeIn 0.3s ease;
+    }
+
     &__content {
         padding-block: $spacing-unit * 10;
         .header {
@@ -7,24 +20,55 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                @media (max-width: $lg-breakpoint) {
+                    justify-content: space-between;
+                }
                 .header {
                     &__logo {
                         text-decoration: none;
                     }
+                    &__menu-toggle {
+                        display: none;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: $spacing-unit * 4;
+                        margin-left: auto;
+                        transition: $transition-base;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                        .header__menu-icon {
+                            font-size: $font-size-xl;
+                            color: $color-black;
+                        }
+                        @media (max-width: $lg-breakpoint) {
+                            display: block;
+                        }
+                    }
                 }
             }
             &__navbar-wrapper {
+                .header {
+                    &__close-btn {
+                        display: none;
+                    }
+                }
                 .navbar {
                     &__links {
                         ul {
                             display: flex;
                             align-items: center;
                             justify-content: space-evenly;
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
                             li {
                                 .nav-item {
                                     font-size: $font-size-base;
                                     font-weight: 500;
                                     color: $color-black;
+                                    text-decoration: none;
                                     transition: $transition-base;
                                     &:hover {
                                         color: $color-blue;
@@ -34,17 +78,117 @@
                         }
                     }
                 }
+                @media (max-width: $lg-breakpoint) {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 320px;
+                    max-width: 85vw;
+                    height: 100vh;
+                    background-color: $color-white;
+                    z-index: 1000;
+                    transform: translateX(-100%);
+                    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    padding: $spacing-unit * 20 $spacing-unit * 16;
+                    overflow-y: auto;
+                    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                    &.is-open {
+                        transform: translateX(0);
+                    }
+                    .header {
+                        &__close-btn {
+                            display: flex;
+                            position: absolute;
+                            top: $spacing-unit * 16;
+                            right: $spacing-unit * 16;
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            padding: $spacing-unit * 4;
+                            align-items: center;
+                            justify-content: center;
+                            transition: $transition-base;
+                            border-radius: 50%;
+                            width: 40px;
+                            height: 40px;
+                            &:hover {
+                                background-color: $color-gray-light;
+                            }
+                            .header__close-icon {
+                                font-size: $font-size-xl;
+                                color: $color-black;
+                            }
+                        }
+                    }
+                    .navbar {
+                        &__links {
+                            margin-top: $spacing-unit * 20;
+                            ul {
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: $spacing-unit * 8;
+                                li {
+                                    width: 100%;
+                                    .nav-item {
+                                        display: block;
+                                        padding: $spacing-unit * 10 $spacing-unit * 8;
+                                        font-size: $font-size-lg;
+                                        border-radius: $spacing-unit * 2;
+                                        transition: $transition-base;
+                                        &:hover {
+                                            background-color: $color-blue-pale;
+                                            color: $color-blue;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .header__social-wrapper--mobile {
+                        margin-top: $spacing-unit * 24;
+                        padding-top: $spacing-unit * 24;
+                        border-top: 1px solid $color-gray-light;
+                        .social {
+                            &__links {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: $spacing-unit * 10;
+                            }
+                        }
+                    }
+                }
             }
             &__social-wrapper {
-                .social {
-                    &__links {
-                        display: flex;
-                        align-items: center;
-                        justify-content: flex-end;
-                        gap: $spacing-unit * 10;
+                &--desktop {
+                    .social {
+                        &__links {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            gap: $spacing-unit * 10;
+                        }
+                    }
+                    @media (max-width: $lg-breakpoint) {
+                        display: none;
+                    }
+                }
+                &--mobile {
+                    display: none;
+                    @media (max-width: $lg-breakpoint) {
+                        display: block;
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
