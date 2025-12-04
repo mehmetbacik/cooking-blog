@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
-import { navItems } from "../data/navData";
-import { socialItems } from "../data/socialData";
+import { navItems } from "../../data/navData";
+import { socialItems } from "../../data/socialData";
 const LogoPath = "/images/logo.svg";
 
 const isMenuOpen = ref(false);
