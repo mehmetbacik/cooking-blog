@@ -5,7 +5,6 @@ import HeaderOverlay from "./components/HeaderOverlay.vue";
 import NavbarLinks from "./components/NavbarLinks.vue";
 import SocialLinks from "./components/SocialLinks.vue";
 
-import { Icon } from "@iconify/vue";
 import { navItems } from "../../data/navData";
 import { socialItems } from "../../data/socialData";
 const LogoPath = "/images/logo.svg";

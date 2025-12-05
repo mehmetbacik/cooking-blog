@@ -37,3 +37,12 @@ export interface SocialItem {
   iconUrl: string;
   link: string;
 }
+
+export interface SlideItem {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  text: string;
+  link: string;
+}
