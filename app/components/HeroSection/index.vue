@@ -13,8 +13,8 @@ const modules = [Autoplay, EffectFade, Pagination, Navigation];
 </script>
 
 <template>
-  <section class="hero-section">
-    <div class="container hero-content">
+  <section class="hero">
+    <div class="container hero__content">
       <Swiper
         :modules="modules"
         :slides-per-view="1"

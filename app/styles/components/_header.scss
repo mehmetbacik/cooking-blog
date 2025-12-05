@@ -1,5 +1,6 @@
 .header {
     border-bottom: solid 1px $color-gray-light;
+    margin-bottom: $spacing-unit * 5;
     position: relative;
     &__overlay {
         position: fixed;

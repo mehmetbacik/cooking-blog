@@ -1,0 +1,16 @@
+.hero {
+    margin-top: $spacing-unit * 10;
+    &__content {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .slide-bg {
+                        img {
+                            border-radius: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
