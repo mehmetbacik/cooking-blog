@@ -20,7 +20,12 @@ const closeMenu = () => emit("closeMenu");
   <nav class="navbar__links">
     <ul>
       <li v-for="item in props.navItems" :key="item.id">
-        <NuxtLink :to="item.link" class="nav-item" active-class="active" @click="closeMenu">
+        <NuxtLink
+          :to="item.link"
+          class="nav-item"
+          active-class="active"
+          @click="closeMenu"
+        >
           {{ item.label }}
         </NuxtLink>
       </li>
