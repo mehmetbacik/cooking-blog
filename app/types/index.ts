@@ -41,8 +41,14 @@ export interface SocialItem {
 export interface SlideItem {
   id: number;
   image: string;
+  badge: string;
   title: string;
   description: string;
+  time: string;
+  category: string;
+  author: string;
+  date: string;
+  photo: string
   text: string;
   link: string;
 }

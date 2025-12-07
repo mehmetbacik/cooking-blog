@@ -44,8 +44,16 @@ const modules = [Autoplay, EffectFade, Pagination, Navigation];
           </div>
           <div class="container slide-content">
             <div class="content-wrapper">
+              <span class="badge">{{ slide.badge }}</span>
               <h1 class="title">{{ slide.title }}</h1>
               <p class="desc">{{ slide.description }}</p>
+              <span class="time">{{ slide.time }}</span>
+              <span class="category">{{ slide.category }}</span>
+              <span class="author">{{ slide.author }}</span>
+              <span class="date">{{ slide.date }}</span>
+              <span class="author__photo">
+                <img :src="slide.photo" :alt="slide.author"/>
+              </span>
               <NuxtLink :to="slide.link" class="btn btn--primary">{{
                 slide.text
               }}</NuxtLink>
