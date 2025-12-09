@@ -4,10 +4,19 @@
         .swiper {
             .swiper-wrapper {
                 .swiper-slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    position: relative;
                     .slide-bg {
                         img {
                             border-radius: 40px;
                         }
+                    }
+                    .slide-content {
+                        position: absolute;
+                        max-width: 50%;
+                        padding: $spacing-unit * 12;
                     }
                 }
             }

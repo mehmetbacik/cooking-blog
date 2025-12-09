@@ -168,6 +168,12 @@
                             align-items: center;
                             justify-content: flex-end;
                             gap: $spacing-unit * 10;
+                            .social-item {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                min-width: 22px;
+                            }
                         }
                     }
                     @media (max-width: $lg-breakpoint) {
