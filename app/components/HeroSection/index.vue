@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, EffectFade} from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 
 import { heroSlides } from "../../data/heroData";
 
@@ -25,29 +25,34 @@ const modules = [Autoplay, EffectFade];
           disableOnInteraction: false,
         }"
       >
-        <SwiperSlide
-          v-for="slide in heroSlides"
-          :key="slide.id"
-        >
+        <SwiperSlide v-for="slide in heroSlides" :key="slide.id">
           <div class="slide-bg">
             <img :src="slide.image" :alt="slide.title" />
             <div class="overlay"></div>
           </div>
           <div class="slide-content">
             <div class="content-wrapper">
-              <span class="badge">{{ slide.badge }}</span>
-              <h1 class="title">{{ slide.title }}</h1>
-              <p class="desc">{{ slide.description }}</p>
-              <span class="time">{{ slide.time }}</span>
-              <span class="category">{{ slide.category }}</span>
-              <span class="author">{{ slide.author }}</span>
-              <span class="date">{{ slide.date }}</span>
-              <span class="author__photo">
-                <img :src="slide.photo" :alt="slide.author"/>
-              </span>
-              <NuxtLink :to="slide.link" class="btn btn--primary">{{
-                slide.text
-              }}</NuxtLink>
+              <div class="slide__header">
+                <span class="badge">{{ slide.badge }}</span>
+                <h1 class="title">{{ slide.title }}</h1>
+                <p class="desc">{{ slide.description }}</p>
+              </div>
+
+              <div class="slide__metadata">
+                <span class="time">{{ slide.time }}</span>
+                <span class="category">{{ slide.category }}</span>
+              </div>
+
+              <div class="slide__footer">
+                <span class="author">{{ slide.author }}</span>
+                <span class="date">{{ slide.date }}</span>
+                <span class="author__photo">
+                  <img :src="slide.photo" :alt="slide.author" />
+                </span>
+                <NuxtLink :to="slide.link" class="btn btn--primary">{{
+                  slide.text
+                }}</NuxtLink>
+              </div>
             </div>
           </div>
         </SwiperSlide>

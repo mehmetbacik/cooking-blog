@@ -23,26 +23,100 @@
                             justify-content: center;
                             flex-direction: column;
                             gap: $spacing-lg;
-                            .badge {
-                                position: relative;
-                                font-size: $font-size-base * 0.875;
-                                font-weight: $font-weight-semibold;
-                                background-color: $color-white;
-                                padding-block: $spacing-unit * 2.5;
-                                padding-inline: $spacing-unit * 5;
-                                border-radius: 30px;
-                                display: inline-flex;
-                                align-items: center;
-                                gap: $spacing-unit * 3;
-                                &::before {
-                                    content: "";
-                                    width: 24px;
-                                    height: 24px;
-                                    background-image: url('/icons/hot-recipes.svg');
-                                    background-repeat: no-repeat;
-                                    background-size: contain;
-                                    pointer-events: none;
-                                    flex-shrink: 0;
+                            .slide {
+                                &__header {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    gap: $spacing-lg;
+                                    .badge {
+                                        position: relative;
+                                        font-size: $font-size-base * 0.875;
+                                        font-weight: $font-weight-semibold;
+                                        color: $color-black;
+                                        background-color: $color-white;
+                                        padding-block: $spacing-unit * 2.5;
+                                        padding-inline: $spacing-unit * 5;
+                                        border-radius: 30px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        gap: $spacing-unit * 3;
+                                        &::before {
+                                            content: "";
+                                            width: 24px;
+                                            height: 24px;
+                                            background-image: url('/icons/hot-recipes.svg');
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            pointer-events: none;
+                                            flex-shrink: 0;
+                                        }
+                                    }
+                                    .title {
+                                        font-size: $font-size-base * 4;
+                                        font-weight: $font-weight-semibold;
+                                        color: $color-black;
+                                        line-height: normal;
+                                        letter-spacing: -4px;
+                                    }
+                                    .desc {
+                                        font-size: $font-size-base * 0.9;
+                                        font-weight: $font-weight-light;
+                                        color: $color-black;
+                                    }
+                                }
+                                &__metadata {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: $spacing-md;
+                                    .time {
+                                        position: relative;
+                                        font-size: $font-size-base * 0.875;
+                                        font-weight: $font-weight-light;
+                                        color: $color-black;
+                                        background-color: $color-soft-cyan;
+                                        padding-block: $spacing-unit * 2;
+                                        padding-inline: $spacing-unit * 3.5;
+                                        border-radius: 30px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        gap: $spacing-unit * 2.5;
+                                        &::before {
+                                            content: "";
+                                            width: 24px;
+                                            height: 24px;
+                                            background-image: url('/icons/time.svg');
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            pointer-events: none;
+                                            flex-shrink: 0;
+                                        }
+                                    }
+                                    .category {
+                                        position: relative;
+                                        font-size: $font-size-base * 0.875;
+                                        font-weight: $font-weight-light;
+                                        color: $color-black;
+                                        background-color: $color-soft-cyan;
+                                        padding-block: $spacing-unit * 2;
+                                        padding-inline: $spacing-unit * 3.5;
+                                        border-radius: 30px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        gap: $spacing-unit * 2.5;
+                                        &::before {
+                                            content: "";
+                                            width: 24px;
+                                            height: 24px;
+                                            background-image: url('/icons/category.svg');
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            pointer-events: none;
+                                            flex-shrink: 0;
+                                        }
+                                    }
                                 }
                             }
                         }
