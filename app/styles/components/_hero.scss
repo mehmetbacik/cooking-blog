@@ -17,6 +17,35 @@
                         position: absolute;
                         max-width: 50%;
                         padding: $spacing-unit * 12;
+                        .content-wrapper {
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: center;
+                            flex-direction: column;
+                            gap: $spacing-lg;
+                            .badge {
+                                position: relative;
+                                font-size: $font-size-base * 0.875;
+                                font-weight: $font-weight-semibold;
+                                background-color: $color-white;
+                                padding-block: $spacing-unit * 2.5;
+                                padding-inline: $spacing-unit * 5;
+                                border-radius: 30px;
+                                display: inline-flex;
+                                align-items: center;
+                                gap: $spacing-unit * 3;
+                                &::before {
+                                    content: "";
+                                    width: 24px;
+                                    height: 24px;
+                                    background-image: url('/icons/hot-recipes.svg');
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    pointer-events: none;
+                                    flex-shrink: 0;
+                                }
+                            }
+                        }
                     }
                 }
             }
