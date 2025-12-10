@@ -36,20 +36,23 @@ const modules = [Autoplay, EffectFade];
                 <span class="badge">{{ slide.badge }}</span>
                 <h1 class="title">{{ slide.title }}</h1>
                 <p class="desc">{{ slide.description }}</p>
-              </div>
-
-              <div class="slide__metadata">
-                <span class="time">{{ slide.time }}</span>
-                <span class="category">{{ slide.category }}</span>
+                <div class="slide__metadata">
+                  <span class="time">{{ slide.time }}</span>
+                  <span class="category">{{ slide.category }}</span>
+                </div>
               </div>
 
               <div class="slide__footer">
-                <span class="author">{{ slide.author }}</span>
-                <span class="date">{{ slide.date }}</span>
-                <span class="author__photo">
-                  <img :src="slide.photo" :alt="slide.author" />
-                </span>
-                <NuxtLink :to="slide.link" class="btn btn--primary">{{
+                <div class="author-wrapper">
+                  <span class="author-photo">
+                    <img :src="slide.photo" :alt="slide.author" />
+                  </span>
+                  <div class="author-content">
+                    <span class="author">{{ slide.author }}</span>
+                    <span class="date">{{ slide.date }}</span>
+                  </div>
+                </div>
+                <NuxtLink :to="slide.link" class="hero-button">{{
                   slide.text
                 }}</NuxtLink>
               </div>

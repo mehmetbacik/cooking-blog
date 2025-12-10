@@ -1,5 +1,6 @@
 .hero {
     margin-top: $spacing-unit * 10;
+    margin-bottom: $spacing-unit * 40;
     &__content {
         .swiper {
             .swiper-wrapper {
@@ -11,18 +12,21 @@
                     .slide-bg {
                         img {
                             border-radius: 40px;
+                            object-fit: cover;
                         }
                     }
                     .slide-content {
                         position: absolute;
                         max-width: 50%;
+                        height: 100%;
                         padding: $spacing-unit * 12;
                         .content-wrapper {
                             display: flex;
                             align-items: flex-start;
-                            justify-content: center;
+                            justify-content: space-between;
                             flex-direction: column;
                             gap: $spacing-lg;
+                            height: 100%;
                             .slide {
                                 &__header {
                                     display: flex;
@@ -111,6 +115,60 @@
                                             width: 24px;
                                             height: 24px;
                                             background-image: url('/icons/category.svg');
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            pointer-events: none;
+                                            flex-shrink: 0;
+                                        }
+                                    }
+                                }
+                                &__footer {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    width: calc(100% - 30px);
+                                    .author-wrapper {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: $spacing-unit * 3.5;
+                                        .author-photo {
+                                            img {
+                                                border-radius: 50%;
+                                                object-fit: cover;
+                                            }
+                                        }
+                                        .author-content {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                            .author {
+                                                font-size: $font-size-base;
+                                                color: $color-black;
+                                                font-weight: $font-weight-bold;
+                                            }
+                                            .date {
+                                                font-size: $font-size-base * 0.875;
+                                                color: $color-black;
+                                                font-weight: $font-weight-light;
+                                            }
+                                        }
+                                    }
+                                    .hero-button {
+                                        font-size: $font-size-base * 0.875;
+                                        font-weight: $font-weight-light;
+                                        color: $color-white;
+                                        background-color: $color-black;
+                                        padding-inline: $spacing-unit * 9;
+                                        padding-block: $spacing-unit * 4.5;
+                                        border-radius: 18px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        gap: $spacing-unit * 2.5;
+                                        &::after {
+                                            content: "";
+                                            width: 24px;
+                                            height: 24px;
+                                            background-image: url('/icons/play.svg');
                                             background-repeat: no-repeat;
                                             background-size: contain;
                                             pointer-events: none;
