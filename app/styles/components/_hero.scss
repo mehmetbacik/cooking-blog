@@ -1,6 +1,10 @@
 .hero {
     margin-top: $spacing-unit * 10;
     margin-bottom: $spacing-unit * 40;
+    @media (max-width: $sm-breakpoint) {
+        margin-top: $spacing-unit * 8;
+        margin-bottom: $spacing-unit * 15;
+    }
     &__content {
         .swiper {
             .swiper-wrapper {
@@ -13,6 +17,9 @@
                         img {
                             border-radius: 40px;
                             object-fit: cover;
+                            @media (max-width: $sm-breakpoint) {
+                                border-radius: 20px;
+                            }
                         }
                     }
                     .slide-content {
@@ -20,6 +27,9 @@
                         max-width: 50%;
                         height: 100%;
                         padding: $spacing-unit * 12;
+                        @media (max-width: $sm-breakpoint) {
+                            padding: $spacing-unit * 4;
+                        }
                         .content-wrapper {
                             display: flex;
                             align-items: flex-start;
@@ -34,6 +44,9 @@
                                     justify-content: center;
                                     flex-direction: column;
                                     gap: $spacing-lg;
+                                    @media (max-width: $sm-breakpoint) {
+                                        gap: $spacing-sm;
+                                    }
                                     .badge {
                                         position: relative;
                                         font-size: $font-size-base * 0.875;
@@ -56,6 +69,17 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.4;
+                                            padding-block: $spacing-unit * 1.2;
+                                            padding-inline: $spacing-unit * 1.2;
+                                            gap: $spacing-unit * 1;
+                                            &::before {
+                                                content: "";
+                                                width: 10px;
+                                                height: 10px;
+                                            }
+                                        }                                        
                                     }
                                     .title {
                                         font-size: $font-size-base * 4;
@@ -63,11 +87,18 @@
                                         color: $color-black;
                                         line-height: normal;
                                         letter-spacing: -4px;
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 1;
+                                            letter-spacing: 0;
+                                        }
                                     }
                                     .desc {
                                         font-size: $font-size-base * 0.9;
                                         font-weight: $font-weight-light;
                                         color: $color-black;
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.4;
+                                        }
                                     }
                                 }
                                 &__metadata {
@@ -75,6 +106,9 @@
                                     align-items: center;
                                     justify-content: center;
                                     gap: $spacing-md;
+                                    @media (max-width: $sm-breakpoint) {
+                                        gap: $spacing-sm;
+                                    }
                                     .time {
                                         position: relative;
                                         font-size: $font-size-base * 0.875;
@@ -97,6 +131,17 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.4;
+                                            padding-block: $spacing-unit * 1.2;
+                                            padding-inline: $spacing-unit * 1.2;
+                                            gap: $spacing-unit * 1;
+                                            &::before {
+                                                content: "";
+                                                width: 10px;
+                                                height: 10px;
+                                            }
+                                        } 
                                     }
                                     .category {
                                         position: relative;
@@ -120,6 +165,17 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.4;
+                                            padding-block: $spacing-unit * 1.2;
+                                            padding-inline: $spacing-unit * 1.2;
+                                            gap: $spacing-unit * 1;
+                                            &::before {
+                                                content: "";
+                                                width: 10px;
+                                                height: 10px;
+                                            }
+                                        } 
                                     }
                                 }
                                 &__footer {
@@ -127,6 +183,9 @@
                                     align-items: center;
                                     justify-content: space-between;
                                     width: calc(100% - 30px);
+                                    @media (max-width: $sm-breakpoint) {
+                                        width: 100%;
+                                    }
                                     .author-wrapper {
                                         display: flex;
                                         align-items: center;
@@ -135,6 +194,12 @@
                                             img {
                                                 border-radius: 50%;
                                                 object-fit: cover;
+                                                width: 50px;
+                                                height: 50px;
+                                                @media (max-width: $sm-breakpoint) {
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
                                             }
                                         }
                                         .author-content {
@@ -145,11 +210,17 @@
                                                 font-size: $font-size-base;
                                                 color: $color-black;
                                                 font-weight: $font-weight-bold;
+                                                @media (max-width: $sm-breakpoint) {
+                                                    font-size: $font-size-base * 0.5;
+                                                }
                                             }
                                             .date {
                                                 font-size: $font-size-base * 0.875;
                                                 color: $color-black;
                                                 font-weight: $font-weight-light;
+                                                @media (max-width: $sm-breakpoint) {
+                                                    font-size: $font-size-base * 0.4;
+                                                }
                                             }
                                         }
                                     }
@@ -174,6 +245,16 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                         @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.4;
+                                            padding-inline: $spacing-unit * 2;
+                                            padding-block: $spacing-unit * 2;
+                                            gap: $spacing-unit * 1;
+                                            &::after {
+                                                width: 10px;
+                                                height: 10px;
+                                            }
+                                         }
                                     }
                                 }
                             }
