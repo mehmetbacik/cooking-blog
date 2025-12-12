@@ -33,15 +33,9 @@
                         @media (max-width: $sm-breakpoint) {
                             position: relative;
                             background-color: $color-blue-pale;
-                            padding: $spacing-unit * 3.5;
+                            padding: $spacing-unit * 4;
                             border-radius: 0px 0px 20px 20px;
                             max-width: 100%;
-                        }
-                        @media (max-width: $xs-breakpoint) {
-                            padding: $spacing-unit * 3;
-                        }
-                        @media (max-width: $xxs-breakpoint) {
-                            padding: $spacing-unit * 2;
                         }
                         .content-wrapper {
                             display: flex;
@@ -61,13 +55,7 @@
                                     flex-direction: column;
                                     gap: $spacing-lg;
                                     @media (max-width: $sm-breakpoint) {
-                                        gap: $spacing-unit * 2.25;
-                                    }
-                                    @media (max-width: $xs-breakpoint) {
-                                        gap: $spacing-unit * 2;
-                                    }
-                                    @media (max-width: $xxs-breakpoint) {
-                                        gap: $spacing-unit * 1;
+                                        gap: $spacing-sm;
                                     }
                                     .badge {
                                         position: relative;
@@ -92,29 +80,17 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 0.5;
+                                            font-size: $font-size-base * 0.5;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 1;
                                             line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 8px;
-                                                height: 8px;
+                                                width: 10px;
+                                                height: 10px;
                                             }
-                                        } 
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.3;
-                                            padding-block: $spacing-unit * 1;
-                                            padding-inline: $spacing-unit * 1;
-                                            gap: $spacing-unit * 0.5;
-                                            line-height: normal;
-                                            &::before {
-                                                content: "";
-                                                width: 7px;
-                                                height: 7px;
-                                            }
-                                        }                                       
+                                        }                                      
                                     }
                                     .title {
                                         font-size: $font-size-base * 4;
@@ -123,17 +99,8 @@
                                         line-height: normal;
                                         letter-spacing: -4px;
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.975;
-                                            padding-right: 20px;
+                                            font-size: $font-size-base * 1.25;
                                             letter-spacing: 0;
-                                        }
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.75;
-                                            padding-right: 40px;
-                                        }
-                                        @media (max-width: $xxs-breakpoint) {
-                                            font-size: $font-size-base * 0.65;
-                                            padding-right: 40px;
                                         }
                                     }
                                     .desc {
@@ -141,12 +108,7 @@
                                         font-weight: $font-weight-light;
                                         color: $color-black;
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.425;
-                                            padding-right: 0px;
-                                        }
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.35;
-                                            padding-right: 20px;
+                                            font-size: $font-size-base * 0.6;
                                         }
                                     }
                                 }
@@ -181,29 +143,17 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 0.5;
+                                            font-size: $font-size-base * 0.5;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 1;
                                             line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 8px;
-                                                height: 8px;
+                                                width: 10px;
+                                                height: 10px;
                                             }
-                                        } 
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.3;
-                                            padding-block: $spacing-unit * 1;
-                                            padding-inline: $spacing-unit * 1;
-                                            gap: $spacing-unit * 0.5;
-                                            line-height: normal;
-                                            &::before {
-                                                content: "";
-                                                width: 7px;
-                                                height: 7px;
-                                            }
-                                        } 
+                                        }   
                                     }
                                     .category {
                                         position: relative;
@@ -228,29 +178,17 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 0.5;
+                                            font-size: $font-size-base * 0.5;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 1;
                                             line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 8px;
-                                                height: 8px;
+                                                width: 10px;
+                                                height: 10px;
                                             }
-                                        } 
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.3;
-                                            padding-block: $spacing-unit * 1;
-                                            padding-inline: $spacing-unit * 1;
-                                            gap: $spacing-unit * 0.5;
-                                            line-height: normal;
-                                            &::before {
-                                                content: "";
-                                                width: 7px;
-                                                height: 7px;
-                                            }
-                                        } 
+                                        }  
                                     }
                                 }
                                 &__footer {
@@ -275,12 +213,8 @@
                                                 width: 50px;
                                                 height: 50px;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    width: 20px;
-                                                    height: 20px;
-                                                }
-                                                @media (max-width: $xs-breakpoint) {
-                                                    width: 18px;
-                                                    height: 18px;
+                                                    width: 30px;
+                                                    height: 30px;
                                                 }
                                             }
                                         }
@@ -293,10 +227,7 @@
                                                 color: $color-black;
                                                 font-weight: $font-weight-bold;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    font-size: $font-size-base * 0.5;
-                                                }
-                                                @media (max-width: $xs-breakpoint) {
-                                                    font-size: $font-size-base * 0.4;
+                                                    font-size: $font-size-base * 0.65;
                                                 }
                                             }
                                             .date {
@@ -304,10 +235,7 @@
                                                 color: $color-black;
                                                 font-weight: $font-weight-light;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    font-size: $font-size-base * 0.4;
-                                                }
-                                                @media (max-width: $xs-breakpoint) {
-                                                    font-size: $font-size-base * 0.3;
+                                                    font-size: $font-size-base * 0.55;
                                                 }
                                             }
                                         }
@@ -334,27 +262,15 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            padding-block: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 0.5;
+                                            font-size: $font-size-base * 0.5;
+                                            padding-inline: $spacing-unit * 2;
+                                            padding-block: $spacing-unit * 2;
+                                            gap: $spacing-unit * 1;
                                             line-height: normal;
                                             border-radius: 5px;
                                             &::after {
-                                                width: 8px;
-                                                height: 8px;
-                                            }
-                                        }
-                                        @media (max-width: $xs-breakpoint) {
-                                            font-size: $font-size-base * 0.3;
-                                            padding-inline: $spacing-unit * 1;
-                                            padding-block: $spacing-unit * 1;
-                                            gap: $spacing-unit * 0.5;
-                                            line-height: normal;
-                                            border-radius: 5px;
-                                            &::after {
-                                                width: 7px;
-                                                height: 7px;
+                                                width: 10px;
+                                                height: 10px;
                                             }
                                         }
                                     }
