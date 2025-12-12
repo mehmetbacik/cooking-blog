@@ -27,7 +27,19 @@ const modules = [Autoplay, EffectFade];
       >
         <SwiperSlide v-for="slide in heroSlides" :key="slide.id">
           <div class="slide-bg">
-            <img :src="slide.image" :alt="slide.title" />
+            <picture>
+              <source
+                v-if="slide.mobileImage"
+                :srcset="slide.mobileImage"
+                media="(max-width: 425px)"
+              />
+              <source
+                v-if="slide.mobileImage"
+                :srcset="slide.mobileImage"
+                media="(max-width: 576px)"
+              />
+              <img :src="slide.image" :alt="slide.title" />
+            </picture>
             <div class="overlay"></div>
           </div>
           <div class="slide-content">

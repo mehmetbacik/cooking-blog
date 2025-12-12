@@ -4,6 +4,7 @@ export const heroSlides: SlideItem[] = [
   {
     id: 1,
     image: "/images/hero-banner.png",
+    mobileImage: "/images/hero-mobile-banner.png",
     badge: "Hot Recipes",
     title: "Spicy delicious chicken wings",
     description:
@@ -19,6 +20,7 @@ export const heroSlides: SlideItem[] = [
   {
     id: 2,
     image: "/images/hero-banner.png",
+    mobileImage: "/images/hero-mobile-banner.png",
     badge: "Hot Recipes",
     title: "Seasonal Flavors in Your Kitchen",
     description:
@@ -34,6 +36,7 @@ export const heroSlides: SlideItem[] = [
   {
     id: 3,
     image: "/images/hero-banner.png",
+    mobileImage: "/images/hero-mobile-banner.png",
     badge: "Hot Recipes",
     title: "Balanced Meals for Every Day",
     description:
