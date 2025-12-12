@@ -16,6 +16,9 @@
 
     &__content {
         padding-block: $spacing-unit * 10;
+        @media (max-width: $sm-breakpoint) {
+            padding-block: $spacing-unit * 4;
+        }
         .header {
             &__logo-wrapper {
                 display: flex;

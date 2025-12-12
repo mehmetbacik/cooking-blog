@@ -2,8 +2,8 @@
     margin-top: $spacing-unit * 10;
     margin-bottom: $spacing-unit * 40;
     @media (max-width: $sm-breakpoint) {
-        margin-top: $spacing-unit * 8;
-        margin-bottom: $spacing-unit * 15;
+        margin-top: $spacing-unit * 4;
+        margin-bottom: $spacing-unit * 10;
     }
     &__content {
         .swiper {
@@ -28,7 +28,7 @@
                         height: 100%;
                         padding: $spacing-unit * 12;
                         @media (max-width: $sm-breakpoint) {
-                            padding: $spacing-unit * 4;
+                            padding: $spacing-unit * 2;
                         }
                         .content-wrapper {
                             display: flex;
@@ -37,6 +37,9 @@
                             flex-direction: column;
                             gap: $spacing-lg;
                             height: 100%;
+                            @media (max-width: $sm-breakpoint) {
+                                gap: $spacing-sm;
+                            }
                             .slide {
                                 &__header {
                                     display: flex;
@@ -45,7 +48,7 @@
                                     flex-direction: column;
                                     gap: $spacing-lg;
                                     @media (max-width: $sm-breakpoint) {
-                                        gap: $spacing-sm;
+                                        gap: $spacing-unit * 1;
                                     }
                                     .badge {
                                         position: relative;
@@ -70,14 +73,15 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 1;
+                                            font-size: $font-size-base * 0.3;
+                                            padding-block: $spacing-unit * 1;
+                                            padding-inline: $spacing-unit * 1;
+                                            gap: $spacing-unit * 0.5;
+                                            line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 10px;
-                                                height: 10px;
+                                                width: 8px;
+                                                height: 8px;
                                             }
                                         }                                        
                                     }
@@ -88,7 +92,8 @@
                                         line-height: normal;
                                         letter-spacing: -4px;
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 1;
+                                            font-size: $font-size-base * 0.65;
+                                            padding-right: 15px;
                                             letter-spacing: 0;
                                         }
                                     }
@@ -97,7 +102,7 @@
                                         font-weight: $font-weight-light;
                                         color: $color-black;
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
+                                            font-size: $font-size-base * 0.35;
                                         }
                                     }
                                 }
@@ -132,14 +137,15 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 1;
+                                            font-size: $font-size-base * 0.3;
+                                            padding-block: $spacing-unit * 1;
+                                            padding-inline: $spacing-unit * 1;
+                                            gap: $spacing-unit * 0.5;
+                                            line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 10px;
-                                                height: 10px;
+                                                width: 7px;
+                                                height: 7px;
                                             }
                                         } 
                                     }
@@ -166,14 +172,15 @@
                                             flex-shrink: 0;
                                         }
                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-block: $spacing-unit * 1.2;
-                                            padding-inline: $spacing-unit * 1.2;
-                                            gap: $spacing-unit * 1;
+                                            font-size: $font-size-base * 0.3;
+                                            padding-block: $spacing-unit * 1;
+                                            padding-inline: $spacing-unit * 1;
+                                            gap: $spacing-unit * 0.5;
+                                            line-height: normal;
                                             &::before {
                                                 content: "";
-                                                width: 10px;
-                                                height: 10px;
+                                                width: 7px;
+                                                height: 7px;
                                             }
                                         } 
                                     }
@@ -190,6 +197,9 @@
                                         display: flex;
                                         align-items: center;
                                         gap: $spacing-unit * 3.5;
+                                        @media (max-width: $sm-breakpoint) {
+                                            gap: $spacing-unit * 1.5;
+                                        }
                                         .author-photo {
                                             img {
                                                 border-radius: 50%;
@@ -197,8 +207,8 @@
                                                 width: 50px;
                                                 height: 50px;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    width: 20px;
-                                                    height: 20px;
+                                                    width: 18px;
+                                                    height: 18px;
                                                 }
                                             }
                                         }
@@ -211,7 +221,7 @@
                                                 color: $color-black;
                                                 font-weight: $font-weight-bold;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    font-size: $font-size-base * 0.5;
+                                                    font-size: $font-size-base * 0.4;
                                                 }
                                             }
                                             .date {
@@ -219,7 +229,7 @@
                                                 color: $color-black;
                                                 font-weight: $font-weight-light;
                                                 @media (max-width: $sm-breakpoint) {
-                                                    font-size: $font-size-base * 0.4;
+                                                    font-size: $font-size-base * 0.3;
                                                 }
                                             }
                                         }
@@ -245,16 +255,18 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
-                                         @media (max-width: $sm-breakpoint) {
-                                            font-size: $font-size-base * 0.4;
-                                            padding-inline: $spacing-unit * 2;
-                                            padding-block: $spacing-unit * 2;
-                                            gap: $spacing-unit * 1;
+                                        @media (max-width: $sm-breakpoint) {
+                                            font-size: $font-size-base * 0.3;
+                                            padding-inline: $spacing-unit * 1;
+                                            padding-block: $spacing-unit * 1;
+                                            gap: $spacing-unit * 0.5;
+                                            line-height: normal;
+                                            border-radius: 5px;
                                             &::after {
-                                                width: 10px;
-                                                height: 10px;
+                                                width: 7px;
+                                                height: 7px;
                                             }
-                                         }
+                                        }
                                     }
                                 }
                             }
