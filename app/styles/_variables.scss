@@ -12,6 +12,7 @@ $color-orange: #FF7426;
 
 // Breakpoints
 $breakpoints: (
+  "xxs": 340px,
   "xs": 375px,
   "sm": 576px,
   "md": 768px,
@@ -20,6 +21,7 @@ $breakpoints: (
   "xxl": 1400px,
 );
 
+$xxs-breakpoint: map-get($breakpoints, "xxs");
 $xs-breakpoint: map-get($breakpoints, "xs");
 $sm-breakpoint: map-get($breakpoints, "sm");
 $md-breakpoint: map-get($breakpoints, "md");
