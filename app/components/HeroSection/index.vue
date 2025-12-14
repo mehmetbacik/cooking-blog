@@ -38,6 +38,11 @@ const modules = [Autoplay, EffectFade];
                 :srcset="slide.mobileImage"
                 media="(max-width: 576px)"
               />
+              <source
+                v-if="slide.mobileImage"
+                :srcset="slide.mobileImage"
+                media="(max-width: 768px)"
+              />
               <img :src="slide.image" :alt="slide.title" />
             </picture>
             <div class="overlay"></div>
