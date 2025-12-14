@@ -42,6 +42,9 @@
                         max-width: 50%;
                         height: 100%;
                         padding: $spacing-unit * 12;
+                        @media (max-width: $lg-breakpoint) {
+                            padding: $spacing-unit * 6;
+                        }
                         @media (max-width: $md-breakpoint) {
                             position: relative;
                             background-color: $color-blue-pale;
@@ -76,6 +79,9 @@
                                     justify-content: center;
                                     flex-direction: column;
                                     gap: $spacing-lg;
+                                    @media (max-width: $lg-breakpoint) {
+                                        gap: $spacing-md;
+                                    }
                                     @media (max-width: $md-breakpoint) {
                                         gap: $spacing-md;
                                     }
@@ -104,6 +110,18 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 0.75;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 2;
+                                            line-height: normal;
+                                            &::before {
+                                                content: "";
+                                                width: 20px;
+                                                height: 20px;
+                                            }
+                                        } 
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 0.75;
                                             padding-block: $spacing-unit * 2;
@@ -135,6 +153,10 @@
                                         color: $color-black;
                                         line-height: normal;
                                         letter-spacing: -4px;
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 2;
+                                            letter-spacing: -1px;
+                                        }
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 2;
                                             letter-spacing: -1px;
@@ -148,6 +170,9 @@
                                         font-size: $font-size-base * 0.9;
                                         font-weight: $font-weight-light;
                                         color: $color-black;
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 0.85;
+                                        }
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 0.85;
                                         }
@@ -186,6 +211,18 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 0.75;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 2;
+                                            line-height: normal;
+                                            &::before {
+                                                content: "";
+                                                width: 20px;
+                                                height: 20px;
+                                            }
+                                        } 
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 0.75;
                                             padding-block: $spacing-unit * 2;
@@ -233,6 +270,18 @@
                                             pointer-events: none;
                                             flex-shrink: 0;
                                         }
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 0.75;
+                                            padding-block: $spacing-unit * 2;
+                                            padding-inline: $spacing-unit * 2;
+                                            gap: $spacing-unit * 2;
+                                            line-height: normal;
+                                            &::before {
+                                                content: "";
+                                                width: 20px;
+                                                height: 20px;
+                                            }
+                                        }  
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 0.75;
                                             padding-block: $spacing-unit * 2;
@@ -264,6 +313,9 @@
                                     align-items: center;
                                     justify-content: space-between;
                                     width: calc(100% - 30px);
+                                    @media (max-width: $lg-breakpoint) {
+                                        width: 100%;
+                                    }
                                     @media (max-width: $md-breakpoint) {
                                         width: 100%;
                                     }
@@ -286,6 +338,10 @@
                                                 object-fit: cover;
                                                 width: 50px;
                                                 height: 50px;
+                                                @media (max-width: $lg-breakpoint) {
+                                                    width: 35px;
+                                                    height: 35px;
+                                                }
                                                 @media (max-width: $md-breakpoint) {
                                                     width: 40px;
                                                     height: 40px;
@@ -304,6 +360,9 @@
                                                 font-size: $font-size-base;
                                                 color: $color-black;
                                                 font-weight: $font-weight-bold;
+                                                @media (max-width: $lg-breakpoint) {
+                                                    font-size: $font-size-base * 0.9;
+                                                }
                                                 @media (max-width: $md-breakpoint) {
                                                     font-size: $font-size-base * 0.85;
                                                 }
@@ -315,6 +374,9 @@
                                                 font-size: $font-size-base * 0.875;
                                                 color: $color-black;
                                                 font-weight: $font-weight-light;
+                                                @media (max-width: $lg-breakpoint) {
+                                                    font-size: $font-size-base * 0.75;
+                                                }
                                                 @media (max-width: $md-breakpoint) {
                                                     font-size: $font-size-base * 0.75;
                                                 }
@@ -344,6 +406,18 @@
                                             background-size: contain;
                                             pointer-events: none;
                                             flex-shrink: 0;
+                                        }
+                                        @media (max-width: $lg-breakpoint) {
+                                            font-size: $font-size-base * 0.75;
+                                            padding-inline: $spacing-unit * 2;
+                                            padding-block: $spacing-unit * 2;
+                                            gap: $spacing-unit * 2;
+                                            line-height: normal;
+                                            border-radius: 10px;
+                                            &::after {
+                                                width: 20px;
+                                                height: 20px;
+                                            }
                                         }
                                         @media (max-width: $md-breakpoint) {
                                             font-size: $font-size-base * 0.75;
