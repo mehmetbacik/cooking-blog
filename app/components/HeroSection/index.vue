@@ -21,7 +21,7 @@ const modules = [Autoplay, EffectFade];
         :fade-effect="{ crossFade: true }"
         :speed="1000"
         :autoplay="{
-          delay: 9995000,
+          delay: 5000,
           disableOnInteraction: false,
         }"
       >

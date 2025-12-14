@@ -158,6 +158,7 @@
                                         letter-spacing: -4px;
                                         @media (max-width: $xl-breakpoint) {
                                             font-size: $font-size-base * 3;
+                                            letter-spacing: 0;
                                         }
                                         @media (max-width: $lg-breakpoint) {
                                             font-size: $font-size-base * 2;
