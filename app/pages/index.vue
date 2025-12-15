@@ -6,6 +6,7 @@ const featuredRecipes = recipes.slice(0, 3);
 <template>
   <div>
     <HeroSection />
+    <CategoriesSection />
     <section class="container mt-lg mb-lg">
       <div class="section-header text-center">
         <h2>Latest Recipes</h2>
