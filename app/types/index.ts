@@ -53,3 +53,10 @@ export interface SlideItem {
   text: string;
   link: string;
 }
+
+export interface CategoryItem {
+  id: number;
+  title: string;
+  url: string;
+  image: string;
+}
