@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import type { SlideItem } from "../../../types";
-defineProps<{ slide: SlideItem }>();
+
+defineProps({
+  slide: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <template>
-  <footer class="slide__footer">
+  <div class="slide__footer">
     <div class="author-wrapper">
       <span class="author-photo">
         <img :src="slide.photo" :alt="slide.author" />
       </span>
-
       <div class="author-content">
         <span class="author">{{ slide.author }}</span>
         <span class="date">{{ slide.date }}</span>
@@ -19,5 +23,5 @@ defineProps<{ slide: SlideItem }>();
     <NuxtLink :to="slide.link" class="hero-button">
       {{ slide.text }}
     </NuxtLink>
-  </footer>
+  </div>
 </template>
