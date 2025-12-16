@@ -23,7 +23,6 @@ import { categoriesData } from "../../data/categoriesData";
                 class="categories__image"
               />
             </div>
-
             <span class="categories__title">
               {{ category.title }}
             </span>
