@@ -22,7 +22,7 @@ export const heroSlides: SlideItem[] = [
     image: "/images/hero-banner.png",
     mobileImage: "/images/hero-mobile-banner.png",
     badge: "Hot Recipes",
-    title: "Seasonal Flavors in Your Kitchen",
+    title: "Seasonal Flavors in Kitchen",
     description:
       "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim.",
     time: "45 Minutes",
