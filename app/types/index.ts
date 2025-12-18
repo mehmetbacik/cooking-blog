@@ -49,7 +49,7 @@ export interface SlideItem {
   category: string;
   author: string;
   date: string;
-  photo: string
+  photo: string;
   text: string;
   link: string;
 }
@@ -59,4 +59,13 @@ export interface CategoryItem {
   title: string;
   url: string;
   image: string;
+}
+
+export interface SimpleRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
 }

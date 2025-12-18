@@ -1,0 +1,68 @@
+import type { SimpleRecipeItem } from "../types";
+
+export const recipes: SimpleRecipeItem[] = [
+  {
+    id: 1,
+    slug: "big-and-juicy-wagyu-beef-cheeseburger",
+    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    image: "/images/home/simpleRecipes/simpleRecipes-1.png",
+    category: "Snack",
+    time: "30 Minutes",
+  },
+  {
+    id: 2,
+    slug: "fresh-lime-roasted-salmon-with-ginger-sauce",
+    title: "Fresh Lime Roasted Salmon with Ginger Sauce",
+    image: "/images/home/simpleRecipes/simpleRecipes-2.png",
+    category: "Fish",
+    time: "30 Minutes",
+  },
+  {
+    id: 3,
+    slug: "strawberry-oatmeal-pancake-with-honey-syrup",
+    title: "Strawberry Oatmeal Pancake with Honey Syrup",
+    image: "/images/home/simpleRecipes/simpleRecipes-3.png",
+    category: "Breakfast",
+    time: "30 Minutes",
+  },
+  {
+    id: 4,
+    slug: "fresh-and-healthy-mixed-mayonnaise-salad",
+    title: "Fresh and Healthy Mixed Mayonnaise Salad",
+    image: "/images/home/simpleRecipes/simpleRecipes-4.png",
+    category: "Healthy",
+    time: "30 Minutes",
+  },
+  {
+    id: 5,
+    slug: "chicken-meatballs-with-cream-cheese",
+    title: "Chicken Meatballs with Cream Cheese",
+    image: "/images/home/simpleRecipes/simpleRecipes-5.png",
+    category: "Meat",
+    time: "30 Minutes",
+  },
+  {
+    id: 6,
+    slug: "fruity-pancake-with-orange-blueberry",
+    title: "Fruity Pancake with Orange & Blueberry",
+    image: "/images/home/simpleRecipes/simpleRecipes-6.png",
+    category: "Sweet",
+    time: "30 Minutes",
+  },
+  {
+    id: 7,
+    slug: "the-best-easy-one-pot-chicken-and-rice",
+    title: "The Best Easy One Pot Chicken and Rice",
+    image: "/images/home/simpleRecipes/simpleRecipes-7.png",
+    category: "Snack",
+    time: "30 Minutes",
+  },
+  {
+    id: 8,
+    slug: "the-creamiest-creamy-chicken-and-bacon-pasta",
+    title: "The Creamiest Creamy Chicken and Bacon Pasta",
+    image: "/images/home/simpleRecipes/simpleRecipes-8.png",
+    category: "Noodles",
+    time: "30 Minutes",
+  },
+];
