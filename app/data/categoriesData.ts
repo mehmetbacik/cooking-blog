@@ -10,7 +10,7 @@ export const categoriesData: CategoryItem[] = [
   {
     id: 2,
     title: "Vegan",
-    url: "/categories/city",
+    url: "/recipes",
     image: "/images/vegan.png",
   },
   {
