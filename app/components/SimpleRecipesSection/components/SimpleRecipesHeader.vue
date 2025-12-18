@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="simpleRecipes__header">
     <h2 class="simpleRecipes__title">Simple and tasty recipes</h2>

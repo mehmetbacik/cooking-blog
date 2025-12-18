@@ -1,6 +1,6 @@
 import type { SimpleRecipeItem } from "../types";
 
-export const recipes: SimpleRecipeItem[] = [
+export const simpleRecipesData: SimpleRecipeItem[] = [
   {
     id: 1,
     slug: "big-and-juicy-wagyu-beef-cheeseburger",
