@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div class="simpleRecipes__item">
-    <a :href="simpleRecipe.slug" class="simpleRecipes__link">
+    <NuxtLink :to="`/recipes/${simpleRecipe.slug}`" class="simpleRecipes__link">
       <div class="simpleRecipes__image-wrapper">
         <img
           :src="simpleRecipe.image"
@@ -19,6 +19,6 @@ defineProps<{
       <span class="simpleRecipes__item-title">
         {{ simpleRecipe.title }}
       </span>
-    </a>
+    </NuxtLink>
   </div>
 </template>
