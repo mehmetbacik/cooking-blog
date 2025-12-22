@@ -85,12 +85,14 @@ onMounted(() => {
       <span class="simpleRecipes__item-title">
         {{ simpleRecipe.title }}
       </span>
-      <span class="simpleRecipes__item-time">
-        {{ simpleRecipe.time }}
-      </span>
-      <span class="simpleRecipes__item-category">
-        {{ simpleRecipe.category }}
-      </span>
+      <div class="simpleRecipes__item-meta">
+        <span class="simpleRecipes__item-time">
+          {{ simpleRecipe.time }}
+        </span>
+        <span class="simpleRecipes__item-category">
+          {{ simpleRecipe.category }}
+        </span>
+      </div>
     </NuxtLink>
   </div>
 </template>
