@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import type { SimpleRecipeItem } from "../../../types";
 import SimpleRecipesCard from "./SimpleRecipesCard.vue";
+import SimpleRecipesAdBanner from "./SimpleRecipesAdBanner.vue";
 defineProps<{
   simpleRecipes: SimpleRecipeItem[];
 }>();
 </script>
 
-<template>
+<template >
   <div class="simpleRecipes__list">
-    <SimpleRecipesCard
-      v-for="simpleRecipe in simpleRecipes"
+    <template
+      v-for="(simpleRecipe, index) in simpleRecipes"
       :key="simpleRecipe.id"
-      :simpleRecipe="simpleRecipe"
-    />
+    >
+      <SimpleRecipesCard :simpleRecipe="simpleRecipe" />
+      <SimpleRecipesAdBanner v-if="index === 4" />
+    </template>
   </div>
 </template>
