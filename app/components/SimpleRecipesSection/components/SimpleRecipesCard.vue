@@ -1,55 +1,29 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import type { SimpleRecipeItem } from "../../../types";
+import { useFavorites } from "../../../helpers/useFavorites";
 import { useTextTruncation } from "../../../helpers/useTextTruncation";
 
 const props = defineProps<{
   simpleRecipe: SimpleRecipeItem;
 }>();
 
-const STORAGE_KEY = "favorites";
+const { isFavorite, toggleFavorite } = useFavorites();
 
-const isFavorite = ref(false);
 const isAnimating = ref(false);
 
-const getFavorites = (): number[] => {
-  if (typeof window === "undefined") return [];
-  try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-  } catch {
-    return [];
-  }
-};
-
-const setFavorites = (favorites: number[]) => {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
-};
-
-const toggleFavorite = (event: MouseEvent) => {
+const onToggleFavorite = (event: MouseEvent) => {
   event.preventDefault();
   event.stopPropagation();
 
-  const favorites = getFavorites();
-
-  if (isFavorite.value) {
-    setFavorites(favorites.filter((id) => id !== props.simpleRecipe.id));
-  } else {
-    setFavorites([...favorites, props.simpleRecipe.id]);
-    animate();
-  }
-
-  isFavorite.value = !isFavorite.value;
+  toggleFavorite(props.simpleRecipe.id);
+  animate();
 };
 
 const animate = () => {
   isAnimating.value = true;
   setTimeout(() => (isAnimating.value = false), 400);
 };
-
-onMounted(() => {
-  isFavorite.value = getFavorites().includes(props.simpleRecipe.id);
-});
 
 const { truncatedTitle } = useTextTruncation(props.simpleRecipe.title);
 </script>
@@ -60,9 +34,9 @@ const { truncatedTitle } = useTextTruncation(props.simpleRecipe.title);
       <div class="simpleRecipes__image-wrapper">
         <button
           class="fav-btn"
-          :class="{ active: isFavorite, pop: isAnimating }"
-          @click="toggleFavorite"
-          :aria-pressed="isFavorite"
+          :class="{ active: isFavorite(simpleRecipe.id), pop: isAnimating }"
+          @click="onToggleFavorite"
+          :aria-pressed="isFavorite(simpleRecipe.id)"
           aria-label="Favorite"
         >
           <svg
@@ -86,7 +60,7 @@ const { truncatedTitle } = useTextTruncation(props.simpleRecipe.title);
       </div>
 
       <span class="simpleRecipes__item-title">
-          {{ truncatedTitle }}
+        {{ truncatedTitle }}
       </span>
       <div class="simpleRecipes__item-meta">
         <span class="simpleRecipes__item-time">
