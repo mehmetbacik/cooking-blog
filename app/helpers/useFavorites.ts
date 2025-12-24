@@ -1,15 +1,17 @@
 import { ref, onMounted } from "vue";
 
 const STORAGE_KEY = "favorites";
+const favorites = ref<number[]>([]);
+let isInitialized = false;
 
 export const useFavorites = () => {
-  const favorites = ref<number[]>([]);
-
   const loadFavorites = () => {
     if (typeof window === "undefined") return;
 
     try {
-      favorites.value = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+      favorites.value = JSON.parse(
+        localStorage.getItem(STORAGE_KEY) || "[]"
+      );
     } catch {
       favorites.value = [];
     }
@@ -26,7 +28,7 @@ export const useFavorites = () => {
 
   const addFavorite = (id: number) => {
     if (!favorites.value.includes(id)) {
-      favorites.value.push(id);
+      favorites.value = [...favorites.value, id];
       saveFavorites();
     }
   };
@@ -45,7 +47,10 @@ export const useFavorites = () => {
   };
 
   onMounted(() => {
-    loadFavorites();
+    if (!isInitialized) {
+      loadFavorites();
+      isInitialized = true;
+    }
   });
 
   return {
