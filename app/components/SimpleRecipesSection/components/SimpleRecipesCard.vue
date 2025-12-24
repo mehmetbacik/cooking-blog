@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import type { SimpleRecipeItem } from "../../../types";
+import { useTextTruncation } from "../../../helpers/useTextTruncation";
 
 const props = defineProps<{
   simpleRecipe: SimpleRecipeItem;
@@ -49,6 +50,8 @@ const animate = () => {
 onMounted(() => {
   isFavorite.value = getFavorites().includes(props.simpleRecipe.id);
 });
+
+const { truncatedTitle } = useTextTruncation(props.simpleRecipe.title);
 </script>
 
 <template>
@@ -83,7 +86,7 @@ onMounted(() => {
       </div>
 
       <span class="simpleRecipes__item-title">
-        {{ simpleRecipe.title }}
+          {{ truncatedTitle }}
       </span>
       <div class="simpleRecipes__item-meta">
         <span class="simpleRecipes__item-time">
