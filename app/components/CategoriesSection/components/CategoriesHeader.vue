@@ -3,8 +3,8 @@
 <template>
   <div class="categories__header">
     <h2 class="categories__title">Categories</h2>
-    <a href="/recipes" class="categories__all-link">
+    <NuxtLink to="/recipes" class="categories__all-link">
       View All Categories
-    </a>
+    </NuxtLink>
   </div>
 </template>

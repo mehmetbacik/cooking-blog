@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="slide-bg">
+  <div class="slide__bg">
     <picture>
       <source
         v-if="slide.mobileImage"
@@ -23,7 +23,7 @@ defineProps({
     <div class="overlay"></div>
   </div>
 
-  <div class="slide-content">
+  <div class="slide__content">
     <div class="content-wrapper">
       <SlideHeader :slide="slide" />
 

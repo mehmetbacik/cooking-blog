@@ -23,7 +23,7 @@
                     @media (max-width: $sm-breakpoint) {
                         flex-direction: column;
                     }
-                    .slide-bg {
+                    .slide__bg {
                         width: 100%;
                         img {
                             border-radius: 40px;
@@ -37,7 +37,7 @@
                             }
                         }
                     }
-                    .slide-content {
+                    .slide__content {
                         position: absolute;
                         max-width: 50%;
                         height: 100%;

@@ -15,15 +15,15 @@ const props = defineProps<{
   <div
     :class="['social__links', mobile ? 'header__social-wrapper--mobile' : '']"
   >
-    <a
+    <NuxtLink 
       v-for="social in props.socialItems"
       :key="social.id"
-      :href="social.link"
+      :to="social.link"
       target="_blank"
       :aria-label="social.name"
       class="social-item"
     >
       <img :src="social.iconUrl" :alt="social.name" />
-    </a>
+    </NuxtLink >
   </div>
 </template>
