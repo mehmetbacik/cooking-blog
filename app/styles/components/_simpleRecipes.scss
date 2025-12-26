@@ -51,6 +51,7 @@
                     color: $color-black;
                     text-align: center;
                     padding-inline: $spacing-unit * 60;
+                    line-height: 1.8;
                     @media (max-width: $md-breakpoint) {
                         padding-inline: $spacing-unit * 2;
                     }  

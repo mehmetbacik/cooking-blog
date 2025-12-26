@@ -177,6 +177,7 @@
                                         font-size: $font-size-base * 0.9;
                                         font-weight: $font-weight-light;
                                         color: $color-black;
+                                        line-height: 1.8;
                                         @media (max-width: $lg-breakpoint) {
                                             font-size: $font-size-base * 0.85;
                                         }
