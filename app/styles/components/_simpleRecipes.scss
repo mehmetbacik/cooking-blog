@@ -117,7 +117,7 @@
                                 justify-content: center;
                                 cursor: pointer;
                                 box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-                                transition: all 0.2s ease;
+                                transition: $transition-base;
                                 backdrop-filter: blur(2px);
                                 @media (max-width: $sm-breakpoint) {
                                     top: 10px;
