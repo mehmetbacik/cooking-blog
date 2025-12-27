@@ -69,3 +69,10 @@ export interface SimpleRecipeItem {
   category: string;
   time: string;
 }
+
+export interface InstagramPost {
+  id: number;
+  image: string;
+  link: string;
+  alt: string;
+}
