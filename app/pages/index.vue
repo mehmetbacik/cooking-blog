@@ -9,6 +9,7 @@ const featuredRecipes = recipes.slice(0, 3);
     <CategoriesSection />
     <SimpleRecipesSection />
     <BannerSection />
+    <InstagramSection />
     <RecipeCard
       v-for="recipe in featuredRecipes"
       :key="recipe.id"
