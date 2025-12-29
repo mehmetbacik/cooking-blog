@@ -1,0 +1,68 @@
+import type { DeliciousRecipeItem } from "../types";
+
+export const deliciousRecipeItem: DeliciousRecipeItem[] = [
+  {
+    id: 1,
+    slug: "mixed-tropical-fruit-salad-with-superfood-boosts ",
+    title: "Mixed Tropical Fruit Salad with Superfood Boosts",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-1.png",
+    category: "Healthy",
+    time: "30 Minutes",
+  },
+  {
+    id: 2,
+    slug: "big-and-juicy-wagyu-beef-cheeseburger",
+    title: "Big and Juicy Wagyu Beef Cheeseburger",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-2.png",
+    category: "Western",
+    time: "30 Minutes",
+  },
+  {
+    id: 3,
+    slug: "healthy-japanese-fried-rice-with-asparagus",
+    title: "Healthy Japanese Fried Rice with Asparagus",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-3.png",
+    category: "Healthy",
+    time: "30 Minutes",
+  },
+  {
+    id: 4,
+    slug: "cauliflower-walnut-vegetarian-taco-meat",
+    title: "Cauliflower Walnut Vegetarian Taco Meat",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-4.png",
+    category: "Eastern",
+    time: "30 Minutes",
+  },
+  {
+    id: 5,
+    slug: "rainbow-chicken-salad-with-almond-honey-mustard-dressing",
+    title: "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-5.png",
+    category: "Healthy",
+    time: "30 Minutes",
+  },
+  {
+    id: 6,
+    slug: "barbeque-spicy-sandwiches-with-chips",
+    title: "Barbeque Spicy Sandwiches with Chips",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-6.png",
+    category: "Snack",
+    time: "30 Minutes",
+  },
+  {
+    id: 7,
+    slug: "firecracker-vegan-lettuce-wraps-spicy",
+    title: "Firecracker Vegan Lettuce Wraps - Spicy!",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-7.png",
+    category: "Seafood",
+    time: "30 Minutes",
+  },
+  {
+    id: 8,
+    slug: "chicken-ramen-soup-with-mushroom ",
+    title: "Chicken Ramen Soup with Mushroom",
+    image: "/images/home/deliciousRecipes/deliciousRecipes-8.png",
+    category: "Japanese",
+    time: "30 Minutes",
+  },
+];

@@ -76,3 +76,12 @@ export interface InstagramPost {
   link: string;
   alt: string;
 }
+
+export interface DeliciousRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
+}
