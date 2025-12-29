@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { createError } from "nuxt/app";
+
 import { simpleRecipesData } from "../../data/simpleRecipesData";
+import { deliciousRecipesData } from "../../data/deliciousRecipesData";
+
 const route = useRoute();
-const recipe = simpleRecipesData.find((r) => r.slug === route.params.slug);
+const slug = route.params.slug;
+
+const recipe =
+  simpleRecipesData.find((r) => r.slug === slug) ||
+  deliciousRecipesData.find((r) => r.slug === slug);
 
 if (!recipe) {
   throw createError({ statusCode: 404, statusMessage: "Recipe Not Found" });
