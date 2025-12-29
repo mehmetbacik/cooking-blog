@@ -10,10 +10,12 @@
     @media (max-width: $md-breakpoint) {
         margin-top: $spacing-unit * 6;
         margin-bottom: $spacing-unit * 12;
+         padding-bottom: $spacing-unit * 10;
     }
     @media (max-width: $sm-breakpoint) {
         margin-top: $spacing-unit * 4;
         margin-bottom: $spacing-unit * 10;
+         padding-bottom: $spacing-unit * 10;
     }
     &__content {
         display: flex;
@@ -74,7 +76,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }  
             @media (max-width: $sm-breakpoint) {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             } 
             .homeInstagram__item {
                 img {
