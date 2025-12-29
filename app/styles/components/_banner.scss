@@ -39,6 +39,7 @@
                 line-height: normal;
                 color: $color-black;
                 @media (max-width: $md-breakpoint) {
+                    font-size: $font-size-base * 2;
                     text-align: center;
                 }
                 @media (max-width: $sm-breakpoint) {

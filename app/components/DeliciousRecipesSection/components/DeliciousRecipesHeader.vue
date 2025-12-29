@@ -1,7 +1,7 @@
 <template>
   <div class="deliciousRecipes__header">
     <h2 class="deliciousRecipes__title">
-      Try this delicious recipe to make your day
+      Try this delicious recipe to make your&nbsp;day
     </h2>
     <p class="deliciousRecipes__desc">
       Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
