@@ -9,5 +9,57 @@
         margin-top: $spacing-unit * 4;
         margin-bottom: $spacing-unit * 10;
     }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-unit * 24;
+        @media (max-width: $md-breakpoint) {
+            gap: $spacing-unit * 10;
+        } 
+        @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 8;
+        }
+        .deliciousRecipes__header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: $spacing-unit * 24;
+            @media (max-width: $sm-breakpoint) {
+                gap: $spacing-unit * 4;
+            }
+            .deliciousRecipes__title {
+                font-size: $font-size-base * 3;
+                font-weight: $font-weight-semibold;
+                text-align: left;
+                letter-spacing: -2px;
+                color: $color-black;
+                line-height: normal;
+                @media (max-width: $md-breakpoint) {
+                    font-size: $font-size-base * 2;
+                    letter-spacing: 0;
+                }  
+                @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 1.5;
+                    letter-spacing: -1px;
+                }                    
+            }
+            .deliciousRecipes__desc {
+                font-size: $font-size-base;
+                font-weight: $font-weight-light;
+                color: $color-black;
+                text-align: left;
+                line-height: 1.8;
+                @media (max-width: $md-breakpoint) {
+                    padding-inline: $spacing-unit * 2;
+                }  
+                @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.875;
+                    padding-inline: $spacing-unit * 0;
+                }   
+            }
+        }
+    }
 }
 
