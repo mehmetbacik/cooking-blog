@@ -85,3 +85,9 @@ export interface DeliciousRecipeItem {
   category: string;
   time: string;
 }
+
+export interface FooterNavItem {
+  id: number;
+  label: string;
+  link: string;
+}
