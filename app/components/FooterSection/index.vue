@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { navItems } from "../../data/footerNavData";
+import { socialItems } from "../../data/socialData";
 
 const email = ref("");
 
@@ -29,6 +31,30 @@ const handleSubscribe = () => {
           />
           <button type="submit">Subscribe</button>
         </form>
+      </div>
+      <div class="footer__nav">
+        <nav class="footer__links">
+          <NuxtLink
+            v-for="item in navItems"
+            :key="item.id"
+            :to="item.link"
+            class="footer-item"
+          >
+            {{ item.label }}
+          </NuxtLink>
+        </nav>
+      </div>
+      <div class="footer__social">
+        <NuxtLink
+          v-for="social in socialItems"
+          :key="social.id"
+          :href="social.link"
+          target="_blank"
+          class="social-link"
+          :aria-label="social.name"
+        >
+          <img :src="social.iconUrl" :alt="social.name" />
+        </NuxtLink>
       </div>
     </div>
   </footer>
