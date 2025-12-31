@@ -9,4 +9,100 @@
         margin-top: $spacing-unit * 4;
         margin-bottom: $spacing-unit * 10;
     }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-unit * 40;
+        .footer__newsletter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $spacing-unit * 6;
+            padding-block: $spacing-unit * 20;
+            background-color: $color-blue-pale;
+            background-image: url("/images/footer/newsletter-1.png"), url("/images/footer/newsletter-2.png");
+            background-position: left bottom, right bottom;
+            background-repeat: no-repeat, no-repeat;
+            background-size: auto, auto;
+            border-radius: 50px;
+            &-title {
+                font-size: $font-size-base * 3;
+                font-weight: $font-weight-semibold;
+                text-align: center;
+                letter-spacing: -2px;
+                color: $color-black;
+                line-height: normal;
+                @media (max-width: $md-breakpoint) {
+                    font-size: $font-size-base * 2;
+                    letter-spacing: 0;
+                }  
+                @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 1.5;
+                    letter-spacing: -1px;
+                }  
+            }
+            &-desc {
+                font-size: $font-size-base;
+                font-weight: $font-weight-light;
+                color: $color-black;
+                text-align: center;
+                line-height: 1.8;
+                @media (max-width: $md-breakpoint) {
+                    padding-inline: $spacing-unit * 2;
+                }  
+                @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.875;
+                    padding-inline: $spacing-unit * 0;
+                }  
+            }
+            &-form {
+                display: flex;
+                align-items: center;
+                margin-top: $spacing-unit * 10;
+                background-color: $color-white;
+                border-radius: 25px;
+                padding: $spacing-unit * 2.5;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+                transition: $transition-base;
+                &:focus-within {
+                    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+                }
+                input {
+                    flex: 1;
+                    border: none;
+                    background: transparent;
+                    padding-inline: $spacing-unit * 5;
+                    padding-block: $spacing-unit * 5;
+                    font-size: $font-size-base * 0.875;
+                    color: $color-black;
+                    &::placeholder {
+                        color: $color-gray;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                button {
+                    border: none;
+                    background-color: $color-black;
+                    color: $color-white;
+                    padding-inline: $spacing-unit * 10;
+                    padding-block: $spacing-unit * 5;
+                    font-size: $font-size-base * 0.875;
+                    font-weight: $font-weight-semibold;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: $transition-base;
+                    &:hover {
+                        background-color: $color-black;
+                        transform: translateY(-1px);
+                    }
+                    &:active {
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
 }

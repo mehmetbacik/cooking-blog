@@ -17,12 +17,12 @@ const handleSubscribe = () => {
   <footer class="footer">
     <div class="container footer__content">
       <div class="footer__newsletter">
-        <h4>Deliciousness to your inbox</h4>
-        <p>
+        <h4 class="footer__newsletter-title">Deliciousness to your inbox</h4>
+        <p class="footer__newsletter-desc">
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          tempor <br />incididunt ut labore et dolore magna aliqut enim ad minim
         </p>
-        <form @submit.prevent="handleSubscribe" class="newsletter-form">
+        <form @submit.prevent="handleSubscribe" class="footer__newsletter-form">
           <input
             v-model="email"
             type="email"
