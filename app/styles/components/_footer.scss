@@ -104,5 +104,49 @@
                 }
             }
         }
+        .footer__bottom {
+            .footer__nav-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: solid 1px $color-gray-light;
+                padding-bottom: $spacing-unit * 12;
+                .footer__logo-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: $spacing-unit * 4;
+                    .footer__logo-desc {
+                        font-size: $font-size-base;
+                        font-weight: $font-weight-light;
+                        color: $color-black;
+                        text-align: center;
+                        line-height: 1.8;
+                        @media (max-width: $md-breakpoint) {
+                            padding-inline: $spacing-unit * 2;
+                        }  
+                        @media (max-width: $sm-breakpoint) {
+                            font-size: $font-size-base * 0.875;
+                            padding-inline: $spacing-unit * 0;
+                        }  
+                    }
+                }
+                .footer__nav-wrapper {
+                    .footer__nav {
+                        display: flex;
+                        align-items: center;
+                        gap: $spacing-unit * 15;
+                        &-item {
+                            font-size: $font-size-base;
+                            font-weight: $font-weight-semibold;
+                            color: $color-black;
+                            transition: $transition-base;
+                            &:hover {
+                                color: $color-blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

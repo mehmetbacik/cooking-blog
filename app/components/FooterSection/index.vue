@@ -3,6 +3,8 @@ import { ref } from "vue";
 import { navItems } from "../../data/footerNavData";
 import { socialItems } from "../../data/socialData";
 
+const LogoPath = "/images/logo.svg";
+
 const email = ref("");
 
 const handleSubscribe = () => {
@@ -32,29 +34,41 @@ const handleSubscribe = () => {
           <button type="submit">Subscribe</button>
         </form>
       </div>
-      <div class="footer__nav">
-        <nav class="footer__links">
+      <div class="footer__bottom">
+        <div class="footer__nav-group">
+          <div class="footer__logo-wrapper">
+            <NuxtLink to="/" class="footer__logo">
+              <img :src="LogoPath" alt="Logo" />
+            </NuxtLink>
+            <p class="footer__logo-desc">
+              Lorem ipsum dolor sit amet, consectetuipisicing elit
+            </p>
+          </div>
+          <div class="footer__nav-wrapper">
+            <nav class="footer__nav">
+              <NuxtLink
+                v-for="item in navItems"
+                :key="item.id"
+                :to="item.link"
+                class="footer__nav-item"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__social">
           <NuxtLink
-            v-for="item in navItems"
-            :key="item.id"
-            :to="item.link"
-            class="footer-item"
+            v-for="social in socialItems"
+            :key="social.id"
+            :href="social.link"
+            target="_blank"
+            class="social-link"
+            :aria-label="social.name"
           >
-            {{ item.label }}
+            <img :src="social.iconUrl" :alt="social.name" />
           </NuxtLink>
-        </nav>
-      </div>
-      <div class="footer__social">
-        <NuxtLink
-          v-for="social in socialItems"
-          :key="social.id"
-          :href="social.link"
-          target="_blank"
-          class="social-link"
-          :aria-label="social.name"
-        >
-          <img :src="social.iconUrl" :alt="social.name" />
-        </NuxtLink>
+        </div>
       </div>
     </div>
   </footer>
