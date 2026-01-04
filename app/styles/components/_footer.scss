@@ -65,6 +65,8 @@
                 padding: $spacing-unit * 2.5;
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
                 transition: $transition-base;
+                width: 100%;
+                max-width: 440px;
                 &:focus-within {
                     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
                 }
@@ -144,6 +146,35 @@
                                 color: $color-blue;
                             }
                         }
+                    }
+                }
+            }
+            .footer__meta {
+                display: flex;
+                align-items: center;
+                padding-block: $spacing-unit * 12;
+                .footer__copyright {
+                    flex: 8;
+                    text-align: center;
+                    span {
+                        font-size: $font-size-base * 1.125;
+                        font-weight: $font-weight-light;
+                        color: $color-black;
+                        .footer__copyright-company {
+                            color: $color-orange;
+                        }
+                    }
+                }
+                .footer__social {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex: 1;
+                    &-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 22px;
                     }
                 }
             }

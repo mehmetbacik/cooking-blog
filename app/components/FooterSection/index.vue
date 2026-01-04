@@ -57,17 +57,23 @@ const handleSubscribe = () => {
             </nav>
           </div>
         </div>
-        <div class="footer__social">
-          <NuxtLink
-            v-for="social in socialItems"
-            :key="social.id"
-            :href="social.link"
-            target="_blank"
-            class="social-link"
-            :aria-label="social.name"
-          >
-            <img :src="social.iconUrl" :alt="social.name" />
-          </NuxtLink>
+        <div class="footer__meta">
+          <div class="footer__copyright">
+            <span>&copy; 2020 Flowbase. Powered by <NuxtLink to="#" class="footer__copyright-company">Webflow</NuxtLink></span>
+            
+          </div>
+          <div class="footer__social">
+            <NuxtLink
+              v-for="social in socialItems"
+              :key="social.id"
+              :to="social.link"
+              target="_blank"
+              class="footer__social-item"
+              :aria-label="social.name"
+            >
+              <img :src="social.iconUrl" :alt="social.name" />
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
