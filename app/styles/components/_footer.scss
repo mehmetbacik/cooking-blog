@@ -13,6 +13,9 @@
         display: flex;
         flex-direction: column;
         gap: $spacing-unit * 40;
+        @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 10;
+        }
         .footer__newsletter {
             display: flex;
             flex-direction: column;
@@ -113,10 +116,17 @@
                 justify-content: space-between;
                 border-bottom: solid 1px $color-gray-light;
                 padding-bottom: $spacing-unit * 12;
+                @media (max-width: $sm-breakpoint) {
+                    flex-direction: column;
+                    gap: $spacing-unit * 4;
+                }
                 .footer__logo-wrapper {
                     display: flex;
                     flex-direction: column;
                     gap: $spacing-unit * 4;
+                    @media (max-width: $sm-breakpoint) {
+                        align-items: center;
+                    }
                     .footer__logo-desc {
                         font-size: $font-size-base;
                         font-weight: $font-weight-light;
@@ -137,6 +147,10 @@
                         display: flex;
                         align-items: center;
                         gap: $spacing-unit * 15;
+                        @media (max-width: $sm-breakpoint) {
+                            flex-direction: column;
+                            gap: $spacing-unit * 4;
+                        }
                         &-item {
                             font-size: $font-size-base;
                             font-weight: $font-weight-semibold;
@@ -150,11 +164,16 @@
                 }
             }
             .footer__meta {
+                position: relative;
                 display: flex;
                 align-items: center;
                 padding-block: $spacing-unit * 12;
+                @media (max-width: $sm-breakpoint) {
+                    flex-direction: column;
+                    gap: $spacing-unit * 4;
+                }
                 .footer__copyright {
-                    flex: 8;
+                    width: 100%;
                     text-align: center;
                     span {
                         font-size: $font-size-base * 1.125;
@@ -166,15 +185,19 @@
                     }
                 }
                 .footer__social {
+                    position: absolute;
+                    right: 0;
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
-                    flex: 1;
+                    gap: $spacing-unit * 10;
                     &-item {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         min-width: 22px;
+                    }
+                    @media (max-width: $sm-breakpoint) {
+                        position: relative;
                     }
                 }
             }
