@@ -3,7 +3,7 @@ import { posts } from "../../data/posts";
 </script>
 
 <template>
-  <div class="container page-wrapper">
+  <div class="blogList">
     <div class="header-block">
       <h1>Culinary Stories</h1>
       <p>Tips, techniques, and tales from the kitchen.</p>

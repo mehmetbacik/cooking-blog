@@ -4,7 +4,7 @@ const featuredRecipes = recipes.slice(0, 3);
 </script>
 
 <template>
-  <div>
+  <div class="home">
     <HeroSection />
     <CategoriesSection />
     <SimpleRecipesSection />
