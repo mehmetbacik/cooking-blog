@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
-import { posts } from "../../data/posts";
-import type { BlogPost } from "../../types";
+import { blogData } from "../../data/blogData";
 
-const allPosts = ref(posts);
+const allPosts = ref(blogData);
 const searchQuery = ref("");
 const currentPage = ref(1);
 const itemsPerPage = 6;
@@ -13,10 +12,10 @@ const filteredPosts = computed(() => {
   if (!query) return allPosts.value;
 
   return allPosts.value.filter(
-    (post) =>
-      post.title.toLowerCase().includes(query) ||
-      post.category.toLowerCase().includes(query) ||
-      post.excerpt.toLowerCase().includes(query)
+    (blogData) =>
+      blogData.title.toLowerCase().includes(query) ||
+      blogData.author.toLowerCase().includes(query) ||
+      blogData.excerpt.toLowerCase().includes(query)
   );
 });
 
@@ -70,23 +69,25 @@ const changePage = (page: number) => {
       <div class="main-column">
         <div v-if="paginatedPosts.length > 0" class="blog-list">
           <article
-            v-for="post in paginatedPosts"
-            :key="post.id"
+            v-for="blogData in paginatedPosts"
+            :key="blogData.id"
             class="blog-entry"
           >
             <div class="entry-image">
-              <img :src="post.image" :alt="post.title" loading="lazy" />
+              <img :src="blogData.image" :alt="blogData.title" loading="lazy" />
             </div>
             <div class="entry-content">
-              <span class="cat-tag">{{ post.category }}</span>
-              <NuxtLink :to="`/blog/${post.slug}`" class="title-link">
-                <h2>{{ post.title }}</h2>
+              <NuxtLink :to="`/blog/${blogData.slug}`" class="title-link">
+                <h2>{{ blogData.title }}</h2>
               </NuxtLink>
-              <p>{{ post.excerpt }}</p>
+              <p>{{ blogData.excerpt }}</p>
               <div class="entry-meta">
-                <span>{{ post.date }}</span> •
-                <span>{{ post.readTime }} read</span>
+                <span>{{ blogData.date }}</span>
               </div>
+              <span class="author-photo">
+                <img :src="blogData.photo" :alt="blogData.author" />
+              </span>
+              <span class="author">{{ blogData.author }}</span>
             </div>
           </article>
         </div>

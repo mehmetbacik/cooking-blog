@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import { createError } from "nuxt/app";
-import { posts } from "../../data/posts";
+import { blogData } from "../../data/blogData";
 const route = useRoute();
-const post = posts.find((p) => p.slug === route.params.slug);
+const post = blogData.find((p) => p.slug === route.params.slug);
 
 if (!post) {
   throw createError({ statusCode: 404, statusMessage: "Post Not Found" });
@@ -14,7 +14,6 @@ if (!post) {
   <article class="container post-wrapper">
     <div class="post-header">
       <NuxtLink to="/blog" class="back-link">← Back to Blog</NuxtLink>
-      <span class="category">{{ post.category }}</span>
       <h1>{{ post.title }}</h1>
       <div class="meta">
         Written by <strong>{{ post.author }}</strong> on {{ post.date }}

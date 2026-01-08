@@ -1,6 +1,6 @@
 import type { BlogPost } from "../types";
 
-export const posts: BlogPost[] = [
+export const blogData: BlogPost[] = [
   {
     id: 1,
     slug: "crochet-projects-for-noodl-lovers",
