@@ -1,40 +1,48 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   currentPage: number;
   totalPages: number;
 }>();
 
 const emit = defineEmits<{
-  (e: "change", page: number): void;
+  (e: "page-change", page: number): void;
 }>();
+
+const changePage = (page: number) => {
+  if (page >= 1 && page <= props.totalPages) {
+    emit("page-change", page);
+  }
+};
 </script>
 
 <template>
   <div v-if="totalPages > 1" class="pagination">
     <button
-      class="page-btn"
+      class="page-btn prev"
       :disabled="currentPage === 1"
-      @click="emit('change', currentPage - 1)"
+      @click="changePage(currentPage - 1)"
     >
-      ← Prev
+      &larr; Prev
     </button>
 
-    <button
-      v-for="page in totalPages"
-      :key="page"
-      class="page-num"
-      :class="{ active: currentPage === page }"
-      @click="emit('change', page)"
-    >
-      {{ page }}
-    </button>
+    <div class="page-numbers">
+      <button
+        v-for="page in totalPages"
+        :key="page"
+        class="page-num"
+        :class="{ active: currentPage === page }"
+        @click="changePage(page)"
+      >
+        {{ page }}
+      </button>
+    </div>
 
     <button
-      class="page-btn"
+      class="page-btn next"
       :disabled="currentPage === totalPages"
-      @click="emit('change', currentPage + 1)"
+      @click="changePage(currentPage + 1)"
     >
-      Next →
+      Next &rarr;
     </button>
   </div>
 </template>

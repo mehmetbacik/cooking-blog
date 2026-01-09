@@ -5,22 +5,25 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: "update:modelValue", value: string): void;
+  (e: 'update:modelValue', value: string): void;
+  (e: 'search'): void;
 }>();
 
-const onInput = (event: Event) => {
-  emit("update:modelValue", (event.target as HTMLInputElement).value);
+const updateValue = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.value);
 };
 </script>
 
 <template>
   <div class="search-box">
     <input
-      class="search-input"
-      :placeholder="placeholder || 'Search...'"
-      :value="modelValue"
-      @input="onInput"
       type="text"
+      :value="modelValue"
+      @input="updateValue"
+      :placeholder="placeholder || 'Search...'"
+      class="search-input"
     />
+    <button class="search-btn" @click="emit('search')">Search</button>
   </div>
 </template>
