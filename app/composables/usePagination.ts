@@ -1,34 +1,37 @@
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, type Ref } from "vue";
 
-export function usePagination<T>(items: T[], itemsPerPage = 6) {
+export function usePagination<T>(list: Ref<T[]>, itemsPerPage: number = 6) {
   const currentPage = ref(1);
 
-  const totalPages = computed(() =>
-    Math.ceil(items.length / itemsPerPage)
+  const totalPages = computed(
+    () => Math.ceil(list.value.length / itemsPerPage) || 1
   );
 
   const paginatedItems = computed(() => {
     const start = (currentPage.value - 1) * itemsPerPage;
-    return items.slice(start, start + itemsPerPage);
+    const end = start + itemsPerPage;
+    return list.value.slice(start, end);
   });
 
-  watch(totalPages, (newTotal) => {
-    if (currentPage.value > newTotal) {
-      currentPage.value = 1;
-    }
+  watch(list, () => {
+    currentPage.value = 1;
   });
 
   const changePage = (page: number) => {
     if (page >= 1 && page <= totalPages.value) {
       currentPage.value = page;
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
+
+  const nextPage = () => changePage(currentPage.value + 1);
+  const prevPage = () => changePage(currentPage.value - 1);
 
   return {
     currentPage,
     totalPages,
     paginatedItems,
     changePage,
+    nextPage,
+    prevPage,
   };
 }
