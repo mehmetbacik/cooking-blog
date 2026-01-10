@@ -1,100 +1,100 @@
 .homeBanner {
-    margin-top: $spacing-unit * 10;
-    margin-bottom: $spacing-unit * 40;
+  margin-top: $spacing-unit * 10;
+  margin-bottom: $spacing-unit * 40;
+  @media (max-width: $md-breakpoint) {
+    margin-top: $spacing-unit * 6;
+    margin-bottom: $spacing-unit * 12;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 10;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-unit * 4;
     @media (max-width: $md-breakpoint) {
-        margin-top: $spacing-unit * 6;
-        margin-bottom: $spacing-unit * 12;
+      flex-direction: column;
     }
     @media (max-width: $sm-breakpoint) {
-        margin-top: $spacing-unit * 4;
-        margin-bottom: $spacing-unit * 10;
+      flex-direction: column;
     }
-    &__content {
-        display: flex;
+    .homeBanner__intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-unit * 5;
+      @media (max-width: $md-breakpoint) {
         align-items: center;
-        justify-content: center;
-        gap: $spacing-unit * 4;
+      }
+      @media (max-width: $sm-breakpoint) {
+        align-items: center;
+      }
+      .homeBanner__title {
+        font-size: $font-size-base * 2.8;
+        font-weight: $font-weight-semibold;
+        letter-spacing: -2px;
+        line-height: normal;
+        color: $color-black;
         @media (max-width: $md-breakpoint) {
-            flex-direction: column;
+          font-size: $font-size-base * 2;
+          text-align: center;
         }
         @media (max-width: $sm-breakpoint) {
-            flex-direction: column;
+          font-size: $font-size-base * 1.5;
+          letter-spacing: -1px;
+          text-align: center;
         }
-        .homeBanner__intro {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: $spacing-unit * 5;
-            @media (max-width: $md-breakpoint) {
-                align-items: center;
-            }
-            @media (max-width: $sm-breakpoint) {
-                align-items: center;
-            }            
-            .homeBanner__title {
-                font-size: $font-size-base * 2.8;
-                font-weight: $font-weight-semibold;
-                letter-spacing: -2px;
-                line-height: normal;
-                color: $color-black;
-                @media (max-width: $md-breakpoint) {
-                    font-size: $font-size-base * 2;
-                    text-align: center;
-                }
-                @media (max-width: $sm-breakpoint) {
-                    font-size: $font-size-base * 1.5;
-                    letter-spacing: -1px;
-                    text-align: center;
-                }
-            }
-            .homeBanner__desc {
-                font-size: $font-size-base;
-                font-weight: $font-weight-light;
-                color: $color-black;
-                line-height: 1.8;
-                text-align: left;
-                @media (max-width: $md-breakpoint) {
-                    text-align: center;
-                }
-                @media (max-width: $sm-breakpoint) {
-                    font-size: $font-size-base * 0.875;
-                    text-align: center;
-                }
-            }
-            .homeBanner__btn {
-                font-size: $font-size-base;
-                background-color: $color-black;
-                color: $color-white;
-                padding-block: $spacing-unit * 5;
-                padding-inline: $spacing-unit * 12.5;
-                font-weight: $font-weight-semibold;
-                border-radius: 20px;
-                margin-top: $spacing-unit * 12;
-                transition: $transition-base;
-                &:hover {
-                    transform: translateY(-2px);
-                }
-                &:active {
-                    transform: translateY(0px);
-                }
-                @media (max-width: $sm-breakpoint) {
-                    font-size: $font-size-base * 0.5;
-                    margin-top: $spacing-unit * 2;
-                    padding-block: $spacing-unit * 2;
-                    padding-inline: $spacing-unit * 4;
-                    border-radius: 5px;
-                }
-            }
+      }
+      .homeBanner__desc {
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+        color: $color-black;
+        line-height: 1.8;
+        text-align: left;
+        @media (max-width: $md-breakpoint) {
+          text-align: center;
         }
-        .homeBanner__media {
-            flex: 1.3;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 0px 0px 25px 25px;
-            }
+        @media (max-width: $sm-breakpoint) {
+          font-size: $font-size-base * 0.875;
+          text-align: center;
         }
+      }
+      .homeBanner__btn {
+        font-size: $font-size-base;
+        background-color: $color-black;
+        color: $color-white;
+        padding-block: $spacing-unit * 5;
+        padding-inline: $spacing-unit * 12.5;
+        font-weight: $font-weight-semibold;
+        border-radius: 20px;
+        margin-top: $spacing-unit * 12;
+        transition: $transition-base;
+        &:hover {
+          transform: translateY(-2px);
+        }
+        &:active {
+          transform: translateY(0px);
+        }
+        @media (max-width: $sm-breakpoint) {
+          font-size: $font-size-base * 0.5;
+          margin-top: $spacing-unit * 2;
+          padding-block: $spacing-unit * 2;
+          padding-inline: $spacing-unit * 4;
+          border-radius: 5px;
+        }
+      }
     }
+    .homeBanner__media {
+      flex: 1.3;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 0px 25px 25px;
+      }
+    }
+  }
 }

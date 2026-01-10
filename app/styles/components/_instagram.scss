@@ -1,133 +1,133 @@
 .homeInstagram {
-    margin-top: $spacing-unit * 10;
-    margin-bottom: $spacing-unit * 40;
-    background: linear-gradient(
-        to bottom,
-        $color-white 0%,
-        $color-blue-pale 100%
-    );
-    padding-bottom: $spacing-unit * 20;
+  margin-top: $spacing-unit * 10;
+  margin-bottom: $spacing-unit * 40;
+  background: linear-gradient(
+    to bottom,
+    $color-white 0%,
+    $color-blue-pale 100%
+  );
+  padding-bottom: $spacing-unit * 20;
+  @media (max-width: $md-breakpoint) {
+    margin-top: $spacing-unit * 6;
+    margin-bottom: $spacing-unit * 12;
+    padding-bottom: $spacing-unit * 10;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 10;
+    padding-bottom: $spacing-unit * 10;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-unit * 20;
     @media (max-width: $md-breakpoint) {
-        margin-top: $spacing-unit * 6;
-        margin-bottom: $spacing-unit * 12;
-         padding-bottom: $spacing-unit * 10;
+      gap: $spacing-unit * 10;
     }
     @media (max-width: $sm-breakpoint) {
-        margin-top: $spacing-unit * 4;
-        margin-bottom: $spacing-unit * 10;
-         padding-bottom: $spacing-unit * 10;
+      gap: $spacing-unit * 8;
     }
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: $spacing-unit * 20;
+    .homeInstagram__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-unit * 6;
+      @media (max-width: $sm-breakpoint) {
+        gap: $spacing-unit * 4;
+      }
+      .homeInstagram__title {
+        font-size: $font-size-base * 3;
+        font-weight: $font-weight-semibold;
+        letter-spacing: -2px;
+        color: $color-black;
         @media (max-width: $md-breakpoint) {
-            gap: $spacing-unit * 10;
-        } 
+          font-size: $font-size-base * 2;
+          letter-spacing: 0;
+        }
         @media (max-width: $sm-breakpoint) {
-            gap: $spacing-unit * 8;
+          font-size: $font-size-base * 1.5;
+          letter-spacing: -1px;
+          text-align: center;
         }
-        .homeInstagram__header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: $spacing-unit * 6;
-            @media (max-width: $sm-breakpoint) {
-                gap: $spacing-unit * 4;
-            }
-            .homeInstagram__title {
-                font-size: $font-size-base * 3;
-                font-weight: $font-weight-semibold;
-                letter-spacing: -2px;
-                color: $color-black;
-                @media (max-width: $md-breakpoint) {
-                    font-size: $font-size-base * 2;
-                    letter-spacing: 0;
-                }  
-                @media (max-width: $sm-breakpoint) {
-                    font-size: $font-size-base * 1.5;
-                    letter-spacing: -1px;
-                    text-align: center;
-                }                    
-            }
-            .homeInstagram__desc {
-                font-size: $font-size-base;
-                font-weight: $font-weight-light;
-                color: $color-black;
-                text-align: center;
-                padding-inline: $spacing-unit * 60;
-                line-height: 1.8;
-                @media (max-width: $md-breakpoint) {
-                    padding-inline: $spacing-unit * 2;
-                }  
-                @media (max-width: $sm-breakpoint) {
-                    font-size: $font-size-base * 0.875;
-                    padding-inline: $spacing-unit * 0;
-                }   
-            }
+      }
+      .homeInstagram__desc {
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+        color: $color-black;
+        text-align: center;
+        padding-inline: $spacing-unit * 60;
+        line-height: 1.8;
+        @media (max-width: $md-breakpoint) {
+          padding-inline: $spacing-unit * 2;
         }
-        .homeInstagram__posts {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: $spacing-unit * 10;
-            @media (max-width: $md-breakpoint) {
-                grid-template-columns: repeat(2, 1fr);
-            }  
-            @media (max-width: $sm-breakpoint) {
-                grid-template-columns: repeat(2, 1fr);
-            } 
-            .homeInstagram__item {
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 5px;
-                }
-            }             
+        @media (max-width: $sm-breakpoint) {
+          font-size: $font-size-base * 0.875;
+          padding-inline: $spacing-unit * 0;
         }
-        .homeInstagram__btn {
-            font-size: $font-size-base * 0.875;
-            font-weight: $font-weight-semibold;
-            color: $color-white;
-            background-color: $color-black;
-            padding-inline: $spacing-unit * 7.5;
-            padding-block: $spacing-unit * 5;
-            border-radius: 18px;
-            display: inline-flex;
-            align-items: center;
-            gap: $spacing-unit * 2.5;
-            transition: $transition-base;
-            &:hover {
-                transform: translateY(-2px);
-            }
-            &:active {
-                transform: translateY(0px);
-            }
-            &::after {
-                content: "";
-                width: 22px;
-                height: 22px;
-                background-image: url('/images/home/instagram/instagram.svg');
-                background-repeat: no-repeat;
-                background-size: contain;
-                pointer-events: none;
-                flex-shrink: 0;
-            }
-            @media (max-width: $sm-breakpoint) {
-                font-size: $font-size-base * 0.5;
-                padding-inline: $spacing-unit * 2;
-                padding-block: $spacing-unit * 2;
-                gap: $spacing-unit * 1;
-                line-height: normal;
-                border-radius: 5px;
-                &::after {
-                    width: 10px;
-                    height: 10px;
-                }
-            }            
-        }          
+      }
     }
+    .homeInstagram__posts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $spacing-unit * 10;
+      @media (max-width: $md-breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $sm-breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .homeInstagram__item {
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+      }
+    }
+    .homeInstagram__btn {
+      font-size: $font-size-base * 0.875;
+      font-weight: $font-weight-semibold;
+      color: $color-white;
+      background-color: $color-black;
+      padding-inline: $spacing-unit * 7.5;
+      padding-block: $spacing-unit * 5;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: $spacing-unit * 2.5;
+      transition: $transition-base;
+      &:hover {
+        transform: translateY(-2px);
+      }
+      &:active {
+        transform: translateY(0px);
+      }
+      &::after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        background-image: url("/images/home/instagram/instagram.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        flex-shrink: 0;
+      }
+      @media (max-width: $sm-breakpoint) {
+        font-size: $font-size-base * 0.5;
+        padding-inline: $spacing-unit * 2;
+        padding-block: $spacing-unit * 2;
+        gap: $spacing-unit * 1;
+        line-height: normal;
+        border-radius: 5px;
+        &::after {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
 }
