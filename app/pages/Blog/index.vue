@@ -6,6 +6,8 @@ import BaseSearch from "../../ui/BaseSearch.vue";
 import BasePagination from "../../ui/BasePagination.vue";
 import BlogListHeader from "./components/BlogListHeader.vue";
 import BlogListCard from "./components/BlogListCard.vue";
+import BaseAdd from "../../ui/BaseAdd.vue";
+
 
 import { useSearch } from "../../composables/useSearch";
 import { usePagination } from "../../composables/usePagination";
@@ -34,6 +36,7 @@ const handlePageChange = (page: number) => {
 <template>
   <div class="blogList">
     <div class="container blogList__content">
+      
       <BlogListHeader />
       <BaseSearch v-model="searchQuery" placeholder="Search article, news or recipe..." />
 
@@ -60,7 +63,9 @@ const handlePageChange = (page: number) => {
         </div>
 
         <aside class="sidebar-column">
-          <div class="sidebar-widget ad-widget">AddArea</div>
+          <div class="sidebar-widget ad-widget">
+            <BaseAdd />
+          </div>
         </aside>
       </div>
     </div>

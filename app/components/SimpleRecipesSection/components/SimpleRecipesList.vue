@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SimpleRecipeItem } from "../../../types";
 import SimpleRecipesCard from "./SimpleRecipesCard.vue";
-import SimpleRecipesAdsBanner from "./SimpleRecipesAdsBanner.vue";
+import BaseAdd from "../../../ui/BaseAdd.vue";
 defineProps<{
   simpleRecipes: SimpleRecipeItem[];
 }>();
@@ -14,7 +14,7 @@ defineProps<{
       :key="simpleRecipe.id"
     >
       <SimpleRecipesCard :simpleRecipe="simpleRecipe" />
-      <SimpleRecipesAdsBanner v-if="index === 4" />
+      <BaseAdd v-if="index === 4" />
     </template>
   </div>
 </template>
