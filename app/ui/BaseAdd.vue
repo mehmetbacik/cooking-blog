@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const AdsPath = "/images/ads.png";
+const AdsPath = "/images/global/ads.png";
 </script>
 
 <template>

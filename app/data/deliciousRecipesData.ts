@@ -3,7 +3,7 @@ import type { DeliciousRecipeItem } from "../types";
 export const deliciousRecipesData: DeliciousRecipeItem[] = [
   {
     id: 1,
-    slug: "mixed-tropical-fruit-salad-with-superfood-boosts ",
+    slug: "mixed-tropical-fruit-salad-with-superfood-boosts",
     title: "Mixed Tropical Fruit Salad with Superfood Boosts",
     image: "/images/home/deliciousRecipes/deliciousRecipe-1.png",
     category: "Healthy",

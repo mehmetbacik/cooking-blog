@@ -89,3 +89,11 @@ export interface BlogPost {
   author: string;
   photo: string;
 }
+
+export interface TastyRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  author: string;
+}
