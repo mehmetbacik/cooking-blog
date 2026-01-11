@@ -16,14 +16,14 @@ const updateValue = (event: Event) => {
 </script>
 
 <template>
-  <div class="search-box">
+  <div class="search__wrapper">
     <input
       type="text"
       :value="modelValue"
       @input="updateValue"
       :placeholder="placeholder || 'Search...'"
-      class="search-input"
+      class="search__input"
     />
-    <button class="search-btn" @click="emit('search')">Search</button>
+    <button class="search__btn" @click="emit('search')">Search</button>
   </div>
 </template>

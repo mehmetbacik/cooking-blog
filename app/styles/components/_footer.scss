@@ -129,13 +129,6 @@
             padding-inline: $spacing-unit * 2;
             padding-block: $spacing-unit * 4;
           }
-          &:hover {
-            background-color: $color-black;
-            transform: translateY(-1px);
-          }
-          &:active {
-            transform: translateY(0);
-          }
         }
       }
     }

@@ -1,5 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+.search__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: $color-white;
+  border: solid 1px $color-gray-soft;
+  border-radius: 25px;
+  padding: $spacing-unit * 2.5;
+  transition: $transition-base;
+  width: 100%;
+  max-width: 700px;
+  @media (max-width: $md-breakpoint) {
+    margin-top: $spacing-unit * 5;
+    margin-bottom: $spacing-unit * 15;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-top: $spacing-unit * 5;
+    margin-bottom: $spacing-unit * 15;
+  }
+  .search__input {
+    width: 100%;
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding-inline: $spacing-unit * 5;
+    padding-block: $spacing-unit * 5;
+    font-size: $font-size-base * 0.875;
+    color: $color-black;
+    @media (max-width: $sm-breakpoint) {
+      padding-inline: $spacing-unit * 2;
+      padding-block: $spacing-unit * 2;
+      font-size: $font-size-base * 0.75;
+    }
+    &::placeholder {
+      color: $color-gray;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .search__btn {
+    border: none;
+    background-color: $color-black;
+    color: $color-white;
+    padding-inline: $spacing-unit * 14;
+    padding-block: $spacing-unit * 5;
+    font-size: $font-size-base * 0.875;
+    font-weight: $font-weight-semibold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: $transition-base;
+    @media (max-width: $sm-breakpoint) {
+      padding-inline: $spacing-unit * 2;
+      padding-block: $spacing-unit * 4;
+    }
+  }
+}
+
 .ads__wrapper {
   img {
     width: 100%;
