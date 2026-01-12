@@ -66,9 +66,8 @@ const handlePageChange = (page: number) => {
         </div>
 
         <aside class="sidebar-column">
-          <div class="sidebar-widget ad-widget">
-            <BaseAdd />
-          </div>
+          <TastyRecipesSection />
+          <BaseAdd />
         </aside>
       </div>
     </div>
