@@ -42,33 +42,35 @@ const handlePageChange = (page: number) => {
           placeholder="Search article, news or recipe..."
         />
       </div>
-
-      <div class="content-layout">
-        <div class="main-column">
-          <div v-if="paginatedPosts.length > 0" class="blog-list">
-            <BlogListCard
-              v-for="post in paginatedPosts"
-              :key="post.id"
-              :post="post"
-            />
+      <div class="blogList__contentLayout">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
+            <div class="blogList__mainLayout">
+              <div v-if="paginatedPosts.length > 0" class="blogList__item">
+                <BlogListCard
+                  v-for="post in paginatedPosts"
+                  :key="post.id"
+                  :post="post"
+                />
+              </div>
+              <div v-else class="no-results">
+                <h3>No articles found</h3>
+                <p>Try searching for something else.</p>
+              </div>
+            </div>
           </div>
-
-          <div v-else class="no-results">
-            <h3>No articles found</h3>
-            <p>Try searching for something else.</p>
+          <div class="col-12 col-lg-4">
+            <aside class="blogList__sidebarLayout">
+              <TastyRecipesSection />
+              <BaseAdd />
+            </aside>
           </div>
-
-          <BasePagination
-            :current-page="currentPage"
-            :total-pages="totalPages"
-            @page-change="handlePageChange"
-          />
         </div>
-
-        <aside class="sidebar-column">
-          <TastyRecipesSection />
-          <BaseAdd />
-        </aside>
+        <BasePagination
+          :current-page="currentPage"
+          :total-pages="totalPages"
+          @page-change="handlePageChange"
+        />
       </div>
     </div>
   </div>

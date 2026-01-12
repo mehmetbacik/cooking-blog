@@ -7,7 +7,7 @@ import TastyRecipesList from "./components/TastyRecipesList.vue";
 
 <template>
   <section class="tastyRecipes">
-    <div class="container tastyRecipes__content">
+    <div class="tastyRecipes__content">
       <TastyRecipesHeader />
       <TastyRecipesList :tastyRecipes="tastyRecipesData" />
     </div>
