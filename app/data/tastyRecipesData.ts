@@ -7,6 +7,8 @@ export const tastyRecipesData: TastyRecipeItem[] = [
     title: "Chicken Meatballs with Cream Cheese",
     image: "/images/blog/tastyRecipes/tastyRecipe-1.png",
     author: "Andreas Paula",
+    category: "Meat",
+    time: "30 Minutes",
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ export const tastyRecipesData: TastyRecipeItem[] = [
     title: "Traditional Bolognaise Ragu",
     image: "/images/blog/tastyRecipes/tastyRecipe-2.png",
     author: "Andreas Paula",
+    category: "Meat",
+    time: "30 Minutes",
   },
   {
     id: 3,
@@ -21,5 +25,7 @@ export const tastyRecipesData: TastyRecipeItem[] = [
     title: "Pork and Chive Chinese Dumplings",
     image: "/images/blog/tastyRecipes/tastyRecipe-3.png",
     author: "Andreas Paula",
+    category: "Meat",
+    time: "30 Minutes",
   },
 ];

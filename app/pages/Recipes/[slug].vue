@@ -4,13 +4,15 @@ import { createError } from "nuxt/app";
 
 import { simpleRecipesData } from "../../data/simpleRecipesData";
 import { deliciousRecipesData } from "../../data/deliciousRecipesData";
+import { tastyRecipesData } from "../../data/tastyRecipesData";
 
 const route = useRoute();
 const slug = route.params.slug;
 
 const recipe =
   simpleRecipesData.find((r) => r.slug === slug) ||
-  deliciousRecipesData.find((r) => r.slug === slug);
+  deliciousRecipesData.find((r) => r.slug === slug) ||
+  tastyRecipesData.find((r) => r.slug === slug);
 
 if (!recipe) {
   throw createError({ statusCode: 404, statusMessage: "Recipe Not Found" });

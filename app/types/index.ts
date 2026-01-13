@@ -96,4 +96,6 @@ export interface TastyRecipeItem {
   title: string;
   image: string;
   author: string;
+  category: string;
+  time: string;
 }
