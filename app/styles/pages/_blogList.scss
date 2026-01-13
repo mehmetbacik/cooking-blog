@@ -1,12 +1,73 @@
 .blogList {
-    margin-top: $spacing-unit * 10;
-    margin-bottom: $spacing-unit * 40;
-    @media (max-width: $md-breakpoint) {
-        margin-top: $spacing-unit * 6;
-        margin-bottom: $spacing-unit * 12;
+  &__content {
+    .blogList__headerLayout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-unit * 20;
+      padding-block: $spacing-unit * 20;
+      .blogList {
+        &__header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: $spacing-unit * 6;
+          @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 4;
+          }
+          .blogList__title {
+            font-size: $font-size-base * 4;
+            font-weight: $font-weight-semibold;
+            letter-spacing: -2px;
+            color: $color-black;
+            @media (max-width: $md-breakpoint) {
+              font-size: $font-size-base * 2;
+              letter-spacing: 0;
+            }
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 1.5;
+              letter-spacing: -1px;
+            }
+          }
+          .blogList__desc {
+            font-size: $font-size-base;
+            font-weight: $font-weight-light;
+            color: $color-black;
+            text-align: center;
+            line-height: 1.8;
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 0.875;
+            }
+          }
+        }
+      }
     }
-    @media (max-width: $sm-breakpoint) {
-        margin-top: $spacing-unit * 4;
-        margin-bottom: $spacing-unit * 10;
+    .blogList__contentLayout {
+      .blogList__mainLayout {
+        .no-results {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: $spacing-unit * 4;
+          h3 {
+            font-weight: $font-weight-semibold;
+            font-size: $font-size-base;
+            color: $color-black;
+          }
+          p {
+            font-weight: $font-weight-light;
+            font-size: $font-size-base * 0.875;
+            color: $color-black;
+          }
+        }
+      }
+      .blogList__sidebarLayout {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-unit * 20;
+      }
     }
+  }
 }

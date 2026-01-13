@@ -69,6 +69,7 @@ const handlePageChange = (page: number) => {
         <BasePagination
           :current-page="currentPage"
           :total-pages="totalPages"
+          :max-visible="5"
           @page-change="handlePageChange"
         />
       </div>
