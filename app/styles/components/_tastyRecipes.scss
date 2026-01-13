@@ -1,0 +1,51 @@
+.tastyRecipes {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 8;
+    .tastyRecipes__header {
+      .tastyRecipes__title {
+        font-size: $font-size-base * 2;
+        font-weight: $font-weight-semibold;
+        color: $color-black;
+        letter-spacing: -2px;
+      }
+    }
+    .tastyRecipes__list {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-unit * 6;
+      .tastyRecipes__item {
+        .tastyRecipes__item-content {
+          display: flex;
+          align-items: center;
+          gap: $spacing-unit * 6;
+          .tastyRecipes__image-wrapper {
+            flex: 1;
+            .tastyRecipes__image {
+              border-radius: 20px;
+            }
+          }
+          .tastyRecipes__meta-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-unit * 4;
+            .tastyRecipes__item-title {
+              font-size: $font-size-base * 1.25;
+              font-weight: $font-weight-semibold;
+              color: $color-black;
+              letter-spacing: -1px;
+            }
+            .tastyRecipes__item-author {
+              font-size: $font-size-base * 1;
+              font-weight: $font-weight-light;
+              color: $color-black;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
