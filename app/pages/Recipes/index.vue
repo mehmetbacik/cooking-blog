@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { recipes } from "../../data/recipes";
+import { recipesData } from "../../data/recipesData";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import { recipes } from "../../data/recipes";
     </div>
 
     <div class="recipes-grid">
-      <article v-for="recipe in recipes" :key="recipe.id" class="recipes-entry">
+      <article v-for="recipe in recipesData" :key="recipe.id" class="recipes-entry">
         <div class="entry-image">
           <img :src="recipe.image" :alt="recipe.title" />
         </div>

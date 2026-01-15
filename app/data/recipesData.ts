@@ -1,6 +1,6 @@
-import type { Recipe } from "../types";
+import type { RecipeItem } from "../types";
 
-export const recipes: Recipe[] = [
+export const recipesData: RecipeItem[] = [
   {
     id: 1,
     slug: "grilled-sea-bass",
