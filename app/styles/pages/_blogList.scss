@@ -1,5 +1,8 @@
 .blogList {
   margin-bottom: $spacing-unit * 40;
+  @media (max-width: $md-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
   @media (max-width: $sm-breakpoint) {
     margin-bottom: $spacing-unit * 15;
   }
@@ -10,6 +13,10 @@
       align-items: center;
       gap: $spacing-unit * 20;
       padding-block: $spacing-unit * 20;
+      @media (max-width: $md-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
       @media (max-width: $sm-breakpoint) {
         gap: $spacing-unit * 5;
         padding-block: $spacing-unit * 5;
@@ -21,6 +28,9 @@
           align-items: center;
           justify-content: center;
           gap: $spacing-unit * 6;
+          @media (max-width: $md-breakpoint) {
+            gap: $spacing-unit * 4;
+          }
           @media (max-width: $sm-breakpoint) {
             gap: $spacing-unit * 4;
           }
@@ -61,6 +71,10 @@
             display: flex;
             align-items: center;
             gap: $spacing-unit * 10;
+            @media (max-width: $md-breakpoint) {
+              flex-direction: column;
+              gap: $spacing-unit * 5;
+            }
             @media (max-width: $sm-breakpoint) {
               flex-direction: column;
               gap: $spacing-unit * 5;
@@ -154,6 +168,10 @@
         display: flex;
         flex-direction: column;
         gap: $spacing-unit * 20;
+        @media (max-width: $md-breakpoint) {
+          margin-top: $spacing-unit * 10;
+          gap: $spacing-unit * 12;
+        }
         @media (max-width: $sm-breakpoint) {
           margin-top: $spacing-unit * 10;
           gap: $spacing-unit * 12;
