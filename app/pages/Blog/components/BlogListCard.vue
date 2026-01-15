@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import type { BlogPost } from "../../../types";
+import { useTextTruncation } from "../../../helpers/useTextTruncation";
 
-defineProps<{
+const props = defineProps<{
   post: BlogPost;
 }>();
+
+const { truncatedTitle } = useTextTruncation(props.post.title);
 </script>
 
 <template>
@@ -13,7 +16,7 @@ defineProps<{
     </div>
     <div class="blogList__item-content">
       <NuxtLink :to="`/blog/${post.slug}`">
-        <h2 class="blogList__item-title">{{ post.title }}</h2>
+        <h2 class="blogList__item-title">{{ truncatedTitle }}</h2>
       </NuxtLink>
       <p class="blogList__item-excerpt">{{ post.excerpt }}</p>
       <div class="blogList__item-meta">
