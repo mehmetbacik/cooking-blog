@@ -46,7 +46,7 @@ const handlePageChange = (page: number) => {
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
             <div class="blogList__mainLayout">
-              <div v-if="paginatedPosts.length > 0" class="blogList__item">
+              <div v-if="paginatedPosts.length > 0" class="blogList__items">
                 <BlogListCard
                   v-for="post in paginatedPosts"
                   :key="post.id"

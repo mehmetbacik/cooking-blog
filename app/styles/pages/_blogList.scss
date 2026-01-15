@@ -45,6 +45,70 @@
     }
     .blogList__contentLayout {
       .blogList__mainLayout {
+        .blogList__items {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-unit * 8;
+          .blogList__item {
+            display: flex;
+            align-items: center;
+            gap: $spacing-unit * 10;
+            &-image {
+              flex: 1;
+              img {
+                border-radius: 20px;
+              }
+            }
+            &-content {
+              flex: 2;
+              display: flex;
+              flex-direction: column;
+              .blogList__item-title {
+                font-size: $font-size-base * 1.5;
+                color: $color-black;
+                font-weight: $font-weight-semibold;
+                letter-spacing: -1px;
+                margin-bottom: $spacing-unit * 2.5;
+              }
+              .blogList__item-excerpt {
+                font-size: $font-size-base * 1;
+                color: $color-black;
+                font-weight: $font-weight-light;
+                margin-bottom: $spacing-unit * 7;
+              }
+              .blogList__item-meta {
+                display: flex;
+                align-items: center;
+                gap: $spacing-unit * 4;
+                .blogList__item-authorInfo {
+                  display: flex;
+                  align-items: center;
+                  gap: $spacing-unit * 4;
+                  .blogList__item-authorPhoto {
+                    img {
+                      border-radius: 100%;
+                    }
+                  }
+                  .blogList__item-author {
+                    font-size: $font-size-base;
+                    color: $color-black;
+                    font-weight: $font-weight-bold;
+                  }
+                }
+                .blogList__item-date {
+                  border-left: solid 1px $color-gray-soft;
+                  padding-block: $spacing-unit * 2;
+                  span {
+                    font-size: $font-size-base;
+                    color: $color-black;
+                    font-weight: $font-weight-light;
+                    padding-inline: $spacing-unit * 4;
+                  }
+                }
+              }
+            }
+          }
+        }
         .no-results {
           display: flex;
           flex-direction: column;

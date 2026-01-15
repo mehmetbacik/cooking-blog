@@ -7,25 +7,25 @@ defineProps<{
 </script>
 
 <template>
-  <article class="blog-entry">
-    <div class="entry-image">
+  <article class="blogList__item">
+    <div class="blogList__item-image">
       <img :src="post.image" :alt="post.title" loading="lazy" />
     </div>
-    <div class="entry-content">
-      <NuxtLink :to="`/blog/${post.slug}`" class="title-link">
-        <h2>{{ post.title }}</h2>
+    <div class="blogList__item-content">
+      <NuxtLink :to="`/blog/${post.slug}`">
+        <h2 class="blogList__item-title">{{ post.title }}</h2>
       </NuxtLink>
-      <p>{{ post.excerpt }}</p>
-
-      <div class="entry-meta">
-        <span>{{ post.date }}</span>
-      </div>
-
-      <div class="author-info">
-        <span class="author-photo">
-          <img :src="post.photo" :alt="post.author" />
-        </span>
-        <span class="author">{{ post.author }}</span>
+      <p class="blogList__item-excerpt">{{ post.excerpt }}</p>
+      <div class="blogList__item-meta">
+        <div class="blogList__item-authorInfo">
+          <div class="blogList__item-authorPhoto">
+            <img :src="post.photo" :alt="post.author" />
+          </div>
+          <span class="blogList__item-author">{{ post.author }}</span>
+        </div>
+        <div class="blogList__item-date">
+          <span>{{ post.date }}</span>
+        </div>
       </div>
     </div>
   </article>
