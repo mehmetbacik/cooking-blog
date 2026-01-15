@@ -16,7 +16,9 @@
   }
   @media (max-width: $sm-breakpoint) {
     margin-top: $spacing-unit * 5;
-    margin-bottom: $spacing-unit * 15;
+    margin-bottom: $spacing-unit * 5;
+    padding: $spacing-unit * 1.5;
+    border-radius: 15px;
   }
   .search__input {
     width: 100%;
@@ -51,8 +53,10 @@
     cursor: pointer;
     transition: $transition-base;
     @media (max-width: $sm-breakpoint) {
+      font-size: $font-size-base * 0.65;
       padding-inline: $spacing-unit * 2;
-      padding-block: $spacing-unit * 4;
+      padding-block: $spacing-unit * 2;
+      border-radius: 10px;
     }
   }
 }
@@ -62,7 +66,7 @@
   justify-content: center;
   align-items: center;
   gap: $spacing-unit * 4;
-  margin-block: $spacing-unit * 4;
+  margin-block: $spacing-unit * 20;
   .page-btn {
     display: flex;
     align-items: center;
@@ -76,6 +80,11 @@
     font-weight: $font-weight-bold;
     color: $color-black;
     transition: $transition-base;
+    @media (max-width: $sm-breakpoint) {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
     &:disabled {
       opacity: 0.5;
       cursor: not-allowed;
@@ -102,6 +111,12 @@
     font-size: $font-size-base * 1.125;
     color: $color-black;
     line-height: normal;
+    @media (max-width: $sm-breakpoint) {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: $font-size-base;
+    }
     &.active {
       border-color: $color-black;
       background: $color-black;

@@ -1,4 +1,8 @@
 .blogList {
+  margin-bottom: $spacing-unit * 40;
+  @media (max-width: $sm-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
   &__content {
     .blogList__headerLayout {
       display: flex;
@@ -6,6 +10,10 @@
       align-items: center;
       gap: $spacing-unit * 20;
       padding-block: $spacing-unit * 20;
+      @media (max-width: $sm-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
       .blogList {
         &__header {
           display: flex;
@@ -53,10 +61,16 @@
             display: flex;
             align-items: center;
             gap: $spacing-unit * 10;
+            @media (max-width: $sm-breakpoint) {
+              flex-direction: column;
+              gap: $spacing-unit * 5;
+            }
             &-image {
               flex: 1;
+              width: 100%;
               img {
                 border-radius: 20px;
+                width: 100%;
               }
             }
             &-content {
@@ -86,13 +100,18 @@
                   gap: $spacing-unit * 4;
                   .blogList__item-authorPhoto {
                     img {
-                      border-radius: 100%;
+                      border-radius: 50%;
                     }
                   }
                   .blogList__item-author {
                     font-size: $font-size-base;
                     color: $color-black;
                     font-weight: $font-weight-bold;
+                    padding-block: $spacing-unit * 2;
+                    line-height: normal;
+                    @media (max-width: $sm-breakpoint) {
+                      font-size: $font-size-base * 0.85;
+                    }
                   }
                 }
                 .blogList__item-date {
@@ -103,6 +122,10 @@
                     color: $color-black;
                     font-weight: $font-weight-light;
                     padding-inline: $spacing-unit * 4;
+                    line-height: normal;
+                    @media (max-width: $sm-breakpoint) {
+                      font-size: $font-size-base * 0.85;
+                    }
                   }
                 }
               }
@@ -131,6 +154,10 @@
         display: flex;
         flex-direction: column;
         gap: $spacing-unit * 20;
+        @media (max-width: $sm-breakpoint) {
+          margin-top: $spacing-unit * 10;
+          gap: $spacing-unit * 12;
+        }
       }
     }
   }
