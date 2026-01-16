@@ -10,13 +10,13 @@ const { truncatedTitle } = useTextTruncation(props.recipe.title);
 </script>
 
 <template>
-  <article class="recipeList__item">
-    <div class="recipeList__item-image">
+  <article class="recipesList__item">
+    <div class="recipesList__item-image">
       <img :src="recipe.image" :alt="recipe.title" loading="lazy" />
     </div>
-    <div class="recipeList__item-content">
+    <div class="recipesList__item-content">
       <NuxtLink :to="`/recipes/${recipe.slug}`">
-        <h2 class="recipeList__item-title">{{ truncatedTitle }}</h2>
+        <h2 class="recipesList__item-title">{{ truncatedTitle }}</h2>
       </NuxtLink>
     </div>
   </article>
