@@ -15,6 +15,7 @@ const allPosts = ref(recipesData);
 
 const { searchQuery, filteredItems } = useSearch(allPosts, [
   "title",
+  "description",
   "category",
   "time",
 ]);

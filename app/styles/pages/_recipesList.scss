@@ -98,7 +98,7 @@
                 letter-spacing: -1px;
                 margin-bottom: $spacing-unit * 2.5;
               }
-              .recipesList__item-excerpt {
+              .recipesList__item-description {
                 font-size: $font-size-base * 1;
                 color: $color-black;
                 font-weight: $font-weight-light;
@@ -108,16 +108,11 @@
                 display: flex;
                 align-items: center;
                 gap: $spacing-unit * 4;
-                .recipesList__item-authorInfo {
+                .recipesList__item-category {
                   display: flex;
                   align-items: center;
                   gap: $spacing-unit * 4;
-                  .recipesList__item-authorPhoto {
-                    img {
-                      border-radius: 50%;
-                    }
-                  }
-                  .recipesList__item-author {
+                  span {
                     font-size: $font-size-base;
                     color: $color-black;
                     font-weight: $font-weight-bold;
@@ -128,7 +123,7 @@
                     }
                   }
                 }
-                .recipesList__item-date {
+                .recipesList__item-time {
                   border-left: solid 1px $color-gray-soft;
                   padding-block: $spacing-unit * 2;
                   span {
