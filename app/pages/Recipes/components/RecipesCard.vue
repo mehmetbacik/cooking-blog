@@ -18,6 +18,15 @@ const { truncatedTitle } = useTextTruncation(props.recipe.title);
       <NuxtLink :to="`/recipes/${recipe.slug}`">
         <h2 class="recipesList__item-title">{{ truncatedTitle }}</h2>
       </NuxtLink>
+      <p class="recipesList__item-description">{{ recipe.description }}</p>
+      <div class="recipesList__item-meta">
+        <div class="recipesList__item-category">
+          <span>{{ recipe.category }}</span>
+        </div>
+        <div class="recipesList__item-time">
+          <span>{{ recipe.time }}</span>
+        </div>
+      </div>
     </div>
   </article>
 </template>
