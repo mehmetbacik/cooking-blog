@@ -11,7 +11,7 @@ export const deliciousRecipesData: DeliciousRecipeItem[] = [
   },
   {
     id: 2,
-    slug: "big-and-juicy-wagyu-beef-cheeseburger",
+    slug: "big-and-juicy-wagyu-beef-cheeseburger1",
     title: "Big and Juicy Wagyu Beef Cheeseburger",
     image: "/images/home/deliciousRecipes/deliciousRecipe-2.png",
     category: "Western",
