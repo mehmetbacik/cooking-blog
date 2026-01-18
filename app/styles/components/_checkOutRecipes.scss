@@ -1,0 +1,208 @@
+.checkOutRecipes {
+  margin-top: $spacing-unit * 10;
+  margin-bottom: $spacing-unit * 40;
+  @media (max-width: $md-breakpoint) {
+    margin-top: $spacing-unit * 6;
+    margin-bottom: $spacing-unit * 12;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 10;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-unit * 20;
+    @media (max-width: $md-breakpoint) {
+      gap: $spacing-unit * 10;
+    }
+    @media (max-width: $sm-breakpoint) {
+      gap: $spacing-unit * 8;
+    }
+    .checkOutRecipes__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-unit * 24;
+      @media (max-width: $md-breakpoint) {
+        flex-direction: column;
+        gap: $spacing-unit * 4;
+      }
+      @media (max-width: $sm-breakpoint) {
+        flex-direction: column;
+        gap: $spacing-unit * 4;
+      }
+      .checkOutRecipes__title {
+        font-size: $font-size-base * 2.25;
+        font-weight: $font-weight-semibold;
+        text-align: left;
+        letter-spacing: -2px;
+        color: $color-black;
+        line-height: normal;
+        @media (max-width: $md-breakpoint) {
+          font-size: $font-size-base * 2;
+          letter-spacing: 0;
+          text-align: center;
+        }
+        @media (max-width: $sm-breakpoint) {
+          font-size: $font-size-base * 1.5;
+          letter-spacing: -1px;
+          text-align: center;
+        }
+      }
+    }
+    .checkOutRecipes__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: $spacing-unit * 10;
+      @media (max-width: $md-breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $sm-breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-unit * 4;
+      }
+      .checkOutRecipes__item {
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+        .checkOutRecipes__link {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-unit * 4.5;
+          text-decoration: none;
+          @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 4;
+          }
+          .checkOutRecipes__image-wrapper {
+            position: relative;
+            .checkOutRecipes__image {
+              width: 100%;
+              height: 100%;
+              border-radius: 25px;
+              object-fit: cover;
+              @media (max-width: $sm-breakpoint) {
+                border-radius: 15px;
+              }
+            }
+            .fav-btn {
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              z-index: 10;
+              background: $color-white;
+              border: none;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+              transition: $transition-base;
+              backdrop-filter: blur(2px);
+              @media (max-width: $sm-breakpoint) {
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+              }
+              .heart-icon {
+                width: 20px;
+                height: 20px;
+                color: $color-gray-soft;
+                transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                @media (max-width: $sm-breakpoint) {
+                  width: 15px;
+                  height: 15px;
+                }
+              }
+              &:hover {
+                transform: scale(1.1);
+                background: $color-white;
+                .heart-icon {
+                  color: $color-red-soft;
+                }
+              }
+              &.active {
+                background: $color-white;
+                .heart-icon {
+                  color: $color-red-soft;
+                  fill: $color-red-soft;
+                }
+              }
+              &.pop .heart-icon {
+                animation: popHeart 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+          .checkOutRecipes__item-title {
+            font-size: $font-size-base * 1.125;
+            font-weight: $font-weight-semibold;
+            color: $color-black;
+            line-height: normal;
+            letter-spacing: -1px;
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 1;
+            }
+          }
+          .checkOutRecipes__item-meta {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: $spacing-unit * 6;
+            margin-bottom: $spacing-unit * 2;
+            @media (max-width: $sm-breakpoint) {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: $spacing-unit * 2;
+            }
+            .checkOutRecipes__item-time {
+              font-size: $font-size-base * 0.875;
+              font-weight: $font-weight-light;
+              color: $color-black;
+              display: flex;
+              align-items: center;
+              gap: $spacing-unit * 2.5;
+              &::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                background-image: url("/icons/time.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                pointer-events: none;
+                flex-shrink: 0;
+              }
+            }
+            .checkOutRecipes__item-category {
+              font-size: $font-size-base * 0.875;
+              font-weight: $font-weight-light;
+              color: $color-black;
+              display: flex;
+              align-items: center;
+              gap: $spacing-unit * 2.5;
+              &::before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                background-image: url("/icons/category.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                pointer-events: none;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
