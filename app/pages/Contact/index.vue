@@ -46,5 +46,6 @@ const handleSubmit = () => {
         </form>
       </div>
     </div>
+    <CheckOutRecipesSection />
   </div>
 </template>
