@@ -99,3 +99,12 @@ export interface TastyRecipeItem {
   category: string;
   time: string;
 }
+
+export interface CheckOutRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
+}
