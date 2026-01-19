@@ -108,3 +108,11 @@ export interface CheckOutRecipeItem {
   category: string;
   time: string;
 }
+
+export interface ContactForm {
+  name: string;
+  email: string;
+  subject: string;
+  enquiryType: string;
+  message: string;
+}
