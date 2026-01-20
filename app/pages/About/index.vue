@@ -1,14 +1,29 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'About Us',
+  description: 'Learn more about our vision, values, and team.'
+});
+
+import AboutHeader from "./components/AboutHeader.vue";
+import AboutBanner from "./components/AboutBanner.vue";
+import AboutContent from "./components/AboutContent.vue";
+</script>
+
 <template>
-  <div class="container about-page">
-    <div class="about-grid">
-      <div class="about-text">
-        <h1>About Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quis
-          deserunt, alias sunt at esse. Rem sequi sit culpa quasi, temporibus at
-          quia voluptatibus itaque debitis molestiae magnam repudiandae impedit?
-        </p>
+  <section class="about">
+    <div class="container about__content">
+      <AboutHeader />
+      <div class="about__contentLayout">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-4">
+            <AboutBanner />
+          </div>
+          <div class="col-12 col-lg-8">
+            <AboutContent />
+          </div>
+        </div>
+        <CheckOutRecipesSection />
       </div>
     </div>
-  </div>
+  </section>
 </template>

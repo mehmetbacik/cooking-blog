@@ -1,4 +1,10 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Contact Us",
+  description:
+    "Get in touch with us for inquiries, collaborations, or project discussions.",
+});
+
 import ContactHeader from "./components/ContactHeader.vue";
 import ContactBanner from "./components/ContactBanner.vue";
 import ContactForm from "./components/ContactForm.vue";
