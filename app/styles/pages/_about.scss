@@ -1,0 +1,65 @@
+.about {
+  margin-bottom: $spacing-unit * 40;
+  @media (max-width: $md-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
+  &__content {
+    .about__headerLayout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-unit * 20;
+      padding-block: $spacing-unit * 20;
+      @media (max-width: $md-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
+      @media (max-width: $sm-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
+      .about {
+        &__header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: $spacing-unit * 6;
+          @media (max-width: $md-breakpoint) {
+            gap: $spacing-unit * 4;
+          }
+          @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 4;
+          }
+          .about__title {
+            font-size: $font-size-base * 4;
+            font-weight: $font-weight-semibold;
+            letter-spacing: -2px;
+            color: $color-black;
+            @media (max-width: $md-breakpoint) {
+              font-size: $font-size-base * 2;
+              letter-spacing: 0;
+            }
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 1.5;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+    }
+    .about__contentLayout {
+      .about__bannerLayout {
+        img {
+          border-radius: 20px;
+        }
+      }
+      .about__detailsLayout {
+        color: $color-black;
+      }
+    }
+  }
+}
