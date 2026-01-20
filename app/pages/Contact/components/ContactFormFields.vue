@@ -67,11 +67,11 @@ defineEmits<{
 
     <div class="contact__form-row full-width">
       <div class="contact__form-group">
-        <label>Message</label>
+        <label>Messages</label>
         <textarea
           :value="modelValue.message"
           @input="e => $emit('update:modelValue', { ...modelValue, message: (e.target as HTMLTextAreaElement).value })"
-          rows="5"
+          rows="7"
           placeholder="Enter your message..."
           required
         />

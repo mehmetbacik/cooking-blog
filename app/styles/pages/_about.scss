@@ -53,12 +53,38 @@
     }
     .about__contentLayout {
       .about__bannerLayout {
+        @media (max-width: $md-breakpoint) {
+          display: none;
+        }
+        @media (max-width: $sm-breakpoint) {
+          display: none;
+        }
         img {
           border-radius: 20px;
         }
       }
       .about__detailsLayout {
-        color: $color-black;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-unit * 4;
+        margin-bottom: $spacing-unit * 40;
+        @media (max-width: $md-breakpoint) {
+          text-align: center;
+          margin-bottom: $spacing-unit * 20;
+        }
+        h2 {
+          font-size: $font-size-base * 2.5;
+          margin-bottom: $spacing-unit * 4;
+          @media (max-width: $md-breakpoint) {
+            font-size: $font-size-base * 1.25;
+          }
+        }
+        p {
+          font-size: $font-size-base * 1.25;
+          @media (max-width: $md-breakpoint) {
+            font-size: $font-size-base * 1;
+          }
+        }
       }
     }
   }
