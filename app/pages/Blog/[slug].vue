@@ -11,19 +11,28 @@ if (!post) {
 </script>
 
 <template>
-  <article class="container post-wrapper">
-    <div class="post-header">
-      <NuxtLink to="/blog" class="back-link">← Back to Blog</NuxtLink>
-      <h1>{{ post.title }}</h1>
-      <div class="meta">
-        Written by <strong>{{ post.author }}</strong> on {{ post.date }}
+  <div class="blogDetail">
+    <div class="container blogDetail__content">
+      <div class="blogDetail__headerLayout">
+        <div class="blogDetail__header">
+          <h1 class="blogDetail__title">{{ post.title }}</h1>
+          <div class="blogDetail__meta">
+            <div class="blogDetail__authorPhoto">
+              <img :src="post.photo" :alt="post.author" />
+            </div>
+            {{ post.author }} - {{ post.date }}
+          </div>
+          <p class="blogDetail__desc">
+            {{ post.excerpt }}
+          </p>
+          <div class="blogDetail__image">
+            <img :src="post.image" :alt="post.title" />
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="featured-image">
-      <img :src="post.image" :alt="post.title" />
-    </div>
-
+  </div>
+  <article class="container post-wrapper">
     <div class="post-content" v-html="post.content"></div>
   </article>
 </template>
