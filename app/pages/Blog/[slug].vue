@@ -17,22 +17,33 @@ if (!post) {
         <div class="blogDetail__header">
           <h1 class="blogDetail__title">{{ post.title }}</h1>
           <div class="blogDetail__meta">
-            <div class="blogDetail__authorPhoto">
+            <div class="blogDetail__author">
               <img :src="post.photo" :alt="post.author" />
+              <span>{{ post.author }}</span>
             </div>
-            {{ post.author }} - {{ post.date }}
+            <div class="blogDetail__date">
+              <span>{{ post.date }}</span>
+            </div>
           </div>
-          <p class="blogDetail__desc">
-            {{ post.excerpt }}
-          </p>
+          <div class="blogDetail__summary">
+            <p>
+              {{ post.summary }}
+            </p>
+          </div>
           <div class="blogDetail__image">
             <img :src="post.image" :alt="post.title" />
           </div>
         </div>
       </div>
+      <div class="blogDetail__contentLayout">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-9">
+            <div class="post-content" v-html="post.content"></div>
+          </div>
+          <div class="col-12 col-lg-3">Share This On:</div>
+        </div>
+      </div>
+      <CheckOutRecipesSection />
     </div>
   </div>
-  <article class="container post-wrapper">
-    <div class="post-content" v-html="post.content"></div>
-  </article>
 </template>
