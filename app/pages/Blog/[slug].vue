@@ -4,6 +4,10 @@ import { useRoute } from "vue-router";
 import { createError } from "nuxt/app";
 import { blogData } from "../../data/blogData";
 
+const fbIcon = "/icons/facebook.svg";
+const twIcon = "/icons/twitter.svg";
+const inIcon = "/icons/instagram.svg";
+
 const route = useRoute();
 const post = blogData.find((p) => p.slug === route.params.slug);
 
@@ -77,34 +81,32 @@ const shareInstagram = async () => {
       <div class="blogDetail__contentLayout">
         <div class="row align-items-center">
           <div class="col-12 col-lg-9">
-            <div class="blogDetail__mainLayout">
-              <div class="post-content" v-html="post.content"></div>
-            </div>
+            <div class="blogDetail__mainLayout" v-html="post.content"></div>
           </div>
           <div class="col-12 col-lg-3">
             <div class="blogDetail__shareLayout">
               <span>Share This On:</span>
-              <div>
+              <div class="blogDetail__shareIcon">
                 <button
                   class="blog-share__btn blog-share__btn--facebook"
                   @click="shareFacebook"
                   aria-label="Share on Facebook"
                 >
-                  Facebook
+                  <img :src="fbIcon" alt="Facebook Icon" />
                 </button>
                 <button
                   class="blog-share__btn blog-share__btn--twitter"
                   @click="shareTwitter"
                   aria-label="Share on Twitter"
                 >
-                  Twitter
+                  <img :src="twIcon" alt="Twitter Icon" />
                 </button>
                 <button
                   class="blog-share__btn blog-share__btn--instagram"
                   @click="shareInstagram"
                   aria-label="Share on Instagram"
                 >
-                  Instagram
+                  <img :src="inIcon" alt="Instagram Icon" />
                 </button>
               </div>
             </div>
