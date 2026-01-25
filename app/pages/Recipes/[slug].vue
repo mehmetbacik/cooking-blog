@@ -22,22 +22,32 @@ if (!recipe) {
 </script>
 
 <template>
-  <div class="container recipe-page">
-    <NuxtLink to="/" class="back-btn">← Back Home</NuxtLink>
-
-    <div class="recipe-layout">
-      <div class="recipe-info">
-        <img :src="recipe.image" :alt="recipe.title" class="image" />
-        <span class="badge">{{ recipe.category }}</span>
-        <h1>{{ recipe.title }}</h1>
-
-        <div class="metrics">
-          <div class="metric">
-            <span class="label">Time</span>
-            <span class="val">{{ recipe.time }}</span>
+  <div class="recipeDetail">
+    <div class="container recipeDetail__content">
+      <div class="recipeDetail__headerLayout">
+        <div class="recipeDetail__header">
+          <h1 class="recipeDetail__title">{{ recipe.title }}</h1>
+        </div>
+      </div>
+      <div class="recipeDetail__contentLayout">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
+            <img :src="recipe.image" :alt="recipe.title" class="image" />
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="recipe-info">
+              <span class="badge">{{ recipe.category }}</span>
+              <div class="metrics">
+                <div class="metric">
+                  <span class="label">Time</span>
+                  <span class="val">{{ recipe.time }}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <CheckOutRecipesSection />
     </div>
   </div>
 </template>

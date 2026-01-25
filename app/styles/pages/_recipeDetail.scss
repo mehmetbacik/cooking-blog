@@ -1,0 +1,12 @@
+.recipeDetail {
+  margin-bottom: $spacing-unit * 40;
+  @media (max-width: $md-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
+  @media (max-width: $sm-breakpoint) {
+    margin-bottom: $spacing-unit * 15;
+  }
+  &__content {
+    
+  }
+}
