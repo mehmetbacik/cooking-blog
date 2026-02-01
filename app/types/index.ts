@@ -8,9 +8,67 @@ export interface RecipeItem {
   servings: number;
   calories: number;
   description: string;
-  ingredients: string[];
+  ingredients: IngredientSection[];
   steps: string[];
 }
+
+export interface IngredientSection {
+  title?: string;
+  items: string[];
+}
+
+export interface SimpleRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
+}
+
+export interface DeliciousRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
+}
+
+export interface TastyRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  author: string;
+  category: string;
+  time: string;
+}
+
+export interface CheckOutRecipeItem {
+  id: number;
+  slug: string;
+  title: string;
+  image: string;
+  category: string;
+  time: string;
+}
+
+export interface DerivedRecipe {
+  id?: number;
+  slug: string;
+  title: string;   
+  image?: string;
+  category?: string;
+  time?: string;
+  servings?: number;
+  calories?: number;
+  description?: string;
+  ingredients?: IngredientSection[];
+  steps?: string[];
+  author?: string;
+}
+
 export interface NavItem {
   id: number;
   label: string;
@@ -47,29 +105,11 @@ export interface CategoryItem {
   image: string;
 }
 
-export interface SimpleRecipeItem {
-  id: number;
-  slug: string;
-  title: string;
-  image: string;
-  category: string;
-  time: string;
-}
-
 export interface InstagramPost {
   id: number;
   image: string;
   link: string;
   alt: string;
-}
-
-export interface DeliciousRecipeItem {
-  id: number;
-  slug: string;
-  title: string;
-  image: string;
-  category: string;
-  time: string;
 }
 
 export interface FooterNavItem {
@@ -89,25 +129,6 @@ export interface BlogPost {
   date: string;
   author: string;
   photo: string;
-}
-
-export interface TastyRecipeItem {
-  id: number;
-  slug: string;
-  title: string;
-  image: string;
-  author: string;
-  category: string;
-  time: string;
-}
-
-export interface CheckOutRecipeItem {
-  id: number;
-  slug: string;
-  title: string;
-  image: string;
-  category: string;
-  time: string;
 }
 
 export interface ContactForm {

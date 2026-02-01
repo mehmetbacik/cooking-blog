@@ -3,7 +3,7 @@ import type { SimpleRecipeItem } from "../types";
 export const simpleRecipesData: SimpleRecipeItem[] = [
   {
     id: 1,
-    slug: "big-and-juicy-wagyu-beef-cheeseburger",
+    slug: "big-and-juicy-wagyu-beef-cheeseburger1",
     title: "Big and Juicy Wagyu Beef Cheeseburger",
     image: "/images/home/simpleRecipes/simpleRecipes-1.png",
     category: "Snack",
@@ -11,7 +11,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 2,
-    slug: "fresh-lime-roasted-salmon-with-ginger-sauce",
+    slug: "fresh-lime-roasted-salmon-with-ginger-sauce1",
     title: "Fresh Lime Roasted Salmon with Ginger Sauce",
     image: "/images/home/simpleRecipes/simpleRecipes-2.png",
     category: "Fish",
@@ -19,7 +19,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 3,
-    slug: "strawberry-oatmeal-pancake-with-honey-syrup",
+    slug: "strawberry-oatmeal-pancake-with-honey-syrup1",
     title: "Strawberry Oatmeal Pancake with Honey Syrup",
     image: "/images/home/simpleRecipes/simpleRecipes-3.png",
     category: "Breakfast",
@@ -27,7 +27,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 4,
-    slug: "fresh-and-healthy-mixed-mayonnaise-salad",
+    slug: "fresh-and-healthy-mixed-mayonnaise-salad1",
     title: "Fresh and Healthy Mixed Mayonnaise Salad",
     image: "/images/home/simpleRecipes/simpleRecipes-4.png",
     category: "Healthy",
@@ -35,7 +35,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 5,
-    slug: "chicken-meatballs-with-cream-cheese",
+    slug: "chicken-meatballs-with-cream-cheese1",
     title: "Chicken Meatballs with Cream Cheese",
     image: "/images/home/simpleRecipes/simpleRecipes-5.png",
     category: "Meat",
@@ -43,7 +43,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 6,
-    slug: "fruity-pancake-with-orange-blueberry",
+    slug: "fruity-pancake-with-orange-blueberry1",
     title: "Fruity Pancake with Orange & Blueberry",
     image: "/images/home/simpleRecipes/simpleRecipes-6.png",
     category: "Sweet",
@@ -51,7 +51,7 @@ export const simpleRecipesData: SimpleRecipeItem[] = [
   },
   {
     id: 7,
-    slug: "the-best-easy-one-pot-chicken-and-rice",
+    slug: "the-best-easy-one-pot-chicken-and-rice1",
     title: "The Best Easy One Pot Chicken and Rice",
     image: "/images/home/simpleRecipes/simpleRecipes-7.png",
     category: "Snack",
