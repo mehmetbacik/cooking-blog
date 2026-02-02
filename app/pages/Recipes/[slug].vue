@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, onBeforeUnmount, ref } from "vue";
 import { useRoute } from "vue-router";
 import { createError } from "nuxt/app";
 
@@ -8,7 +8,9 @@ import { deliciousRecipesData } from "../../data/deliciousRecipesData";
 import { tastyRecipesData } from "../../data/tastyRecipesData";
 import { recipesData } from "../../data/recipesData";
 
-import type { DerivedRecipe } from "~/types";
+import { socialItems } from "../../data/socialData";
+
+import type { DerivedRecipe } from "../../types";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -42,9 +44,34 @@ const toggleStep = (idx: number) => {
   }
 };
 
+const printPage = () => {
+  window.print();
+};
+
+const showShare = ref(false);
+const shareRef = ref<HTMLElement | null>(null);
+
+const toggleShare = () => {
+  showShare.value = !showShare.value;
+};
+
+const handleClickOutside = (e: MouseEvent) => {
+  if (!shareRef.value) return;
+  if (!shareRef.value.contains(e.target as Node)) {
+    showShare.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
+
 //console.log("ROUTE SLUG:", slug);
 //console.log("FOUND IN recipesData:", recipesData.find(r => r.slug === slug));
-
 </script>
 
 <template>
@@ -59,17 +86,37 @@ const toggleStep = (idx: number) => {
           <p v-else class="recipeDetail__description">
             <em>Description for this recipe is being prepared.</em>
           </p>
+          <div class="recipeDetail__actions">
+            <button class="action-btn print-btn" @click="printPage">
+              🖨 Print
+            </button>
+
+            <div class="share-wrapper" ref="shareRef">
+              <button class="action-btn share-btn" @click.stop="toggleShare">
+                🔗 Share
+              </button>
+
+              <div v-if="showShare" class="share-tooltip">
+                <a
+                  v-for="(item, idx) in socialItems"
+                  :key="idx"
+                  :href="item.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                >
+                  <img :src="item.iconUrl" :alt="item.name" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="recipeDetail__contentLayout">
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
             <div class="image-wrapper">
-              <img
-                :src="recipe.image"
-                :alt="recipe.title"
-                class="image"
-              />
+              <img :src="recipe.image" :alt="recipe.title" class="image" />
             </div>
             <div v-if="recipe.steps?.length" class="steps-wrapper">
               <h3 class="section-heading">Instructions</h3>
@@ -101,7 +148,7 @@ const toggleStep = (idx: number) => {
                 </div>
               </div>
             </div>
-            <div v-else >
+            <div v-else>
               <p>
                 <em
                   >Detailed instructions are being prepared for this recipe.</em
@@ -134,10 +181,7 @@ const toggleStep = (idx: number) => {
                   <span class="val text-muted">Info coming soon</span>
                 </div>
               </div>
-              <div
-                v-if="recipe.ingredients?.length"
-                class="ingredients-box"
-              >
+              <div v-if="recipe.ingredients?.length" class="ingredients-box">
                 <h3 class="section-heading">Ingredients</h3>
                 <div
                   v-for="(section, sIdx) in recipe.ingredients"
