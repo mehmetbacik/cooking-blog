@@ -70,7 +70,7 @@
               li {
                 .nav-item {
                   font-size: $font-size-base;
-                  font-weight: 500;
+                  font-weight: $font-weight-semibold;
                   color: $color-black;
                   text-decoration: none;
                   transition: $transition-base;

@@ -48,27 +48,33 @@ const printPage = () => {
   window.print();
 };
 
-const showShare = ref(false);
+const showSharePopup = ref(false);
 const shareRef = ref<HTMLElement | null>(null);
+const shareUrl = window.location.href;
 
-const toggleShare = () => {
-  showShare.value = !showShare.value;
+const toggleSharePopup = () => {
+  showSharePopup.value = !showSharePopup.value;
 };
 
 const handleClickOutside = (e: MouseEvent) => {
-  if (!shareRef.value) return;
-  if (!shareRef.value.contains(e.target as Node)) {
-    showShare.value = false;
+  if (
+    showSharePopup.value &&
+    shareRef.value &&
+    !shareRef.value.contains(e.target as Node)
+  ) {
+    showSharePopup.value = false;
   }
 };
 
-onMounted(() => {
-  document.addEventListener("click", handleClickOutside);
-});
+const copyLink = () => {
+  navigator.clipboard.writeText(shareUrl);
+  alert("Link copied!");
+};
 
-onBeforeUnmount(() => {
-  document.removeEventListener("click", handleClickOutside);
-});
+onMounted(() => document.addEventListener("click", handleClickOutside));
+onBeforeUnmount(() =>
+  document.removeEventListener("click", handleClickOutside),
+);
 
 const isPlayingVideo = ref(false);
 
@@ -119,26 +125,42 @@ const playVideo = () => {
             </div>
           </div>
           <div class="recipeDetail__actions">
-            <button class="action-btn print-btn" @click="printPage">
-              🖨 Print
-            </button>
-
-            <div class="share-wrapper" ref="shareRef">
-              <button class="action-btn share-btn" @click.stop="toggleShare">
-                🔗 Share
+            <div class="recipeDetail__actions-printWrapper">
+              <button class="recipeDetail__actions-printBtn" @click="printPage">
+                <img src="/icons/print.svg" alt="Print Icon" />
               </button>
+              <span>Print</span>
+            </div>
+            <div class="recipeDetail__actions-shareWrapper">
+              <button
+                class="recipeDetail__actions-shareBtn"
+                @click.stop="toggleSharePopup"
+              >
+                <img src="/icons/share.svg" alt="Share Icon" />
+              </button>
+              <span>Share</span>
+              <div v-if="showSharePopup" class="sharePopup-backdrop">
+                <div class="sharePopup" ref="shareRef">
+                  <h3>Share</h3>
 
-              <div v-if="showShare" class="share-tooltip">
-                <a
-                  v-for="(item, idx) in socialItems"
-                  :key="idx"
-                  :href="item.link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="social-icon"
-                >
-                  <img :src="item.iconUrl" :alt="item.name" />
-                </a>
+                  <div class="sharePopup-icons">
+                    <a
+                      v-for="(item, idx) in socialItems"
+                      :key="idx"
+                      :href="item.link"
+                      target="_blank"
+                      class="shareIcon"
+                    >
+                      <img :src="item.iconUrl" :alt="item.name" />
+                      <span>{{ item.name }}</span>
+                    </a>
+                  </div>
+
+                  <div class="sharePopup-linkBox">
+                    <input type="text" :value="recipe.slug" readonly />
+                    <button @click="copyLink">Copy</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
