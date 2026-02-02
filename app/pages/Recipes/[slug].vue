@@ -85,13 +85,39 @@ const playVideo = () => {
     <div class="container recipeDetail__content">
       <div class="recipeDetail__headerLayout">
         <div class="recipeDetail__header">
-          <h1 class="recipeDetail__title">{{ recipe.title }}</h1>
-          <p v-if="recipe.description" class="recipeDetail__description">
-            {{ recipe.description }}
-          </p>
-          <p v-else class="recipeDetail__description">
-            <em>Description for this recipe is being prepared.</em>
-          </p>
+          <div class="recipeDetail__headline">
+            <h1 class="recipeDetail__headline-title">{{ recipe.title }}</h1>
+            <div class="recipeDetail__headline-info">
+              <div class="recipeDetail__headline-infoAuthor">
+                <div class="recipeDetail__headline-infoAuthor-photo">
+                  <img :src="recipe.photo" :alt="recipe.author" />
+                </div>
+                <div class="recipeDetail__headline-infoAuthor-detail">
+                  <span class="recipeDetail__author">{{ recipe.author }}</span>
+                  <span class="recipeDetail__date">{{ recipe.date }}</span>
+                </div>
+              </div>
+              <div class="recipeDetail__headline-infoPrepTime">
+                <div class="recipeDetail__prepTime-content">
+                  <span class="recipeDetail__prepTime-label">Prep Time</span>
+                  <span class="recipeDetail__prepTime-val">{{
+                    recipe.preptime
+                  }}</span>
+                </div>
+              </div>
+              <div class="recipeDetail__headline-infoTime">
+                <div class="recipeDetail__infoTime-content">
+                  <span class="recipeDetail__infoTime-label">Cook Time</span>
+                  <span class="recipeDetail__infoTime-val">{{
+                    recipe.time
+                  }}</span>
+                </div>
+              </div>
+              <div class="recipeDetail__headline-infoCategory">
+                <span>{{ recipe.category || "Unknown" }}</span>
+              </div>
+            </div>
+          </div>
           <div class="recipeDetail__actions">
             <button class="action-btn print-btn" @click="printPage">
               🖨 Print
@@ -118,6 +144,7 @@ const playVideo = () => {
           </div>
         </div>
       </div>
+
       <div class="recipeDetail__contentLayout">
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
@@ -208,6 +235,12 @@ const playVideo = () => {
                   <span class="val text-muted">Info coming soon</span>
                 </div>
               </div>
+              <p v-if="recipe.description" class="recipeDetail__description">
+                {{ recipe.description }}
+              </p>
+              <p v-else class="recipeDetail__description">
+                <em>Description for this recipe is being prepared.</em>
+              </p>
               <div v-if="recipe.ingredients?.length" class="ingredients-box">
                 <h3 class="section-heading">Ingredients</h3>
                 <div

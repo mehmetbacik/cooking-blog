@@ -6,11 +6,15 @@ export interface RecipeItem {
   image: string;
   videoUrl: string;
   time: string;
+  preptime: string;
   servings: number;
   calories: number;
   description: string;
   ingredients: IngredientSection[];
   steps: string[];
+  author: string;
+  photo: string;
+  date: string;
 }
 
 export interface IngredientSection {
@@ -63,12 +67,15 @@ export interface DerivedRecipe {
   videoUrl?: string;
   category?: string;
   time?: string;
+  preptime?: string;
   servings?: number;
   calories?: number;
   description?: string;
   ingredients?: IngredientSection[];
   steps?: string[];
   author?: string;
+  photo?: string;
+  date?: string;
 }
 
 export interface NavItem {
