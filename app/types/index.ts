@@ -4,6 +4,7 @@ export interface RecipeItem {
   title: string;
   category: string;
   image: string;
+  videoUrl: string;
   time: string;
   servings: number;
   calories: number;
@@ -59,6 +60,7 @@ export interface DerivedRecipe {
   slug: string;
   title: string;   
   image?: string;
+  videoUrl?: string;
   category?: string;
   time?: string;
   servings?: number;

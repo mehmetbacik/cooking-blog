@@ -70,6 +70,12 @@ onBeforeUnmount(() => {
   document.removeEventListener("click", handleClickOutside);
 });
 
+const isPlayingVideo = ref(false);
+
+const playVideo = () => {
+  isPlayingVideo.value = true;
+};
+
 //console.log("ROUTE SLUG:", slug);
 //console.log("FOUND IN recipesData:", recipesData.find(r => r.slug === slug));
 </script>
@@ -116,7 +122,28 @@ onBeforeUnmount(() => {
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
             <div class="image-wrapper">
-              <img :src="recipe.image" :alt="recipe.title" class="image" />
+              <div
+                v-if="isPlayingVideo && recipe.videoUrl"
+                class="video-container"
+              >
+                <iframe
+                  :src="`https://www.youtube.com/embed/${recipe.videoUrl}?autoplay=1`"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                  class="video-iframe"
+                ></iframe>
+              </div>
+              <div v-else>
+                <img :src="recipe.image" :alt="recipe.title" class="image" />
+                <button
+                  v-if="recipe.videoUrl"
+                  class="play-button"
+                  @click="playVideo"
+                >
+                  ▶
+                </button>
+              </div>
             </div>
             <div v-if="recipe.steps?.length" class="steps-wrapper">
               <h3 class="section-heading">Instructions</h3>
