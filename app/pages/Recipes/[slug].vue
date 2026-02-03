@@ -143,9 +143,24 @@ const playVideo = () => {
                 <img src="/icons/share.svg" alt="Share Icon" />
               </button>
               <span>Share</span>
-              <div v-if="showSharePopup" class="recipeDetail__actions-sharePopup">
-                <div class="recipeDetail__actions-sharePopupContent" ref="shareRef">
-                  <span class="recipeDetail__actions-sharePopupTitle">Share</span>
+              <div
+                v-if="showSharePopup"
+                class="recipeDetail__actions-sharePopup"
+              >
+                <div
+                  class="recipeDetail__actions-sharePopupContent"
+                  ref="shareRef"
+                >
+                  <span class="recipeDetail__actions-sharePopupTitle"
+                    >Share this Recipe</span
+                  >
+                  <p class="recipeDetail__actions-sharePopupDesc">
+                    Love this recipe? Share it with your friends!
+                  </p>
+                  <div class="recipeDetail__actions-sharePopupLinkBox">
+                    <input type="text" :value="recipe.slug" readonly />
+                    <button @click="copyLink">Copy</button>
+                  </div>
                   <div class="recipeDetail__actions-sharePopupIcons">
                     <a
                       v-for="(item, idx) in socialItems"
@@ -155,12 +170,8 @@ const playVideo = () => {
                       class="recipeDetail__actions-sharePopupShareIcon"
                     >
                       <img :src="item.iconUrl" :alt="item.name" />
-                      <span>{{ item.name }}</span>
+                      <span class="recipeDetail__actions-sharePopupShareIconName">{{ item.name }}</span>
                     </a>
-                  </div>
-                  <div class="recipeDetail__actions-sharePopupLinkBox">
-                    <input type="text" :value="recipe.slug" readonly />
-                    <button @click="copyLink">Copy</button>
                   </div>
                 </div>
               </div>
