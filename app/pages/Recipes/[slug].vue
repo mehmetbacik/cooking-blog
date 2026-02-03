@@ -139,24 +139,22 @@ const playVideo = () => {
                 <img src="/icons/share.svg" alt="Share Icon" />
               </button>
               <span>Share</span>
-              <div v-if="showSharePopup" class="sharePopup-backdrop">
-                <div class="sharePopup" ref="shareRef">
-                  <h3>Share</h3>
-
-                  <div class="sharePopup-icons">
+              <div v-if="showSharePopup" class="recipeDetail__actions-sharePopup">
+                <div class="recipeDetail__actions-sharePopupContent" ref="shareRef">
+                  <span class="recipeDetail__actions-sharePopupTitle">Share</span>
+                  <div class="recipeDetail__actions-sharePopupIcons">
                     <a
                       v-for="(item, idx) in socialItems"
                       :key="idx"
                       :href="item.link"
                       target="_blank"
-                      class="shareIcon"
+                      class="recipeDetail__actions-sharePopupShareIcon"
                     >
                       <img :src="item.iconUrl" :alt="item.name" />
                       <span>{{ item.name }}</span>
                     </a>
                   </div>
-
-                  <div class="sharePopup-linkBox">
+                  <div class="recipeDetail__actions-sharePopupLinkBox">
                     <input type="text" :value="recipe.slug" readonly />
                     <button @click="copyLink">Copy</button>
                   </div>
