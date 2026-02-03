@@ -50,7 +50,11 @@ const printPage = () => {
 
 const showSharePopup = ref(false);
 const shareRef = ref<HTMLElement | null>(null);
-const shareUrl = window.location.href;
+const shareUrl = ref("");
+
+onMounted(() => {
+  shareUrl.value = window.location.href;
+});
 
 const toggleSharePopup = () => {
   showSharePopup.value = !showSharePopup.value;
@@ -67,7 +71,7 @@ const handleClickOutside = (e: MouseEvent) => {
 };
 
 const copyLink = () => {
-  navigator.clipboard.writeText(shareUrl);
+  navigator.clipboard.writeText(shareUrl.value);
   alert("Link copied!");
 };
 
