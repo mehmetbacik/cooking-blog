@@ -10,8 +10,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 820,
+    calories: 219.9,
+    fat: 10.7,
+    protein: 7.9,
+    carbohydrate: 22.3,
+    cholesterol: 37.4,
     description:
       "A light and healthy Japanese-style fried rice made with fresh vegetables, eggs, and low-sodium soy sauce for a nutritious and flavorful meal.",
     ingredients: [
@@ -62,8 +65,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 820,
+    calories: 619.4,
+    fat: 15.7,
+    protein: 9.9,
+    carbohydrate: 12.3,
+    cholesterol: 25.4,
     description:
       "Juicy Wagyu beef patty with melted cheddar, served in a soft bun for a rich and satisfying burger experience.",
     ingredients: [
@@ -110,8 +116,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 520,
+    calories: 112.9,
+    fat: 8.7,
+    protein: 17.9,
+    carbohydrate: 12.3,
+    cholesterol: 47.4,
     description:
       "Oven-roasted salmon with fresh lime and a light ginger sauce, offering a bright and balanced flavor.",
     ingredients: [
@@ -156,8 +165,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 390,
+    calories: 523.4,
+    fat: 54.7,
+    protein: 17.9,
+    carbohydrate: 32.3,
+    cholesterol: 25.4,
     description:
       "Soft oatmeal pancakes topped with fresh strawberries and drizzled with honey syrup for a wholesome breakfast.",
     ingredients: [
@@ -202,8 +214,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 320,
+    calories: 385.3,
+    fat: 12.4,
+    protein: 13.59,
+    carbohydrate: 18.3,
+    cholesterol: 42.4,
     description:
       "A light and refreshing mixed salad with fresh vegetables and a creamy mayonnaise dressing.",
     ingredients: [
@@ -246,8 +261,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 480,
+    calories: 400.8,
+    fat: 30.7,
+    protein: 12.9,
+    carbohydrate: 11.3,
+    cholesterol: 35.2,
     description:
       "Tender chicken meatballs cooked until golden and served with a rich, creamy cheese sauce.",
     ingredients: [
@@ -293,8 +311,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 420,
+    calories: 319.7,
+    fat: 20.7,
+    protein: 6.9,
+    carbohydrate: 22.5,
+    cholesterol: 22.4,
     description:
       "Fluffy pancakes topped with fresh blueberries and bright orange notes for a fruity and sweet treat.",
     ingredients: [
@@ -333,8 +354,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 560,
+    calories: 119.9,
+    fat: 15.1,
+    protein: 9.1,
+    carbohydrate: 18.3,
+    cholesterol: 24.4,
     description:
       "A comforting one-pot meal with tender chicken and perfectly cooked rice, simple and satisfying.",
     ingredients: [
@@ -372,8 +396,11 @@ export const recipesData: RecipeItem[] = [
     videoUrl: "jPOxWOE-3Xk?si=lg3lPplxj0pIFEOB",
     preptime: "15 Minutes",
     time: "30 Minutes",
-    servings: 2,
-    calories: 720,
+    calories: 320.9,
+    fat: 15.7,
+    protein: 9.2,
+    carbohydrate: 25.2,
+    cholesterol: 20.4,
     description:
       "Creamy pasta tossed with tender chicken and crispy bacon in a rich, indulgent sauce.",
     ingredients: [

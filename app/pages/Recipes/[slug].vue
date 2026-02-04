@@ -170,7 +170,10 @@ const playVideo = () => {
                       class="recipeDetail__actions-sharePopupShareIcon"
                     >
                       <img :src="item.iconUrl" :alt="item.name" />
-                      <span class="recipeDetail__actions-sharePopupShareIconName">{{ item.name }}</span>
+                      <span
+                        class="recipeDetail__actions-sharePopupShareIconName"
+                        >{{ item.name }}</span
+                      >
                     </a>
                   </div>
                 </div>
@@ -179,34 +182,47 @@ const playVideo = () => {
           </div>
         </div>
       </div>
-
       <div class="recipeDetail__contentLayout">
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
-            <div class="image-wrapper">
+            <div class="recipeDetail__imageWrapper">
               <div
                 v-if="isPlayingVideo && recipe.videoUrl"
-                class="video-container"
+                class="recipeDetail__videoContainer"
               >
                 <iframe
                   :src="`https://www.youtube.com/embed/${recipe.videoUrl}?autoplay=1`"
                   frameborder="0"
                   allow="autoplay; encrypted-media"
                   allowfullscreen
-                  class="video-iframe"
+                  class="recipeDetail__videoIframe"
                 ></iframe>
               </div>
-              <div v-else>
-                <img :src="recipe.image" :alt="recipe.title" class="image" />
+              <div class="recipeDetail__imageContainer" v-else>
+                <img
+                  :src="recipe.image"
+                  :alt="recipe.title"
+                  class="recipeDetail__image"
+                />
                 <button
                   v-if="recipe.videoUrl"
-                  class="play-button"
+                  class="recipeDetail__playBtn"
                   @click="playVideo"
                 >
-                  ▶
+                  <img src="/icons/playImage.svg" alt="Play" />
                 </button>
               </div>
             </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="recipeDetail__nutritionInformationWrapper">Nutrition Information</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipeDetail__contentLayout">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
             <div v-if="recipe.steps?.length" class="steps-wrapper">
               <h3 class="section-heading">Instructions</h3>
               <div class="steps-list">
@@ -253,9 +269,9 @@ const playVideo = () => {
                   <span class="label">Time</span>
                   <span class="val">{{ recipe.time || "N/A" }}</span>
                 </div>
-                <div v-if="recipe.servings" class="metric">
+                <div v-if="recipe.fat" class="metric">
                   <span class="label">Servings</span>
-                  <span class="val">{{ recipe.servings }}</span>
+                  <span class="val">{{ recipe.fat }}</span>
                 </div>
                 <div v-else class="metric">
                   <span class="label">Servings</span>

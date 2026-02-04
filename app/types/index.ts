@@ -7,8 +7,11 @@ export interface RecipeItem {
   videoUrl: string;
   time: string;
   preptime: string;
-  servings: number;
   calories: number;
+  fat: number;
+  protein: number;
+  carbohydrate: number;
+  cholesterol: number;
   description: string;
   ingredients: IngredientSection[];
   steps: string[];
@@ -62,14 +65,17 @@ export interface CheckOutRecipeItem {
 export interface DerivedRecipe {
   id?: number;
   slug: string;
-  title: string;   
+  title: string;
   image?: string;
   videoUrl?: string;
   category?: string;
   time?: string;
   preptime?: string;
-  servings?: number;
   calories?: number;
+  fat?: number;
+  protein?: number;
+  carbohydrate?: number;
+  cholesterol?: number;
   description?: string;
   ingredients?: IngredientSection[];
   steps?: string[];
