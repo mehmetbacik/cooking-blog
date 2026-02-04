@@ -12,6 +12,7 @@ export interface RecipeItem {
   protein: number;
   carbohydrate: number;
   cholesterol: number;
+  excerpt: string;
   description: string;
   ingredients: IngredientSection[];
   steps: string[];
@@ -76,6 +77,7 @@ export interface DerivedRecipe {
   protein?: number;
   carbohydrate?: number;
   cholesterol?: number;
+  excerpt?: string;
   description?: string;
   ingredients?: IngredientSection[];
   steps?: string[];

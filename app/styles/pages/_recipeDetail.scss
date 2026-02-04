@@ -345,9 +345,54 @@
         }
       }
       .recipeDetail__nutritionInformationWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: $color-blue-pale;
         border-radius: 20px;
         padding: $spacing-unit * 8;
+        height: 100%;
+        .recipeDetail__nutritionInformationContent {
+          .recipeDetail__nutritionInformationTitle {
+            color: $color-black;
+            font-size: $font-size-base * 1.5;
+            font-weight: $font-weight-semibold;
+            letter-spacing: -1.2px;
+            margin-bottom: $spacing-unit * 2;
+          }
+          .recipeDetail__nutritionInformationMetrics {
+            .recipeDetail__nutritionInformationMetric {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: $spacing-unit;
+              border-bottom: solid 1px $color-gray-soft;
+              padding-block: $spacing-unit * 4;
+              .recipeDetail__label {
+                color: $color-black;
+                font-weight: $font-weight-light;
+                font-size: $font-size-base * 1.125;
+              }
+              .recipeDetail__val {
+                color: $color-black;
+                font-weight: $font-weight-semibold;
+                font-size: $font-size-base * 1.125;
+              }
+            }
+          }
+        }
+        .recipeDetail__description {
+          color: $color-black;
+          font-size: $font-size-base * 1;
+          font-weight: $font-weight-light;
+          text-align: center;
+        }
+      }
+      .recipeDetail__excerptWrapper {
+        margin-block: $spacing-unit * 20;
+        color: $color-black;
+        font-size: $font-size-base * 1;
+        font-weight: $font-weight-light;
       }
     }
   }

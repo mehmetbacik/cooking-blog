@@ -11,6 +11,7 @@ import { recipesData } from "../../data/recipesData";
 import { socialItems } from "../../data/socialData";
 
 import type { DerivedRecipe } from "../../types";
+import BaseAdd from "~/ui/BaseAdd.vue";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -85,6 +86,19 @@ const isPlayingVideo = ref(false);
 const playVideo = () => {
   isPlayingVideo.value = true;
 };
+
+const DESCRIPTION_LIMIT = 70;
+
+const shortDescription = computed(() => {
+  if (!recipe.description) return "";
+  return recipe.description.length > DESCRIPTION_LIMIT
+    ? recipe.description.slice(0, DESCRIPTION_LIMIT) + "..."
+    : recipe.description;
+});
+
+const isDescriptionLong = computed(() => {
+  return recipe.description && recipe.description.length > DESCRIPTION_LIMIT;
+});
 
 //console.log("ROUTE SLUG:", slug);
 //console.log("FOUND IN recipesData:", recipesData.find(r => r.slug === slug));
@@ -215,10 +229,89 @@ const playVideo = () => {
             </div>
           </div>
           <div class="col-12 col-lg-4">
-            <div class="recipeDetail__nutritionInformationWrapper">Nutrition Information</div>
+            <div class="recipeDetail__nutritionInformationWrapper">
+              <div class="recipeDetail__nutritionInformationContent">
+                <h3 class="recipeDetail__nutritionInformationTitle">
+                  Nutrition Information
+                </h3>
+                <div class="recipeDetail__nutritionInformationMetrics">
+                  <div class="recipeDetail__nutritionInformationMetric">
+                    <span class="recipeDetail__label">Calories</span>
+                    <span v-if="recipe.calories" class="recipeDetail__val"
+                      >{{ recipe.calories || "N/A" }}&nbsp;kcal</span
+                    >
+                    <span v-else class="recipeDetail__val"
+                      >Info coming soon</span
+                    >
+                  </div>
+                  <div class="recipeDetail__nutritionInformationMetric">
+                    <span class="recipeDetail__label">Total Fat</span>
+                    <span v-if="recipe.fat" class="recipeDetail__val"
+                      >{{ recipe.fat || "N/A" }}&nbsp;g</span
+                    >
+                    <span v-else class="recipeDetail__val"
+                      >Info coming soon</span
+                    >
+                  </div>
+                  <div class="recipeDetail__nutritionInformationMetric">
+                    <span class="recipeDetail__label">Protein</span>
+                    <span v-if="recipe.protein" class="recipeDetail__val"
+                      >{{ recipe.protein || "N/A" }}&nbsp;g</span
+                    >
+                    <span v-else class="recipeDetail__val"
+                      >Info coming soon</span
+                    >
+                  </div>
+                  <div class="recipeDetail__nutritionInformationMetric">
+                    <span class="recipeDetail__label">Carbohydrate</span>
+                    <span v-if="recipe.carbohydrate" class="recipeDetail__val"
+                      >{{ recipe.carbohydrate || "N/A" }}&nbsp;g</span
+                    >
+                    <span v-else class="recipeDetail__val"
+                      >Info coming soon</span
+                    >
+                  </div>
+                  <div class="recipeDetail__nutritionInformationMetric">
+                    <span class="recipeDetail__label">Cholesterol</span>
+                    <span v-if="recipe.cholesterol" class="recipeDetail__val"
+                      >{{ recipe.cholesterol || "N/A" }}&nbsp;mg</span
+                    >
+                    <span v-else class="recipeDetail__val"
+                      >Info coming soon</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <p
+                v-if="recipe.description"
+                class="recipeDetail__description"
+                :title="isDescriptionLong ? recipe.description : ''"
+              >
+                {{ shortDescription }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="recipeDetail__excerptWrapper">
+              <p v-if="recipe.excerpt">
+                {{ recipe.excerpt }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-8">
+            Content
+          </div>
+          <div class="col-12 col-lg-4">
+            <TastyRecipesSection />
+            <BaseAdd />
           </div>
         </div>
       </div>
+
 
       <div class="recipeDetail__contentLayout">
         <div class="row align-items-center">
@@ -263,35 +356,6 @@ const playVideo = () => {
           </div>
           <div class="col-12 col-lg-4">
             <div class="recipe-info">
-              <span class="badge">{{ recipe.category || "Unknown" }}</span>
-              <div class="metrics">
-                <div class="metric">
-                  <span class="label">Time</span>
-                  <span class="val">{{ recipe.time || "N/A" }}</span>
-                </div>
-                <div v-if="recipe.fat" class="metric">
-                  <span class="label">Servings</span>
-                  <span class="val">{{ recipe.fat }}</span>
-                </div>
-                <div v-else class="metric">
-                  <span class="label">Servings</span>
-                  <span class="val text-muted">Info coming soon</span>
-                </div>
-                <div v-if="recipe.calories" class="metric">
-                  <span class="label">Calories</span>
-                  <span class="val">{{ recipe.calories }}</span>
-                </div>
-                <div v-else class="metric">
-                  <span class="label">Calories</span>
-                  <span class="val text-muted">Info coming soon</span>
-                </div>
-              </div>
-              <p v-if="recipe.description" class="recipeDetail__description">
-                {{ recipe.description }}
-              </p>
-              <p v-else class="recipeDetail__description">
-                <em>Description for this recipe is being prepared.</em>
-              </p>
               <div v-if="recipe.ingredients?.length" class="ingredients-box">
                 <h3 class="section-heading">Ingredients</h3>
                 <div

@@ -15,6 +15,8 @@ export const recipesData: RecipeItem[] = [
     protein: 7.9,
     carbohydrate: 22.3,
     cholesterol: 37.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "A light and healthy Japanese-style fried rice made with fresh vegetables, eggs, and low-sodium soy sauce for a nutritious and flavorful meal.",
     ingredients: [
@@ -70,6 +72,8 @@ export const recipesData: RecipeItem[] = [
     protein: 9.9,
     carbohydrate: 12.3,
     cholesterol: 25.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Juicy Wagyu beef patty with melted cheddar, served in a soft bun for a rich and satisfying burger experience.",
     ingredients: [
@@ -121,6 +125,8 @@ export const recipesData: RecipeItem[] = [
     protein: 17.9,
     carbohydrate: 12.3,
     cholesterol: 47.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Oven-roasted salmon with fresh lime and a light ginger sauce, offering a bright and balanced flavor.",
     ingredients: [
@@ -170,6 +176,8 @@ export const recipesData: RecipeItem[] = [
     protein: 17.9,
     carbohydrate: 32.3,
     cholesterol: 25.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Soft oatmeal pancakes topped with fresh strawberries and drizzled with honey syrup for a wholesome breakfast.",
     ingredients: [
@@ -219,6 +227,8 @@ export const recipesData: RecipeItem[] = [
     protein: 13.59,
     carbohydrate: 18.3,
     cholesterol: 42.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "A light and refreshing mixed salad with fresh vegetables and a creamy mayonnaise dressing.",
     ingredients: [
@@ -266,6 +276,8 @@ export const recipesData: RecipeItem[] = [
     protein: 12.9,
     carbohydrate: 11.3,
     cholesterol: 35.2,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Tender chicken meatballs cooked until golden and served with a rich, creamy cheese sauce.",
     ingredients: [
@@ -316,6 +328,8 @@ export const recipesData: RecipeItem[] = [
     protein: 6.9,
     carbohydrate: 22.5,
     cholesterol: 22.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Fluffy pancakes topped with fresh blueberries and bright orange notes for a fruity and sweet treat.",
     ingredients: [
@@ -359,6 +373,8 @@ export const recipesData: RecipeItem[] = [
     protein: 9.1,
     carbohydrate: 18.3,
     cholesterol: 24.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "A comforting one-pot meal with tender chicken and perfectly cooked rice, simple and satisfying.",
     ingredients: [
@@ -401,6 +417,8 @@ export const recipesData: RecipeItem[] = [
     protein: 9.2,
     carbohydrate: 25.2,
     cholesterol: 20.4,
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     description:
       "Creamy pasta tossed with tender chicken and crispy bacon in a rich, indulgent sauce.",
     ingredients: [
