@@ -303,7 +303,49 @@ const isDescriptionLong = computed(() => {
         </div>
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
-            Content
+            <div v-if="recipe.ingredients?.length" class="recipeDetail__ingredientsWrapper">
+              <h3 class="recipeDetail__ingredientsTitle">Ingredients</h3>
+              <div
+                v-for="(section, sIdx) in recipe.ingredients"
+                :key="sIdx"
+                class="recipeDetail__ingredientsContent"
+              >
+                <h4 v-if="section.title" class="recipeDetail__ingredientsContent-sectionTitle">
+                  {{ section.title }}
+                </h4>
+                <ul class="recipeDetail__ingredientsContent-checklist">
+                  <li
+                    v-for="(item, iIdx) in section.items"
+                    :key="iIdx"
+                    class="recipeDetail__ingredientsContent-checklistItem"
+                    :class="{
+                      'is-checked': checkedIngredients.has(`${sIdx}-${iIdx}`),
+                    }"
+                    @click="toggleIngredient(sIdx, iIdx)"
+                  >
+                    <div class="recipeDetail__ingredientsContent-checkbox">
+                      <svg
+                        v-if="checkedIngredients.has(`${sIdx}-${iIdx}`)"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="check-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <span class="recipeDetail__ingredientsContent-text">{{ item }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div v-else>
+              <span class="recipeDetail__ingredientsContent-text">Ingredients for this recipe are being prepared.</span>
+            </div>
           </div>
           <div class="col-12 col-lg-4">
             <TastyRecipesSection />
@@ -311,7 +353,6 @@ const isDescriptionLong = computed(() => {
           </div>
         </div>
       </div>
-
 
       <div class="recipeDetail__contentLayout">
         <div class="row align-items-center">
@@ -352,53 +393,6 @@ const isDescriptionLong = computed(() => {
                   >Detailed instructions are being prepared for this recipe.</em
                 >
               </p>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <div class="recipe-info">
-              <div v-if="recipe.ingredients?.length" class="ingredients-box">
-                <h3 class="section-heading">Ingredients</h3>
-                <div
-                  v-for="(section, sIdx) in recipe.ingredients"
-                  :key="sIdx"
-                  class="ingredient-section"
-                >
-                  <h4 v-if="section.title" class="section-title">
-                    {{ section.title }}
-                  </h4>
-                  <ul class="checklist">
-                    <li
-                      v-for="(item, iIdx) in section.items"
-                      :key="iIdx"
-                      class="checklist-item"
-                      :class="{
-                        'is-checked': checkedIngredients.has(`${sIdx}-${iIdx}`),
-                      }"
-                      @click="toggleIngredient(sIdx, iIdx)"
-                    >
-                      <div class="checkbox">
-                        <svg
-                          v-if="checkedIngredients.has(`${sIdx}-${iIdx}`)"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          class="check-icon"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <span class="text">{{ item }}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div v-else>
-                <em>Ingredients for this recipe are being prepared.</em>
-              </div>
             </div>
           </div>
         </div>

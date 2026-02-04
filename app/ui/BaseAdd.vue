@@ -5,5 +5,6 @@ const AdsPath = "/images/global/ads.png";
 <template>
   <div class="ads__wrapper">
     <img :src="AdsPath" alt="Ads" />
+    <p>www.foodieland.com</p>
   </div>
 </template>

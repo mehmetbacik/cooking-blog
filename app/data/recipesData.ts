@@ -21,7 +21,7 @@ export const recipesData: RecipeItem[] = [
       "A light and healthy Japanese-style fried rice made with fresh vegetables, eggs, and low-sodium soy sauce for a nutritious and flavorful meal.",
     ingredients: [
       {
-        title: "Main Ingredients",
+        title: "For main dish",
         items: [
           "2 cups cooked and chilled rice (preferably day-old)",
           "2 Eggs",

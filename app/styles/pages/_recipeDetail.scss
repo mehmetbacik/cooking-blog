@@ -390,9 +390,84 @@
       }
       .recipeDetail__excerptWrapper {
         margin-block: $spacing-unit * 20;
-        color: $color-black;
-        font-size: $font-size-base * 1;
-        font-weight: $font-weight-light;
+        p {
+          color: $color-black;
+          font-size: $font-size-base * 1;
+          font-weight: $font-weight-light;
+        }
+      }
+      .tastyRecipes {
+        margin-bottom: $spacing-unit * 20;
+      }
+      .recipeDetail__ingredientsWrapper {
+        .recipeDetail__ingredientsTitle {
+          color: $color-black;
+          font-size: $font-size-base * 2.25;
+          font-weight: $font-weight-semibold;
+          letter-spacing: -2px;
+          margin-bottom: $spacing-unit * 12;
+        }
+        .recipeDetail__ingredientsContent {
+          margin-bottom: $spacing-unit * 16;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .recipeDetail__ingredientsContent-sectionTitle {
+            font-size: $font-size-base * 1.5;
+            color: $color-black;
+            font-weight: $font-weight-semibold;
+            letter-spacing: -1px;
+          }
+          .recipeDetail__ingredientsContent-checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            .recipeDetail__ingredientsContent-checklistItem {
+              display: flex;
+              align-items: flex-start;
+              gap: $spacing-unit * 6;
+              cursor: pointer;
+              transition: $transition-base;
+              padding-block: $spacing-unit * 8;
+              border-bottom: solid 2px $color-gray-soft;
+              &:hover .recipeDetail__ingredientsContent-checkbox {
+                border-color: $color-black;
+              }
+              .recipeDetail__ingredientsContent-checkbox {
+                width: 24px;
+                height: 24px;
+                border: solid 2px $color-gray-soft;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                background: $color-white;
+                transition: $transition-base;
+                .check-icon {
+                  width: 16px;
+                  height: 16px;
+                  color: $color-white;
+                }
+              }
+              .recipeDetail__ingredientsContent-text {
+                font-size: $font-size-base * 1.125;
+                color: $color-black;
+                transition: $transition-base;
+              }
+              &.is-checked {
+                .recipeDetail__ingredientsContent-checkbox {
+                  background: $color-black;
+                  border-color: $color-black;
+                }
+                .recipeDetail__ingredientsContent-text {
+                  color: $color-gray;
+                  text-decoration: line-through;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
