@@ -15,7 +15,7 @@ export interface RecipeItem {
   excerpt: string;
   description: string;
   ingredients: IngredientSection[];
-  steps: string[];
+  steps: RecipeStep[];
   author: string;
   photo: string;
   date: string;
@@ -33,6 +33,13 @@ export interface SimpleRecipeItem {
   image: string;
   category: string;
   time: string;
+}
+
+export interface RecipeStep {
+  title?: string;
+  text?: string;
+  text2?: string;
+  image?: string;
 }
 
 export interface DeliciousRecipeItem {
@@ -80,7 +87,7 @@ export interface DerivedRecipe {
   excerpt?: string;
   description?: string;
   ingredients?: IngredientSection[];
-  steps?: string[];
+  steps?: RecipeStep[];
   author?: string;
   photo?: string;
   date?: string;

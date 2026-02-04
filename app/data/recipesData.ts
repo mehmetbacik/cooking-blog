@@ -45,14 +45,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Heat olive oil in a pan over medium heat.",
-      "Add onions and sauté until translucent.",
-      "Add carrots, peas, and corn; cook for 3–4 minutes.",
-      "Push vegetables aside, add eggs, scramble lightly.",
-      "Add chilled rice and mix everything together.",
-      "Season with soy sauce and sesame oil.",
-      "Stir-fry for 3–5 minutes until everything is well combined.",
-      "Top with green onions and serve warm.",
+      {
+        title: "1.Heat olive oil in a pan over medium heat.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Add onions and sauté until translucent.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Add carrots, peas, and corn; cook for 3–4 minutes.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 March 2022",
     author: "John Smith",
@@ -99,13 +106,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Preheat a cast iron pan or grill over medium-high heat.",
-      "Season Wagyu beef with salt, pepper, and Worcestershire sauce, then form into 2 patties.",
-      "Cook patties for 3–4 minutes on each side.",
-      "Place cheddar cheese on top and let melt.",
-      "Toast the brioche buns lightly.",
-      "Assemble with lettuce, tomato, onion, patty, and sauce.",
-      "Serve immediately while hot and juicy.",
+      {
+        title: "1.Preheat a cast iron pan or grill over medium-high heat.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Cook patties for 3–4 minutes on each side.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Toast the brioche buns lightly.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Wade Warren",
@@ -151,12 +166,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Preheat oven to 200°C (390°F).",
-      "Place salmon on a baking tray and drizzle with olive oil.",
-      "Season with salt, pepper, and lime zest.",
-      "Bake for 12–15 minutes until flaky.",
-      "Meanwhile whisk lime juice, soy sauce, ginger, honey, and garlic together.",
-      "Drizzle the ginger-lime sauce over the baked salmon before serving.",
+      {
+        title: "1.Preheat oven to 200°C (390°F).",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Season with salt, pepper, and lime zest.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Bake for 12–15 minutes until flaky.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Robert Fox",
@@ -203,11 +227,22 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Blend oats into a fine flour or leave slightly coarse for texture.",
-      "Mix oats, flour, baking powder, milk, egg, honey, and vanilla until smooth.",
-      "Heat a non-stick pan over medium heat and grease lightly.",
-      "Pour batter and cook pancakes 2–3 minutes per side.",
-      "Serve topped with fresh strawberries and honey syrup.",
+      {
+        title:
+          "1.Blend oats into a fine flour or leave slightly coarse for texture.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Heat a non-stick pan over medium heat and grease lightly.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Pour batter and cook pancakes 2–3 minutes per side.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Dianne Russell",
@@ -253,10 +288,22 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Combine lettuce, cucumber, tomatoes, corn, and shredded carrots in a large bowl.",
-      "In a small bowl whisk mayonnaise, lemon juice, salt, and pepper.",
-      "Pour the dressing over the salad and toss gently to coat.",
-      "Serve chilled for best flavor.",
+      {
+        title:
+          "1.In a small bowl whisk mayonnaise, lemon juice, salt, and pepper.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Pour the dressing over the salad and toss gently to coat.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Serve chilled for best flavor.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Leslie Alexander",
@@ -303,12 +350,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Mix ground chicken with egg, breadcrumbs, garlic, salt, and pepper.",
-      "Shape into small meatballs and pan-fry until golden.",
-      "In a saucepan, melt butter and add cream cheese.",
-      "Pour in milk and whisk until smooth.",
-      "Season with paprika and salt.",
-      "Add cooked meatballs into the sauce and simmer for 5 minutes.",
+      {
+        title: "1.Shape into small meatballs and pan-fry until golden.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.In a saucepan, melt butter and add cream cheese.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Pour in milk and whisk until smooth.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Courtney Henry",
@@ -350,10 +406,22 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Mix flour, sugar, baking powder, milk, egg, and orange zest until smooth.",
-      "Heat a pan over medium heat and lightly grease.",
-      "Cook pancakes for 2–3 minutes per side.",
-      "Serve topped with blueberries, orange slices, and maple syrup.",
+      {
+        title: "1.Heat a pan over medium heat and lightly grease.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Cook pancakes for 2–3 minutes per side.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title:
+          "3.Serve topped with blueberries, orange slices, and maple syrup.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Albert Flores",
@@ -392,12 +460,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Heat olive oil in a pot and sauté onion and garlic.",
-      "Add chicken cubes and cook until lightly browned.",
-      "Add rice and stir for 1 minute.",
-      "Pour chicken broth, season with salt and pepper.",
-      "Cover and simmer 15–18 minutes until rice is tender.",
-      "Fluff with a fork and serve warm.",
+      {
+        title: "1.Heat olive oil in a pot and sauté onion and garlic.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Add rice and stir for 1 minute.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Fluff with a fork and serve warm.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Albert Flores",
@@ -435,13 +512,21 @@ export const recipesData: RecipeItem[] = [
       },
     ],
     steps: [
-      "Boil pasta according to package instructions.",
-      "Sauté bacon until crispy, then remove.",
-      "In the same pan, cook chicken until golden.",
-      "Add garlic and cook for 1 minute.",
-      "Pour in heavy cream and simmer.",
-      "Add Parmesan and stir until thickened.",
-      "Mix in the cooked pasta and crispy bacon.",
+      {
+        title: "1.Sauté bacon until crispy, then remove.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        image: "/images/recipe/banner.png",
+        text2:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "2.Pour in heavy cream and simmer.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
+      {
+        title: "3.Add Parmesan and stir until thickened.",
+        text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      },
     ],
     date: "12 November 2021",
     author: "Albert Flores",

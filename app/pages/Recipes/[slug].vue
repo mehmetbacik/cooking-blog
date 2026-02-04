@@ -303,14 +303,20 @@ const isDescriptionLong = computed(() => {
         </div>
         <div class="row align-items-center">
           <div class="col-12 col-lg-8">
-            <div v-if="recipe.ingredients?.length" class="recipeDetail__ingredientsWrapper">
+            <div
+              v-if="recipe.ingredients?.length"
+              class="recipeDetail__ingredientsWrapper"
+            >
               <h3 class="recipeDetail__ingredientsTitle">Ingredients</h3>
               <div
                 v-for="(section, sIdx) in recipe.ingredients"
                 :key="sIdx"
                 class="recipeDetail__ingredientsContent"
               >
-                <h4 v-if="section.title" class="recipeDetail__ingredientsContent-sectionTitle">
+                <h4
+                  v-if="section.title"
+                  class="recipeDetail__ingredientsContent-sectionTitle"
+                >
                   {{ section.title }}
                 </h4>
                 <ul class="recipeDetail__ingredientsContent-checklist">
@@ -338,25 +344,18 @@ const isDescriptionLong = computed(() => {
                         />
                       </svg>
                     </div>
-                    <span class="recipeDetail__ingredientsContent-text">{{ item }}</span>
+                    <span class="recipeDetail__ingredientsContent-text">{{
+                      item
+                    }}</span>
                   </li>
                 </ul>
               </div>
             </div>
             <div v-else>
-              <span class="recipeDetail__ingredientsContent-text">Ingredients for this recipe are being prepared.</span>
+              <span class="recipeDetail__ingredientsContent-text"
+                >Ingredients for this recipe are being prepared.</span
+              >
             </div>
-          </div>
-          <div class="col-12 col-lg-4">
-            <TastyRecipesSection />
-            <BaseAdd />
-          </div>
-        </div>
-      </div>
-
-      <div class="recipeDetail__contentLayout">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-8">
             <div v-if="recipe.steps?.length" class="steps-wrapper">
               <h3 class="section-heading">Instructions</h3>
               <div class="steps-list">
@@ -369,31 +368,37 @@ const isDescriptionLong = computed(() => {
                 >
                   <div class="step-marker">
                     <span v-if="!checkedSteps.has(idx)">{{ idx + 1 }}</span>
-                    <svg
-                      v-else
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="check-icon-step"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
+                    <svg v-else>...</svg>
                   </div>
-                  <p class="step-text">{{ step }}</p>
+                  <div class="step-content">
+                    <h4 v-if="step.title" class="step-title">
+                      {{ step.title }}
+                    </h4>
+                    <p v-if="step.text" class="step-text">
+                      {{ step.text }}
+                    </p>
+                    <img
+                      v-if="step.image"
+                      :src="step.image"
+                      :alt="step.title || step.text"
+                      class="step-image"
+                    />
+                    <p v-if="step.text2" class="step-text">
+                      {{ step.text2 }}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <div v-else>
-              <p>
-                <em
-                  >Detailed instructions are being prepared for this recipe.</em
-                >
-              </p>
+              <span>
+                Detailed instructions are being prepared for this recipe.
+              </span>
             </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <TastyRecipesSection />
+            <BaseAdd />
           </div>
         </div>
       </div>
