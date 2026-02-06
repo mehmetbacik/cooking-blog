@@ -410,7 +410,7 @@
         .recipeDetail__ingredientsContent {
           margin-bottom: $spacing-unit * 16;
           &:last-child {
-            margin-bottom: 0;
+            /*margin-bottom: 0;*/
           }
           .recipeDetail__ingredientsContent-sectionTitle {
             font-size: $font-size-base * 1.5;
@@ -464,6 +464,88 @@
                   color: $color-gray;
                   text-decoration: line-through;
                 }
+              }
+            }
+          }
+        }
+      }
+      .recipeDetail__stepsWrapper {
+        margin-top: $spacing-unit * 22;
+        .recipeDetail__stepsTitle {
+          color: $color-black;
+          font-size: $font-size-base * 2.25;
+          font-weight: $font-weight-semibold;
+          letter-spacing: -2px;
+          margin-bottom: $spacing-unit * 8;
+        }
+        .recipeDetail__stepsList {
+          display: flex;
+          flex-direction: column;
+          .recipeDetail__stepsItem {
+            display: flex;
+            align-items: flex-start;
+            gap: $spacing-unit * 6.5;
+            cursor: pointer;
+            transition: $transition-base;
+            margin-bottom: $spacing-unit * 12;
+            border-bottom: solid 2px $color-gray-soft;
+            &:hover .recipeDetail__stepsCheckbox {
+              border-color: $color-black;
+            }
+            .recipeDetail__stepsCheckbox {
+              width: 24px;
+              height: 24px;
+              border: solid 2px $color-gray-soft;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+              background: $color-white;
+              transition: $transition-base;
+              .check-icon {
+                width: 16px;
+                height: 16px;
+                color: $color-white;
+              }
+            }
+            .recipeDetail__stepsContent {
+              .recipeDetail__stepsContent-title {
+                font-size: $font-size-base * 1.5;
+                color: $color-black;
+                font-weight: $font-weight-semibold;
+                letter-spacing: -1px;
+                transition: $transition-base;
+                margin-bottom: $spacing-unit * 6;
+              }
+              .recipeDetail__stepsContent-text {
+                font-size: $font-size-base * 1;
+                color: $color-black;
+                font-weight: $font-weight-light;
+                transition: $transition-base;
+                margin-bottom: $spacing-unit * 12;
+              }
+              .recipeDetail__stepsContent-image {
+                border-radius: 20px;
+                margin-bottom: $spacing-unit * 12;
+                transition: $transition-base;
+              }
+            }
+            &.is-checked {
+              .recipeDetail__stepsCheckbox {
+                background: $color-black;
+                border-color: $color-black;
+              }
+              .recipeDetail__stepsContent-text {
+                color: $color-gray;
+                text-decoration: line-through;
+              }
+              .recipeDetail__stepsContent-title {
+                color: $color-gray;
+                text-decoration: line-through;
+              }
+              .recipeDetail__stepsContent-image {
+                filter: grayscale(1);
               }
             }
           }
