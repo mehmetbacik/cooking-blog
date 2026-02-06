@@ -10,26 +10,50 @@
     .recipeDetail__headerLayout {
       padding-top: $spacing-unit * 20;
       padding-bottom: $spacing-unit * 16;
+      @media (max-width: $md-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
+      @media (max-width: $sm-breakpoint) {
+        gap: $spacing-unit * 5;
+        padding-block: $spacing-unit * 5;
+      }
       .recipeDetail__header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: $spacing-unit * 4;
+        @media (max-width: $sm-breakpoint) {
+          flex-direction: column;
+        }
         .recipeDetail__headline {
           display: flex;
           flex-direction: column;
           gap: $spacing-unit * 12;
+          @media (max-width: $sm-breakpoint) {
+            gap: $spacing-unit * 8;
+          }
           &-title {
             color: $color-black;
             font-weight: $font-weight-semibold;
             font-size: $font-size-base * 4;
             letter-spacing: -2px;
             line-height: normal;
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 2;
+              letter-spacing: -1px;
+              text-align: center;
+            }
           }
           .recipeDetail__headline-info {
             display: flex;
             align-items: center;
             gap: $spacing-unit * 8;
+            @media (max-width: $sm-breakpoint) {
+              flex-wrap: wrap;
+              gap: $spacing-unit * 2;
+              justify-content: center;
+            }
             .recipeDetail__headline-infoAuthor {
               display: flex;
               align-items: center;
@@ -39,6 +63,10 @@
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
+                  @media (max-width: $sm-breakpoint) {
+                    width: 24px;
+                    height: 24px;
+                  }
                 }
               }
               &-detail {
@@ -49,11 +77,17 @@
                   color: $color-black;
                   font-weight: $font-weight-bold;
                   font-size: $font-size-base * 1;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.75;
+                  }
                 }
                 .recipeDetail__date {
                   color: $color-black;
                   font-weight: $font-weight-light;
                   font-size: $font-size-base * 0.875;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.65;
+                  }
                 }
               }
             }
@@ -63,6 +97,10 @@
               gap: $spacing-unit * 3;
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
+              @media (max-width: $sm-breakpoint) {
+                padding-left: $spacing-unit * 2;
+                border-left: 0;
+              }
               .recipeDetail__prepTime-content {
                 display: flex;
                 flex-direction: column;
@@ -73,11 +111,17 @@
                   text-transform: uppercase;
                   font-weight: $font-weight-semibold;
                   letter-spacing: 1.6px;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.65;
+                  }
                 }
                 .recipeDetail__prepTime-val {
                   color: $color-black;
                   font-size: $font-size-base * 0.875;
                   font-weight: $font-weight-light;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.75;
+                  }
                 }
               }
               &::before {
@@ -89,6 +133,10 @@
                 background-size: contain;
                 pointer-events: none;
                 flex-shrink: 0;
+                @media (max-width: $sm-breakpoint) {
+                  width: 20px;
+                  height: 20px;
+                }
               }
             }
             .recipeDetail__headline-infoTime {
@@ -97,6 +145,10 @@
               gap: $spacing-unit * 3;
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
+              @media (max-width: $sm-breakpoint) {
+                padding-left: $spacing-unit * 2;
+                border-left: 0;
+              }
               .recipeDetail__infoTime-content {
                 display: flex;
                 flex-direction: column;
@@ -107,11 +159,17 @@
                   text-transform: uppercase;
                   font-weight: $font-weight-semibold;
                   letter-spacing: 1.6px;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.65;
+                  }
                 }
                 .recipeDetail__infoTime-val {
                   color: $color-black;
                   font-size: $font-size-base * 0.875;
                   font-weight: $font-weight-light;
+                  @media (max-width: $sm-breakpoint) {
+                    font-size: $font-size-base * 0.75;
+                  }
                 }
               }
               &::before {
@@ -123,6 +181,10 @@
                 background-size: contain;
                 pointer-events: none;
                 flex-shrink: 0;
+                @media (max-width: $sm-breakpoint) {
+                  width: 20px;
+                  height: 20px;
+                }
               }
             }
             .recipeDetail__headline-infoCategory {
@@ -132,10 +194,17 @@
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
               padding-block: $spacing-unit * 2.25;
+              @media (max-width: $sm-breakpoint) {
+                padding-left: $spacing-unit * 2;
+                border-left: 0;
+              }
               span {
                 color: $color-black;
                 font-size: $font-size-base * 0.875;
                 font-weight: $font-weight-light;
+                @media (max-width: $sm-breakpoint) {
+                  font-size: $font-size-base * 0.75;
+                }
               }
               &::before {
                 content: "";
@@ -146,6 +215,10 @@
                 background-size: contain;
                 pointer-events: none;
                 flex-shrink: 0;
+                @media (max-width: $sm-breakpoint) {
+                  width: 20px;
+                  height: 20px;
+                }
               }
             }
           }
@@ -160,6 +233,9 @@
             align-items: center;
             justify-content: center;
             gap: $spacing-unit * 4;
+            @media (max-width: $sm-breakpoint) {
+              gap: $spacing-unit * 2;
+            }
             .recipeDetail__actions-printBtn {
               display: flex;
               align-items: center;
@@ -169,6 +245,10 @@
               height: 80px;
               border-radius: 50%;
               transition: $transition-base;
+              @media (max-width: $sm-breakpoint) {
+                width: 50px;
+                height: 50px;
+              }
               &:active {
                 transform: scale(0.95);
               }
@@ -187,6 +267,9 @@
             align-items: center;
             justify-content: center;
             gap: $spacing-unit * 4;
+            @media (max-width: $sm-breakpoint) {
+              gap: $spacing-unit * 2;
+            }
             .recipeDetail__actions-shareBtn {
               display: flex;
               align-items: center;
@@ -196,6 +279,10 @@
               height: 80px;
               border-radius: 50%;
               transition: $transition-base;
+              @media (max-width: $sm-breakpoint) {
+                width: 50px;
+                height: 50px;
+              }
               &:active {
                 transform: scale(0.95);
               }
@@ -304,6 +391,9 @@
       margin-bottom: $spacing-unit * 20;
       .recipeDetail__imageWrapper {
         position: relative;
+        @media (max-width: $sm-breakpoint) {
+          margin-bottom: $spacing-unit * 6;
+        }
         .recipeDetail__videoContainer {
           width: 100%;
           position: relative;
@@ -390,6 +480,9 @@
       }
       .recipeDetail__excerptWrapper {
         margin-block: $spacing-unit * 20;
+        @media (max-width: $sm-breakpoint) {
+          margin-block: $spacing-unit * 10;
+        }
         p {
           color: $color-black;
           font-size: $font-size-base * 1;
@@ -406,9 +499,16 @@
           font-weight: $font-weight-semibold;
           letter-spacing: -2px;
           margin-bottom: $spacing-unit * 12;
+          @media (max-width: $sm-breakpoint) {
+            font-size: $font-size-base * 1.75;
+            margin-bottom: $spacing-unit * 8;
+          }
         }
         .recipeDetail__ingredientsContent {
           margin-bottom: $spacing-unit * 16;
+          @media (max-width: $sm-breakpoint) {
+            margin-bottom: $spacing-unit * 8;
+          }
           &:last-child {
             /*margin-bottom: 0;*/
           }
@@ -417,6 +517,9 @@
             color: $color-black;
             font-weight: $font-weight-semibold;
             letter-spacing: -1px;
+            @media (max-width: $sm-breakpoint) {
+              font-size: $font-size-base * 1.25;
+            }
           }
           .recipeDetail__ingredientsContent-checklist {
             list-style: none;
@@ -430,6 +533,9 @@
               transition: $transition-base;
               padding-block: $spacing-unit * 8;
               border-bottom: solid 2px $color-gray-soft;
+              @media (max-width: $sm-breakpoint) {
+                padding-block: $spacing-unit * 5;
+              }
               &:hover .recipeDetail__ingredientsContent-checkbox {
                 border-color: $color-black;
               }
@@ -454,6 +560,9 @@
                 font-size: $font-size-base * 1.125;
                 color: $color-black;
                 transition: $transition-base;
+                @media (max-width: $sm-breakpoint) {
+                  font-size: $font-size-base * 1;
+                }
               }
               &.is-checked {
                 .recipeDetail__ingredientsContent-checkbox {
@@ -471,12 +580,18 @@
       }
       .recipeDetail__stepsWrapper {
         margin-top: $spacing-unit * 22;
+        @media (max-width: $sm-breakpoint) {
+          margin-top: $spacing-unit * 11;
+        }
         .recipeDetail__stepsTitle {
           color: $color-black;
           font-size: $font-size-base * 2.25;
           font-weight: $font-weight-semibold;
           letter-spacing: -2px;
           margin-bottom: $spacing-unit * 8;
+          @media (max-width: $sm-breakpoint) {
+            font-size: $font-size-base * 1.75;
+          }
         }
         .recipeDetail__stepsList {
           display: flex;
@@ -489,6 +604,9 @@
             transition: $transition-base;
             margin-bottom: $spacing-unit * 12;
             border-bottom: solid 2px $color-gray-soft;
+            @media (max-width: $sm-breakpoint) {
+              margin-bottom: $spacing-unit * 8;
+            }
             &:hover .recipeDetail__stepsCheckbox {
               border-color: $color-black;
             }
@@ -517,6 +635,9 @@
                 letter-spacing: -1px;
                 transition: $transition-base;
                 margin-bottom: $spacing-unit * 6;
+                @media (max-width: $sm-breakpoint) {
+                  font-size: $font-size-base * 1.25;
+                }
               }
               .recipeDetail__stepsContent-text {
                 font-size: $font-size-base * 1;
@@ -524,11 +645,17 @@
                 font-weight: $font-weight-light;
                 transition: $transition-base;
                 margin-bottom: $spacing-unit * 12;
+                @media (max-width: $sm-breakpoint) {
+                  margin-bottom: $spacing-unit * 8;
+                }
               }
               .recipeDetail__stepsContent-image {
                 border-radius: 20px;
                 margin-bottom: $spacing-unit * 12;
                 transition: $transition-base;
+                @media (max-width: $sm-breakpoint) {
+                  margin-bottom: $spacing-unit * 8;
+                }
               }
             }
             &.is-checked {
