@@ -33,7 +33,7 @@ To clone the project, run the following commands:
 git clone https://github.com/mehmetbacik/cooking-blog.git
 ```
 ```
-cd travel-planner
+cd cooking-blog
 ```
 
 # Nuxt Minimal Starter

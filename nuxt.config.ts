@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["./app/styles/main.scss"],
+
+  nitro: {
+    preset: "vercel",
+  },
+
   app: {
     head: {
       title: "Cooking Blog",
