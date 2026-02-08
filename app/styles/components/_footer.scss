@@ -89,6 +89,10 @@
         @media (max-width: $sm-breakpoint) {
           margin-top: $spacing-unit * 5;
           margin-bottom: $spacing-unit * 15;
+          background-color: transparent;
+          flex-direction: column;
+          gap: $spacing-unit * 4;
+          box-shadow: none;
         }
         &:focus-within {
           box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
@@ -103,9 +107,11 @@
           font-size: $font-size-base * 0.875;
           color: $color-black;
           @media (max-width: $sm-breakpoint) {
-            padding-inline: $spacing-unit * 2;
-            padding-block: $spacing-unit * 2;
+            padding-inline: $spacing-unit * 4;
+            padding-block: $spacing-unit * 4;
             font-size: $font-size-base * 0.75;
+            background-color: $color-white;
+            border-radius: 20px;
           }
           &::placeholder {
             color: $color-gray;
@@ -128,6 +134,7 @@
           @media (max-width: $sm-breakpoint) {
             padding-inline: $spacing-unit * 2;
             padding-block: $spacing-unit * 4;
+            width: 100%;
           }
         }
       }

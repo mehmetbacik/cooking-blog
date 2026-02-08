@@ -136,6 +136,9 @@
                     font-size: $font-size-lg;
                     border-radius: $spacing-unit * 2;
                     transition: $transition-base;
+                    @media (max-width: $sm-breakpoint) {
+                      padding: $spacing-unit * 2;
+                    }
                     &:hover {
                       background-color: $color-blue-pale;
                       color: $color-blue;

@@ -39,6 +39,10 @@
             font-size: $font-size-base * 4;
             letter-spacing: -2px;
             line-height: normal;
+            @media (max-width: $md-breakpoint) {
+              font-size: $font-size-base * 2;
+              letter-spacing: -1px;
+            }
             @media (max-width: $sm-breakpoint) {
               font-size: $font-size-base * 2;
               letter-spacing: -1px;
@@ -49,10 +53,14 @@
             display: flex;
             align-items: center;
             gap: $spacing-unit * 8;
+            @media (max-width: $md-breakpoint) {
+              flex-wrap: wrap;
+              gap: $spacing-unit * 2;
+            }
             @media (max-width: $sm-breakpoint) {
               flex-wrap: wrap;
               gap: $spacing-unit * 2;
-              justify-content: center;
+              justify-content: space-between;
             }
             .recipeDetail__headline-infoAuthor {
               display: flex;
@@ -63,6 +71,10 @@
                   width: 50px;
                   height: 50px;
                   border-radius: 50%;
+                  @media (max-width: $md-breakpoint) {
+                    width: 30px;
+                    height: 30px;
+                  }
                   @media (max-width: $sm-breakpoint) {
                     width: 24px;
                     height: 24px;
@@ -77,6 +89,9 @@
                   color: $color-black;
                   font-weight: $font-weight-bold;
                   font-size: $font-size-base * 1;
+                  @media (max-width: $md-breakpoint) {
+                    font-size: $font-size-base * 0.875;
+                  }
                   @media (max-width: $sm-breakpoint) {
                     font-size: $font-size-base * 0.75;
                   }
@@ -85,6 +100,9 @@
                   color: $color-black;
                   font-weight: $font-weight-light;
                   font-size: $font-size-base * 0.875;
+                  @media (max-width: $md-breakpoint) {
+                    font-size: $font-size-base * 0.75;
+                  }
                   @media (max-width: $sm-breakpoint) {
                     font-size: $font-size-base * 0.65;
                   }
@@ -97,6 +115,9 @@
               gap: $spacing-unit * 3;
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
+              @media (max-width: $md-breakpoint) {
+                padding-left: $spacing-unit * 3;
+              }
               @media (max-width: $sm-breakpoint) {
                 padding-left: $spacing-unit * 2;
                 border-left: 0;
@@ -145,6 +166,9 @@
               gap: $spacing-unit * 3;
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
+              @media (max-width: $md-breakpoint) {
+                padding-left: $spacing-unit * 3;
+              }
               @media (max-width: $sm-breakpoint) {
                 padding-left: $spacing-unit * 2;
                 border-left: 0;
@@ -194,6 +218,9 @@
               border-left: solid 1px $color-gray-soft;
               padding-left: $spacing-unit * 8;
               padding-block: $spacing-unit * 2.25;
+              @media (max-width: $md-breakpoint) {
+                padding-left: $spacing-unit * 3;
+              }
               @media (max-width: $sm-breakpoint) {
                 padding-left: $spacing-unit * 2;
                 border-left: 0;
@@ -245,6 +272,10 @@
               height: 80px;
               border-radius: 50%;
               transition: $transition-base;
+              @media (max-width: $md-breakpoint) {
+                width: 60px;
+                height: 60px;
+              }
               @media (max-width: $sm-breakpoint) {
                 width: 50px;
                 height: 50px;
@@ -279,6 +310,10 @@
               height: 80px;
               border-radius: 50%;
               transition: $transition-base;
+              @media (max-width: $md-breakpoint) {
+                width: 60px;
+                height: 60px;
+              }
               @media (max-width: $sm-breakpoint) {
                 width: 50px;
                 height: 50px;
@@ -391,6 +426,9 @@
       margin-bottom: $spacing-unit * 20;
       .recipeDetail__imageWrapper {
         position: relative;
+        @media (max-width: $md-breakpoint) {
+          margin-bottom: $spacing-unit * 6;
+        }
         @media (max-width: $sm-breakpoint) {
           margin-bottom: $spacing-unit * 6;
         }
@@ -476,6 +514,12 @@
           font-size: $font-size-base * 1;
           font-weight: $font-weight-light;
           text-align: center;
+          @media (max-width: $md-breakpoint) {
+            margin-top: $spacing-unit * 3;
+          }
+          @media (max-width: $sm-breakpoint) {
+            margin-top: $spacing-unit * 2;
+          }
         }
       }
       .recipeDetail__excerptWrapper {
@@ -508,9 +552,6 @@
           margin-bottom: $spacing-unit * 16;
           @media (max-width: $sm-breakpoint) {
             margin-bottom: $spacing-unit * 8;
-          }
-          &:last-child {
-            /*margin-bottom: 0;*/
           }
           .recipeDetail__ingredientsContent-sectionTitle {
             font-size: $font-size-base * 1.5;
