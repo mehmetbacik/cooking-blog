@@ -9,9 +9,11 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "node": "^25.2.1",
     "node-forge": "^1.3.3",
     "nuxt": "^4.2.1",
     "swiper": "^12.0.3",
