@@ -118,7 +118,7 @@ This project is based on a publicly accessible Figma design. [View the Figma Des
 
 ## Deploy
 
-For a detailed exploration of the project, you can visit the [deployed site here](https://travel-planner-one-ochre.vercel.app/).
+For a detailed exploration of the project, you can visit the [deployed site here](https://cooking-blog-swart.vercel.app/).
 
 ## GitHub Page
 
