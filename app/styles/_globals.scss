@@ -220,3 +220,76 @@
     transform: scale(1);
   }
 }
+
+@media print {
+  nav, 
+  footer, 
+  .recipeDetail__actions, 
+  .recipeDetail__playBtn, 
+  .BaseAdd, 
+  .TastyRecipesSection, 
+  .CheckOutRecipesSection,
+  .recipeDetail__actions-sharePopup {
+    display: none !important;
+  }
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff !important;
+  }
+  .recipeDetail__contentLayout .row {
+    display: block !important;
+  }
+  .col-lg-8, .col-lg-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  .recipeDetail__image {
+    max-width: 300px !important;
+    height: auto !important;
+    float: right; 
+    margin: 0 0 1ch 1ch !important;
+    border-radius: 8px;
+  }
+  .recipeDetail__nutritionInformationWrapper {
+    background: #f9f9f9 !important;
+    border: 1px solid #ddd !important;
+    padding: 10px !important;
+    margin-bottom: 20px !important;
+    page-break-inside: avoid;
+  }
+  .recipeDetail__nutritionInformationMetrics {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+  .recipeDetail__nutritionInformationMetric {
+    border-bottom: none !important;
+    padding: 5px !important;
+  }
+  .recipeDetail__ingredientsContent-checklistItem {
+    list-style: none !important;
+    padding: 4px 0 !important;
+  }
+  .recipeDetail__ingredientsContent-checkbox,
+  .recipeDetail__stepsCheckbox {
+    border: 1px solid #000 !important;
+    print-color-adjust: exact;
+  }
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  .recipeDetail__stepsItem {
+    page-break-inside: avoid;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}
