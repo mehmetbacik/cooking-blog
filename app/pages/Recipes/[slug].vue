@@ -117,12 +117,8 @@ const isDescriptionLong = computed(() => {
               <div class="recipeDetail__headline-infoAuthor">
                 <div class="recipeDetail__headline-infoAuthor-photo">
                   <img
-                    :src="recipe.photo"
+                    :src="recipe.photo || '/images/recipe/author/author.png'"
                     :alt="recipe.author || 'Author'"
-                    @error="
-                      ($event.target as HTMLImageElement).src =
-                        '/images/recipe/author/author.png'
-                    "
                   />
                 </div>
                 <div class="recipeDetail__headline-infoAuthor-detail">
