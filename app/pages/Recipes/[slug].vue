@@ -11,7 +11,7 @@ import { recipesData } from "../../data/recipesData";
 import { socialItems } from "../../data/socialData";
 
 import type { DerivedRecipe } from "../../types";
-import BaseAdd from "~/ui/BaseAdd.vue";
+import BaseAdd from "../../ui/BaseAdd.vue";
 
 const route = useRoute();
 const slug = route.params.slug;
@@ -110,22 +110,35 @@ const isDescriptionLong = computed(() => {
       <div class="recipeDetail__headerLayout">
         <div class="recipeDetail__header">
           <div class="recipeDetail__headline">
-            <h1 class="recipeDetail__headline-title">{{ recipe.title }}</h1>
+            <h1 class="recipeDetail__headline-title">
+              {{ recipe.title || "Health Japanese Fried Rice" }}
+            </h1>
             <div class="recipeDetail__headline-info">
               <div class="recipeDetail__headline-infoAuthor">
                 <div class="recipeDetail__headline-infoAuthor-photo">
-                  <img :src="recipe.photo" :alt="recipe.author" />
+                  <img
+                    :src="recipe.photo"
+                    :alt="recipe.author || 'Author'"
+                    @error="
+                      ($event.target as HTMLImageElement).src =
+                        '/images/recipe/author/author.png'
+                    "
+                  />
                 </div>
                 <div class="recipeDetail__headline-infoAuthor-detail">
-                  <span class="recipeDetail__author">{{ recipe.author }}</span>
-                  <span class="recipeDetail__date">{{ recipe.date }}</span>
+                  <span class="recipeDetail__author">{{
+                    recipe.author || "John Smith"
+                  }}</span>
+                  <span class="recipeDetail__date">{{
+                    recipe.date || "12 March 2022"
+                  }}</span>
                 </div>
               </div>
               <div class="recipeDetail__headline-infoPrepTime">
                 <div class="recipeDetail__prepTime-content">
                   <span class="recipeDetail__prepTime-label">Prep Time</span>
                   <span class="recipeDetail__prepTime-val">{{
-                    recipe.preptime
+                    recipe.preptime || "15 Minutes"
                   }}</span>
                 </div>
               </div>
@@ -133,12 +146,12 @@ const isDescriptionLong = computed(() => {
                 <div class="recipeDetail__infoTime-content">
                   <span class="recipeDetail__infoTime-label">Cook Time</span>
                   <span class="recipeDetail__infoTime-val">{{
-                    recipe.time
+                    recipe.time || "30 Minutes"
                   }}</span>
                 </div>
               </div>
               <div class="recipeDetail__headline-infoCategory">
-                <span>{{ recipe.category || "Unknown" }}</span>
+                <span>{{ recipe.category || "Chicken" }}</span>
               </div>
             </div>
           </div>
@@ -240,45 +253,35 @@ const isDescriptionLong = computed(() => {
                     <span v-if="recipe.calories" class="recipeDetail__val"
                       >{{ recipe.calories || "N/A" }}&nbsp;kcal</span
                     >
-                    <span v-else class="recipeDetail__val"
-                      >Info coming soon</span
-                    >
+                    <span v-else class="recipeDetail__val">Coming soon</span>
                   </div>
                   <div class="recipeDetail__nutritionInformationMetric">
                     <span class="recipeDetail__label">Total Fat</span>
                     <span v-if="recipe.fat" class="recipeDetail__val"
                       >{{ recipe.fat || "N/A" }}&nbsp;g</span
                     >
-                    <span v-else class="recipeDetail__val"
-                      >Info coming soon</span
-                    >
+                    <span v-else class="recipeDetail__val">Coming soon</span>
                   </div>
                   <div class="recipeDetail__nutritionInformationMetric">
                     <span class="recipeDetail__label">Protein</span>
                     <span v-if="recipe.protein" class="recipeDetail__val"
                       >{{ recipe.protein || "N/A" }}&nbsp;g</span
                     >
-                    <span v-else class="recipeDetail__val"
-                      >Info coming soon</span
-                    >
+                    <span v-else class="recipeDetail__val">Coming soon</span>
                   </div>
                   <div class="recipeDetail__nutritionInformationMetric">
                     <span class="recipeDetail__label">Carbohydrate</span>
                     <span v-if="recipe.carbohydrate" class="recipeDetail__val"
                       >{{ recipe.carbohydrate || "N/A" }}&nbsp;g</span
                     >
-                    <span v-else class="recipeDetail__val"
-                      >Info coming soon</span
-                    >
+                    <span v-else class="recipeDetail__val">Coming soon</span>
                   </div>
                   <div class="recipeDetail__nutritionInformationMetric">
                     <span class="recipeDetail__label">Cholesterol</span>
                     <span v-if="recipe.cholesterol" class="recipeDetail__val"
                       >{{ recipe.cholesterol || "N/A" }}&nbsp;mg</span
                     >
-                    <span v-else class="recipeDetail__val"
-                      >Info coming soon</span
-                    >
+                    <span v-else class="recipeDetail__val">Coming soon</span>
                   </div>
                 </div>
               </div>
@@ -382,17 +385,27 @@ const isDescriptionLong = computed(() => {
                     </svg>
                   </div>
                   <div class="recipeDetail__stepsContent">
-                    <h4 v-if="step.title" class="recipeDetail__stepsContent-title">
+                    <h4
+                      v-if="step.title"
+                      class="recipeDetail__stepsContent-title"
+                    >
                       {{ step.title }}
                     </h4>
-                    <p v-if="step.text" class="recipeDetail__stepsContent-text">{{ step.text }}</p>
+                    <p v-if="step.text" class="recipeDetail__stepsContent-text">
+                      {{ step.text }}
+                    </p>
                     <img
                       v-if="step.image"
                       :src="step.image"
                       :alt="step.title || step.text"
                       class="recipeDetail__stepsContent-image"
                     />
-                    <p v-if="step.text2" class="recipeDetail__stepsContent-text">{{ step.text2 }}</p>
+                    <p
+                      v-if="step.text2"
+                      class="recipeDetail__stepsContent-text"
+                    >
+                      {{ step.text2 }}
+                    </p>
                   </div>
                 </div>
               </div>
