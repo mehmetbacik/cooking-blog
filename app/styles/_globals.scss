@@ -224,11 +224,13 @@
 @media print {
   nav, 
   footer, 
+  .header__logo-wrapper,
+  .header__navbar-wrapper,
+  .ads__wrapper,
+  .tastyRecipes,
+  .checkOutRecipes,
   .recipeDetail__actions, 
   .recipeDetail__playBtn, 
-  .BaseAdd, 
-  .TastyRecipesSection, 
-  .CheckOutRecipesSection,
   .recipeDetail__actions-sharePopup {
     display: none !important;
   }
