@@ -514,11 +514,12 @@
           font-size: $font-size-base * 1;
           font-weight: $font-weight-light;
           text-align: center;
+          margin-top: $spacing-unit * 5;
           @media (max-width: $md-breakpoint) {
-            margin-top: $spacing-unit * 3;
+            margin-top: $spacing-unit * 6;
           }
           @media (max-width: $sm-breakpoint) {
-            margin-top: $spacing-unit * 2;
+            margin-top: $spacing-unit * 7;
           }
         }
       }

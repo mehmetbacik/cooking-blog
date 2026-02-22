@@ -1,5 +1,9 @@
-<script setup>
-defineProps({ recipe: Object });
+<script setup lang="ts">
+defineProps<{
+  recipe: {
+    excerpt?: string;
+  };
+}>();
 </script>
 
 <template>

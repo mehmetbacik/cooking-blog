@@ -1,32 +1,36 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 
-const DESCRIPTION_LIMIT = 70;
+const props = defineProps<{
+  description?: string;
+  calories?: string;
+  fat?: string;
+  protein?: string;
+  carbs?: string;
+  cholesterol?: string;
+}>();
 
-const props = defineProps({
-  recipe: Object,
+const metrics = computed(() => [
+  {
+    label: "Calories",
+    value: props.calories ? `${props.calories} kcal` : null,
+  },
+  { label: "Total Fat", value: props.fat ? `${props.fat} g` : null },
+  { label: "Protein", value: props.protein ? `${props.protein} g` : null },
+  { label: "Carbohydrate", value: props.carbs ? `${props.carbs} g` : null },
+  {
+    label: "Cholesterol",
+    value: props.cholesterol ? `${props.cholesterol} mg` : null,
+  },
+]);
+
+const truncatedDescription = computed(() => {
+  const limit = 70;
+  if (!props.description) return "";
+  return props.description.length > limit
+    ? props.description.slice(0, limit) + "..."
+    : props.description;
 });
-
-const metrics = [
-  { label: "Calories", key: "calories", unit: "kcal" },
-  { label: "Total Fat", key: "fat", unit: "g" },
-  { label: "Protein", key: "protein", unit: "g" },
-  { label: "Carbohydrate", key: "carbohydrate", unit: "g" },
-  { label: "Cholesterol", key: "cholesterol", unit: "mg" },
-];
-
-const description = computed(() => {
-  if (!props.recipe.description) return "";
-  return props.recipe.description.length > DESCRIPTION_LIMIT
-    ? props.recipe.description.slice(0, DESCRIPTION_LIMIT) + "..."
-    : props.recipe.description;
-});
-
-const tooltip = computed(() =>
-  props.recipe.description.length > DESCRIPTION_LIMIT
-    ? props.recipe.description
-    : "",
-);
 </script>
 
 <template>
@@ -35,23 +39,25 @@ const tooltip = computed(() =>
       <h3 class="recipeDetail__nutritionInformationTitle">
         Nutrition Information
       </h3>
-
       <div class="recipeDetail__nutritionInformationMetrics">
         <div
+          v-for="metric in metrics"
+          :key="metric.label"
           class="recipeDetail__nutritionInformationMetric"
-          v-for="item in metrics"
         >
-          <span class="recipeDetail__label">{{ item.label }}</span>
-          <span class="recipeDetail__val" v-if="recipe[item.key]">
-            {{ recipe[item.key] }} {{ item.unit }}
-          </span>
-          <span class="recipeDetail__val" v-else>Coming soon</span>
+          <span class="recipeDetail__label">{{ metric.label }}</span>
+          <span class="recipeDetail__val">{{
+            metric.value || "Coming soon"
+          }}</span>
         </div>
       </div>
     </div>
-
-    <p v-if="description" class="recipeDetail__description" :title="tooltip">
-      {{ description }}
+    <p
+      v-if="description"
+      class="recipeDetail__description"
+      :title="description"
+    >
+      {{ truncatedDescription }}
     </p>
   </div>
 </template>
